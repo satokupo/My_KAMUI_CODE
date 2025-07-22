@@ -1,0 +1,24 @@
+{
+    "mcpServers": {
+        "t2i-google-imagen3": {
+            "type": "http",
+            "url": "https://mcp-unified-server-820994673238.us-central1.run.app/t2i/google/imagen/3/generate-002",
+            "description": "Google Imagen 3 Text-to-Image"
+        },
+        "t2i-google-imagen3-fast": {
+            "type": "http",
+            "url": "https://mcp-unified-server-820994673238.us-central1.run.app/t2i/google/imagen/3/fast-002",
+            "description": "Google Imagen 3 Fast Text-to-Image"
+        },
+        "i2i-fal-flux-kontext-max": {
+            "type": "http",
+            "url": "https://mcp-unified-server-820994673238.us-central1.run.app/i2i/fal/flux/kontext/max",
+            "description": "Fal.ai Flux Kontext Max Image-to-Image ⭐"
+        },
+        "t2a-google-lyria": {
+            "type": "http",
+            "url": "https://mcp-unified-server-820994673238.us-central1.run.app/t2a/google/lyria/002/latest",
+            "description": "Google Lyria Text-to-Audio/Music"
+        }
+    }
+}

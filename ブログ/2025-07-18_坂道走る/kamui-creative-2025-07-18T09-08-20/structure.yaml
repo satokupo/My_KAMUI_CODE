@@ -1,0 +1,221 @@
+src:
+  structure.yaml:
+    content: |-
+      罫線ノート上の夏の田舎の坂道を走る棒人間イラスト生成プロジェクト
+      - 目的: ブログのアイキャッチ用の手描き風棒人間イラスト5枚の作成
+      - デザインコンセプト:
+        * モノライン（単線）による手描き風、落書き風のミニマル表現
+        * 罫線ノートの紙面上での描写（水平線が透けて見える）
+        * 夏の田舎の坂道での疲労感と汗だくの状態を強調
+        * 棒人間の顔は口のみ（への字や波形で苦しさを表現）
+        * 横長比率でタイトル文字を重ねても見やすい構成
+      - 各イラストで異なる疲労度と夏の暑さを表現
+    agent選定理由: |-
+      claude-3-5-sonnet-20241022は少数の複雑なタスクに適しており、
+      各イラストの細かな表現指示と一貫性のあるスタイル管理に最適です。
+    api選定理由: 特になし
+    dependency: []
+    agent: claude-3-5-sonnet-20241022
+    api: []
+  monoline-illustrations:
+    01_uphill_struggle.png:
+      content: |-
+          Monoline (single-line) style stick figure illustration drawn on ruled notebook paper
+          - A stick figure running uphill from left to right on a summer countryside slope
+          - Forward-leaning posture with both arms swinging while running
+          - Face shows only mouth (downward curve expressing distress), no eyes or ears
+          - Sweat lines around the head (several short lines)
+          - Background shows horizontal ruled notebook lines visible through the scene
+          - Summer countryside hillside path rendered in simple line art
+          - Simplified sun icon and heat reflection from the road
+          - Horizontal ratio composition for blog header use
+          - Hand-drawn, doodle-style minimal expression
+          - Clear left-to-right upward movement direction
+      agent選定理由: |2-
+          t2i-flux-schnellは高速で線画・イラスト生成に特化しており、
+          手描き風のモノラインスタイルの表現に最適です。
+      dependency: []
+      agent: t2i-flux-schnell
+      api: []
+    02_steep_climb.png:
+      content: |-
+          Monoline (single-line) style stick figure illustration drawn on ruled notebook paper
+          - A stick figure struggling up a steeper slope from left to right
+          - Forward-leaning posture with exaggerated arm swinging while running
+          - Face shows only mouth (wavy line expressing heavy breathing), no eyes or ears
+          - Profuse sweating depicted with lines around head and body
+          - Background shows horizontal ruled notebook lines visible through the scene
+          - Steeper summer countryside path with trees in simple line art
+          - Simplified sun icon with intense heat reflection effects
+          - Horizontal ratio composition for blog header use
+          - Hand-drawn, doodle-style minimal expression
+          - Clear upward progression from left to right
+      agent選定理由: |2-
+          t2i-flux-schnellは高速で線画・イラスト生成に特化しており、
+          手描き風のモノラインスタイルの表現に最適です。
+      dependency: []
+      agent: t2i-flux-schnell
+      api: []
+    03_exhausted_runner.png:
+      content: |-
+          Monoline (single-line) style stick figure illustration drawn on ruled notebook paper
+          - An exhausted stick figure climbing from left to right on a summer hillside
+          - Head hanging down in a struggling forward-leaning posture
+          - Face shows only mouth (large downward curve emphasizing suffering), no eyes or ears
+          - Heavy sweating depicted with numerous sweat lines
+          - Heavy footsteps with body slightly staggering
+          - Background shows horizontal ruled notebook lines visible through the scene
+          - Summer countryside slope with distant mountains in simple line art
+          - Simplified sun icon with intense heat reflection effects
+          - Horizontal ratio composition for blog header use
+          - Hand-drawn, doodle-style minimal expression
+          - Figure positioned moving upward from left to right
+      agent選定理由: |2-
+          t2i-flux-schnellは高速で線画・イラスト生成に特化しており、
+          手描き風のモノラインスタイルの表現に最適です。
+      dependency: []
+      agent: t2i-flux-schnell
+      api: []
+    04_final_push.png:
+      content: |-
+          Monoline (single-line) style stick figure illustration drawn on ruled notebook paper
+          - A stick figure making final effort running uphill from left to right
+          - Dramatically swinging arms in desperate forward-leaning posture
+          - Face shows only mouth (open mouth expressing determination), no eyes or ears
+          - Sweat dripping depicted with flowing lines
+          - Entire body showing fatigue in the pose
+          - Background shows horizontal ruled notebook lines visible through the scene
+          - Summer countryside hilltop and sky rendered in simple line art
+          - Simplified sun icon with heat reflection from the road
+          - Horizontal ratio composition for blog header use
+          - Hand-drawn, doodle-style minimal expression
+          - Near the top, running from left to right
+      agent選定理由: |2-
+          t2i-flux-schnellは高速で線画・イラスト生成に特化しており、
+          手描き風のモノラインスタイルの表現に最適です。
+      dependency: []
+      agent: t2i-flux-schnell
+      api: []
+    05_sweaty_ascent.png:
+      content: |-
+          Monoline (single-line) style stick figure illustration drawn on ruled notebook paper
+          - A stick figure drenched in sweat, near limit climbing from left to right
+          - Body leaning forward with heavy, labored footsteps
+          - Face shows only mouth (wide open mouth expressing heavy breathing), no eyes or ears
+          - Profuse sweating depicted with extensive sweat lines around head and body
+          - Most exhausted state expressed through curved body lines
+          - Background shows horizontal ruled notebook lines visible through the scene
+          - Summer countryside steep mid-slope with rural landscape in simple line art
+          - Simplified sun icon with intense heat reflection effects
+          - Horizontal ratio composition for blog header use
+          - Hand-drawn, doodle-style minimal expression
+          - Clear left-to-right upward movement on steep incline
+      agent選定理由: |2-
+          t2i-flux-schnellは高速で線画・イラスト生成に特化しており、
+          手描き風のモノラインスタイルの表現に最適です。
+      dependency: []
+      agent: t2i-flux-schnell
+      api: []
+    06_uphill_struggle_enhanced.png:
+      content: |-
+          Monoline (single-line) style stick figure illustration drawn on ruled notebook paper
+          - A stick figure desperately climbing uphill from left to right on summer countryside
+          - Forward-leaning posture with both arms swinging while running upward
+          - Face shows only mouth (downward curve expressing distress), no eyes or ears
+          - Sweat lines around the head (several short lines representing perspiration)
+          - Background shows horizontal ruled notebook lines subtly visible through the scene
+          - Summer countryside hillside ascending from left to right in simple line art
+          - Simplified sun icon and heat shimmer effects from the road surface
+          - Horizontal ratio composition perfect for blog header images
+          - Hand-drawn, doodle-style minimal expression with authentic sketch aesthetic
+          - Enhanced details: dust clouds behind feet trailing to the left, curved strain posture
+          - Additional elements: trees on right side showing elevation gain
+      agent選定理由: |2-
+          t2i-flux-schnellは高速で線画・イラスト生成に特化しており、
+          手描き風のモノラインスタイルの表現に最適です。
+      dependency: []
+      agent: t2i-flux-schnell
+      api: []
+    07_steep_climb_enhanced.png:
+      content: |-
+          Monoline (single-line) style stick figure illustration drawn on ruled notebook paper
+          - A stick figure climbing steeper slope from left to right with intense effort
+          - Forward-leaning posture with exaggerated arm swinging while running upward
+          - Face shows only mouth (wavy line expressing heavy breathing), no eyes or ears
+          - Profuse sweating depicted with lines around head and body
+          - Background shows horizontal ruled notebook lines subtly visible through the scene
+          - Steep summer hillside rising from left to right with trees in simple line art
+          - Simplified sun icon with intense heat shimmer effects and glare lines
+          - Horizontal ratio composition perfect for blog header images
+          - Hand-drawn, doodle-style minimal expression with authentic sketch aesthetic
+          - Enhanced details: motion lines trailing left, steep angle clearly visible
+          - Rocky path ascending left to right, vegetation on upper right
+      agent選定理由: |2-
+          t2i-flux-schnellは高速で線画・イラスト生成に特化しており、
+          手描き風のモノラインスタイルの表現に最適です。
+      dependency: []
+      agent: t2i-flux-schnell
+      api: []
+    08_exhausted_runner_enhanced.png:
+      content: |-
+          Monoline (single-line) style stick figure illustration drawn on ruled notebook paper
+          - Extremely exhausted stick figure climbing from left to right on summer hillside
+          - Head hanging down in struggling forward-leaning posture moving upward
+          - Face shows only mouth (large downward curve emphasizing suffering), no eyes or ears
+          - Heavy sweating depicted with numerous sweat lines around the figure
+          - Staggering gait with body wavering, progressing left to right uphill
+          - Background shows horizontal ruled notebook lines subtly visible through the scene
+          - Summer hillside with mountains visible on right horizon in simple line art
+          - Simplified sun icon with intense heat shimmer effects and overwhelming glare
+          - Horizontal ratio composition perfect for blog header images
+          - Hand-drawn, doodle-style minimal expression with authentic sketch aesthetic
+          - Enhanced details: trembling lines, shadow trailing behind on the left
+          - Heat waves rising from ascending path, sparse vegetation on upper slopes
+      agent選定理由: |2-
+          t2i-flux-schnellは高速で線画・イラスト生成に特化しており、
+          手描き風のモノラインスタイルの表現に最適です。
+      dependency: []
+      agent: t2i-flux-schnell
+      api: []
+    09_final_push_enhanced.png:
+      content: |-
+          Monoline (single-line) style stick figure illustration drawn on ruled notebook paper
+          - Stick figure making final push uphill from left to right on summer countryside
+          - Dramatically swinging arms in desperate forward-leaning running posture
+          - Face shows only mouth (open mouth expressing determination), no eyes or ears
+          - Sweat dripping depicted with flowing lines from head and body
+          - Entire body showing fatigue through curved posture lines
+          - Background shows horizontal ruled notebook lines subtly visible through the scene
+          - Summer hilltop visible on right side with sky in simple line art
+          - Simplified sun icon with heat shimmer effects and road reflection
+          - Horizontal ratio composition perfect for blog header images
+          - Hand-drawn, doodle-style minimal expression with authentic sketch aesthetic
+          - Enhanced details: motion blur trailing left, summit visible on right
+          - Pathway markers showing left-to-right ascent, elevated perspective
+      agent選定理由: |2-
+          t2i-flux-schnellは高速で線画・イラスト生成に特化しており、
+          手描き風のモノラインスタイルの表現に最適です。
+      dependency: []
+      agent: t2i-flux-schnell
+      api: []
+    10_sweaty_ascent_enhanced.png:
+      content: |-
+          Monoline (single-line) style stick figure illustration drawn on ruled notebook paper
+          - Stick figure drenched in sweat climbing from left to right near exhaustion limit
+          - Body leaning forward with heavy gait showing extreme fatigue moving upward
+          - Face shows only mouth (wide open mouth expressing labored breathing), no eyes or ears
+          - Profuse sweating depicted with extensive sweat lines around head and body
+          - Most exhausted state expressed through extremely curved body lines
+          - Background shows horizontal ruled notebook lines subtly visible through the scene
+          - Steep hillside mid-section ascending left to right with rural landscape
+          - Simplified sun icon with intense heat shimmer effects and overwhelming glare
+          - Horizontal ratio composition perfect for blog header images
+          - Hand-drawn, doodle-style minimal expression with authentic sketch aesthetic
+          - Enhanced details: sweat drops falling behind, extreme curved posture
+          - Rural fields visible below on left, heat distortion along upward path
+      agent選定理由: |2-
+          t2i-flux-schnellは高速で線画・イラスト生成に特化しており、
+          手描き風のモノラインスタイルの表現に最適です。
+      dependency: []
+      agent: t2i-flux-schnell
+      api: []
