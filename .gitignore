@@ -1,0 +1,5 @@
+*.ini
+.cursor
+.vscode
+.workbench
+.obsidian
