@@ -1,0 +1,185 @@
+
+{
+  "mcpServers": {
+    "t2i-fal-wan-v2-2-a14b": {
+      "type": "http",
+      "url": "https://mcp-wan-v2-2-a14b-text-to-image-20250806-002511-0-zl3xx5lsaq-uc.a.run.app/t2i/fal/wan/v2.2-a14b/text-to-image",
+      "description": "Fal.ai WAN v2.2-a14b Text-to-Image - 14B parameter high-resolution photorealistic image generation ⭐"
+    },
+    "t2v-fal-wan-v2-2-5b-fast": {
+      "type": "http",
+      "url": "https://mcp-wan-v2-2-5b-text-to-video-fast-wan-20250806-p-zl3xx5lsaq-uc.a.run.app/t2v/fal/wan/v2.2-5b/text-to-video/fast-wan",
+      "description": "Fal.ai WAN v2.2-5b FastVideo - 5B parameter fast video generation up to 5s 720p 24FPS ⭐"
+    },
+    "t2i-fal-qwen-image": {
+      "type": "http",
+      "url": "https://mcp-qwen-image-20250804-234340-d9b53a64-820994673238.us-central1.run.app/t2i/fal/qwen-image",
+      "description": "Fal.ai Qwen-Image Text-to-Image - High-quality image generation with complex text rendering and precise image editing ⭐"
+    },
+    "i2i-fal-aura-sr": {
+      "type": "http", 
+      "url": "https://mcp-aura-sr-20250804-134429-ed0bd13d-820994673238.us-central1.run.app/i2i/fal/aura-sr",
+      "description": "Fal.ai AuraSR Image-to-Image - Advanced image upscaling and super-resolution ⭐"
+    },
+    "t2i-fal-flux-krea-lora": {
+      "type": "http",
+      "url": "https://mcp-gemini-video-analysis-20250802-025100-fa7a3927-820994673238.us-central1.run.app/t2i/fal/flux-krea-lora",
+      "description": "Fal.ai FLUX Krea LoRA Text-to-Image - Generate images with LoRA adaptations ⭐"
+    },
+    "i2i-fal-flux-krea-lora": {
+      "type": "http",
+      "url": "https://mcp-gemini-video-analysis-20250802-025100-fa7a3927-820994673238.us-central1.run.app/i2i/fal/flux-krea-lora/image-to-image",
+      "description": "Fal.ai FLUX Krea LoRA Image-to-Image - Transform images with LoRA adaptations ⭐"
+    },
+    "i2v-fal-veo3-fast": {
+      "type": "http",
+      "url": "https://mcp-gemini-video-analysis-20250801-165638-13edbd98-820994673238.us-central1.run.app/i2v/fal/veo3/fast",
+      "description": "Fal.ai Veo3 Fast Image-to-Video Generation ⭐"
+    },
+    "video-analysis-google-gemini": {
+      "type": "http",
+      "url": "https://mcp-gemini-video-analysis-20250731-130658-1467db4-zl3xx5lsaq-uc.a.run.app/video-analysis/google/gemini",
+      "description": "Google Gemini 2.5-flash Video Analysis - Detailed video content analysis with Japanese/English support ⭐"
+    },
+    "t2i-google-imagen3": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-010824-a071b7b8-820994673238.us-central1.run.app/t2i/google/imagen",
+      "description": "Google Imagen 3 Text-to-Image Generation"
+    },
+    "t2m-google-lyria": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-010824-a071b7b8-820994673238.us-central1.run.app/t2m/google/lyria",
+      "description": "Google Lyria Text-to-Music Generation ⭐"
+    },
+    "t2i-fal-imagen4-ultra": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-010824-a071b7b8-820994673238.us-central1.run.app/t2i/fal/imagen4/ultra",
+      "description": "Fal.ai Imagen4 Ultra Text-to-Image (High Quality) ⭐"
+    },
+    "t2i-fal-imagen4-fast": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-010824-a071b7b8-820994673238.us-central1.run.app/t2i/fal/imagen4/fast",
+      "description": "Fal.ai Imagen4 Fast Text-to-Image (Speed Optimized) ⭐"
+    },
+    "t2v-fal-veo3-fast": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-010824-a071b7b8-820994673238.us-central1.run.app/t2v/fal/veo3/fast",
+      "description": "Fal.ai Veo3 Fast Text-to-Video Generation ⭐"
+    },
+    "i2v-fal-hailuo-02-pro": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-010824-a071b7b8-820994673238.us-central1.run.app/i2v/fal/minimax/hailuo-02/pro",
+      "description": "Fal.ai Hailuo-02 Pro Image-to-Video Generation ⭐"
+    },
+    "i2v-fal-hailuo-02-fast": {
+      "type": "http",
+      "url": "https://mcp-gemini-video-analysis-20250802-135111-93c970bc-820994673238.us-central1.run.app/i2v/fal/minimax/hailuo-02/fast",
+      "description": "Fal.ai Hailuo-02 Fast Image-to-Video Generation (Speed Optimized) ⭐"
+    },
+    "i2i-fal-flux-kontext-max": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-010824-a071b7b8-820994673238.us-central1.run.app/i2i/fal/flux/kontext/max",
+      "description": "Fal.ai Flux Kontext Max Image-to-Image Enhancement ⭐"
+    },
+    "i2i3d-fal-hunyuan3d-v21": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-010824-a071b7b8-820994673238.us-central1.run.app/i2i3d/fal/hunyuan/3d-v21",
+      "description": "Fal.ai Hunyuan3D v2.1 Image-to-3D Model Generation ⭐"
+    },
+    "v2a-fal-thinksound": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-010824-a071b7b8-820994673238.us-central1.run.app/v2a/fal/thinksound/audio/standard",
+      "description": "Fal.ai ThinkSound Video-to-Audio Generation ⭐"
+    },
+    "v2v-fal-luma-ray2-modify": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-010824-a071b7b8-820994673238.us-central1.run.app/v2v/fal/luma/dream-machine/ray-2/modify",
+      "description": "Fal.ai Luma Dream Machine Ray-2 Video-to-Video Modification ⭐"
+    },
+    "r2v-fal-vidu-q1": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-010824-a071b7b8-820994673238.us-central1.run.app/r2v/fal/vidu/q1",
+      "description": "Fal.ai Vidu Q1 Reference-to-Video Generation ⭐"
+    },
+    "t2i-fal-flux-schnell": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-010824-a071b7b8-820994673238.us-central1.run.app/t2i/fal/flux/schnell",
+      "description": "Fal.ai Flux-1 Schnell Text-to-Image (Fast) ⭐"
+    },
+    "t2i-fal-rundiffusion-photo-flux": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-010824-a071b7b8-820994673238.us-central1.run.app/t2i/fal/rundiffusion/photo-flux",
+      "description": "Fal.ai Rundiffusion Photo Flux Text-to-Image ⭐"
+    },
+    "t2s-fal-minimax-speech-02-turbo": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-024457-8bc6d0d5-820994673238.us-central1.run.app/t2s/fal/minimax/speech-02-turbo",
+      "description": "Fal.ai MiniMax Speech-02-Turbo Text-to-Speech Generation ⭐"
+    },
+    "i2i-fal-flux-kontext-lora": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-010824-a071b7b8-820994673238.us-central1.run.app/i2i/fal/flux/kontext",
+      "description": "Fal.ai Flux Kontext LoRA Image-to-Image Editing with LoRA Support ⭐"
+    },
+    "train-fal-flux-kontext-trainer": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-010824-a071b7b8-820994673238.us-central1.run.app/train/fal/flux/kontext",
+      "description": "Fal.ai Flux Kontext Trainer LoRA Training ⭐"
+    },
+    "v2v-fal-bria-background-removal": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-010824-a071b7b8-820994673238.us-central1.run.app/video/fal/bria/background-removal",
+      "description": "Fal.ai Bria Video Background Removal - Remove video backgrounds with transparency ⭐"
+    },
+    "v2v-fal-creatify-lipsync": {
+      "type": "http",
+      "url": "https://mcp-creatify-lipsync-20250719-010824-a071b7b8-820994673238.us-central1.run.app/v2v/fal/creatify/lipsync",
+      "description": "Fal.ai Creatify Lipsync - Realistic lipsync video optimized for speed, quality, and consistency ⭐"
+    },
+    "v2v-fal-pixverse-lipsync": {
+      "type": "http",
+      "url": "https://mcp-pixverse-lipsync-20250723-131006-ebd10b2c-820994673238.us-central1.run.app/v2v/fal/pixverse/lipsync",
+      "description": "Fal.ai Pixverse Lipsync - High-quality video-to-video lipsync generation ⭐"
+    },
+    "v2v-fal-minimax-voice-design": {
+      "type": "http",
+      "url": "https://mcp-fal-minimax-voice-design-20250725-133906-d3c2-zl3xx5lsaq-uc.a.run.app/v2v/fal/minimax/voice-design",
+      "description": "Fal.ai Minimax Voice Design - Custom voice generation and design ⭐"
+    },
+    "v2v-fal-pixverse-extend": {
+      "type": "http",
+      "url": "https://mcp-fal-pixverse-extend-20250726-231026-824376d5-820994673238.us-central1.run.app/v2v/fal/pixverse/extend",
+      "description": "Fal.ai Pixverse Extend - Video extension and enhancement ⭐"
+    },
+    "i2v-fal-bytedance-seedance-v1-lite": {
+      "type": "http",
+      "url": "https://mcp-fal-bytedance-seedance-v1-lite-i2v-20250727-6-zl3xx5lsaq-uc.a.run.app/i2v/fal/bytedance/seedance-v1-lite",
+      "description": "Fal.ai ByteDance Seedance V1 Lite Image-to-Video Generation ⭐"
+    },
+    "v2v-fal-topaz-upscale-video": {
+      "type": "http",
+      "url": "https://mcp-fal-topaz-upscale-video-20250728-124149-ee75e-zl3xx5lsaq-uc.a.run.app/v2v/fal/topaz/upscale-video",
+      "description": "Fal.ai Topaz Video AI - Advanced video upscaling, frame interpolation, and enhancement ⭐"
+    },
+    "t2v-fal-wan-v2-2-a14b-t2v": {
+      "type": "http",
+      "url": "https://mcp-wan-v2-t2v-20250730-093450-24818c25-820994673238.us-central1.run.app/t2v/fal/wan/v2-2-a14b",
+      "description": "Fal.ai WAN v2.2-a14b Text-to-Video - High-quality video generation with visual quality and motion diversity ⭐"
+    },
+    "i2v-fal-wan-v2-2-a14b-i2v": {
+      "type": "http",
+      "url": "https://mcp-wan-v2-t2v-20250730-093450-24818c25-820994673238.us-central1.run.app/i2v/fal/wan/v2.2-a14b",
+      "description": "Fal.ai WAN v2.2-a14b Image-to-Video - High-quality video generation from images with visual quality and motion diversity ⭐"
+    },
+    "i2v-fal-bytedance-omnihuman": {
+      "type": "http",
+      "url": "https://mcp-fal-omnihuman-20250730-032358-5f58f817-820994673238.us-central1.run.app/i2v/fal/bytedance/omnihuman",
+      "description": "Fal.ai ByteDance OmniHuman I2V - Image-to-Video generation with natural lip sync and facial expressions ⭐"
+    },
+    "v2v-runway-aleph": {
+      "type": "http",
+      "url": "https://mcp-gemini-video-analysis-20250804-044214-4962bc3a-820994673238.us-central1.run.app/v2v/runway/aleph",
+      "description": "Runway Gen4 Aleph Video-to-Video - Advanced video transformation with text prompts ⭐"
+    }
+  }
+}
