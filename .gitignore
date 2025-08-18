@@ -4,3 +4,6 @@
 .workbench
 .obsidian
 *.zip
+
+.claude/*
+.claude/
