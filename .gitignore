@@ -7,3 +7,9 @@
 
 .claude/*
 .claude/
+
+_temp/*
+_temp/
+
+env/*
+env/
