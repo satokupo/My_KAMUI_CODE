@@ -10,18 +10,24 @@
 
 ## ファイルアップロード設定 
 ### FAL URLアップロード 
-**必須**: ファイルをFAL URLに変換する際は`upload_to_fal.py`を利用すること 
+**必須**: ファイルをFAL URLに変換する際は`_KAMUI/helper/fal_upload_helper.py`を利用すること 
 
 #### 使用方法 
 ```bash 
-# ファイルをFAL URLに変換 
-python upload_to_fal.py [ファイルパス] 
+# ファイルをFAL URLに変換 (ファイルパス: S:/MyProjects/KAMUI_CODE/_KAMUI/helper/fal_upload_helper.py)
+python _KAMUI/helper/fal_upload_helper.py [ファイルパス] 
+
+# または実行権限付きで直接実行
+./_KAMUI/helper/fal_upload_helper.py [ファイルパス]
+
+# MCP連携用 (ファイルパス: S:/MyProjects/KAMUI_CODE/_KAMUI/helper/local_fal_upload.py)
+python _KAMUI/helper/local_fal_upload.py [ファイルパス]
 
 # 例：動画ファイルをアップロード 
-python upload_to_fal.py ./video.mp4 
+python _KAMUI/helper/fal_upload_helper.py ./video.mp4 
 
 # 例：画像ファイルをアップロード 
-python upload_to_fal.py ./image.jpg
+python _KAMUI/helper/fal_upload_helper.py ./image.jpg
 
 適用場面 
 - 動画生成API（Luma, Runway等）へのインプット 
@@ -29,5 +35,5 @@ python upload_to_fal.py ./image.jpg
 - 音声生成APIへのインプット 
 - その他のFAL APIサービス利用時 
 
-重要: 手動でのファイルアップロードやURL変換は行わず、必ずupload_to_fal.pyスクリプトを使用する 
+重要: 手動でのファイルアップロードやURL変換は行わず、必ず上記スクリプトを使用する 
 ```
