@@ -1,0 +1,8 @@
+{
+	"name": "KAMUI CODE",
+	"private": true,
+	"scripts": {
+		"kc": "claude --mcp-config=./_KAMUI/mcp/mcp-kamui-code.json",
+		"kcc": "claude --mcp-config=./_KAMUI/mcp/mcp-kamui-code.json -c"
+	}
+}
