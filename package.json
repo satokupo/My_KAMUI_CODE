@@ -3,6 +3,8 @@
 	"private": true,
 	"scripts": {
 		"kc": "claude --mcp-config=./_KAMUI/mcp/mcp-kamui-code.json",
-		"kcc": "claude --mcp-config=./_KAMUI/mcp/mcp-kamui-code.json -c"
+		"kc-c": "claude --mcp-config=./_KAMUI/mcp/mcp-kamui-code.json -c",
+		"kcr": "claude --mcp-config=./_KAMUI/mcp/mcp-requirement.json",
+		"kcr-c": "claude --mcp-config=./_KAMUI/mcp/mcp-requirement.json -c"
 	}
 }
