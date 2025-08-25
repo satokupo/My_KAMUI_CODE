@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__i2i-fal-flux-kontext-max__kontext_submit",
+      "mcp__i2i-fal-flux-kontext-max__kontext_status",
+      "mcp__i2i-fal-flux-kontext-max__kontext_result",
+      "Bash(python:*)",
+      "mcp__t2i-google-imagen3-fast__imagen_t2i",
+      "Bash(ls:*)",
+      "Bash(curl:*)",
+      "Bash(env)",
+      "mcp__ide__executeCode",
+      "mcp__t2i-google-imagen3__imagen_t2i",
+      "WebFetch(domain:docs.anthropic.com)",
+      "Bash(claude mcp:*)",
+      "mcp__0_kamui-oauth-hub__view_profile",
+      "mcp__0_kamui-oauth-hub__view_usage",
+      "mcp__1_t2i-kamui-flux-krea__flux_krea_lora_t2i_submit",
+      "mcp__1_t2i-kamui-flux-krea__flux_krea_lora_t2i_status",
+      "mcp__1_t2i-kamui-flux-krea__flux_krea_lora_t2i_result",
+      "mcp__t2i-kamui-imagen4-ultra__imagen4_ultra_submit",
+      "mcp__t2i-kamui-imagen4-ultra__imagen4_ultra_status",
+      "mcp__t2i-kamui-imagen4-ultra__imagen4_ultra_result",
+      "WebSearch",
+      "Bash(chmod:*)",
+      "mcp__requirement__create_requirement",
+      "Bash(git clone:*)",
+      "Bash(cp:*)",
+      "Bash(touch:*)",
+      "Bash(rm:*)"
+    ],
+    "deny": []
+  }
+}

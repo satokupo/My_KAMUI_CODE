@@ -1,22 +1,36 @@
 # 開発
-*.ini
-.cursor
-.vscode
-.workbench
-.obsidian
-*.zip
+**/*.ini
+**/.cursor
+**/.vscode
+**/.workbench
+**/.obsidian
+**/*.zip
 
-.claude/*
-.claude/
+# **/.claude/
 
-_temp/*
-_temp/
+**/_temp/
 
 # 環境ファイル
-env/*
-env/
-.env
-!.env.example
-!.env.sample
+**/env/
+**/.env
+!**/.env.example
+!**/.env.sample
 
 __pycache__
+
+# --------------------------------
+# KAMUI CODE 要件定義生成
+# --------------------------------
+
+## 内部に残された不要なリポジトリ履歴
+**/requirement-docs/.git-archived/
+
+## MCP サンプル一式は追跡しない
+**/requirement-docs/mcp/
+
+## 自動生成される HTML は除外
+**/requirement-docs/index.html
+
+## 自動生成される PNG 群を除外
+**/requirement-docs/kamui-*.png
+**/requirement-docs/mcp_*.png
