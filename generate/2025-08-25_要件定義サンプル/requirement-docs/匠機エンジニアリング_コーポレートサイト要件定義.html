@@ -113,18 +113,9 @@
       text-align: center;
     }
 
-    .header h1 {
-      font-size: 2.2rem;
-      color: var(--primary);
-      margin-bottom: 16px;
-      font-weight: 600;
-    }
-
-    .header p {
-      font-size: 1.1rem;
-      color: var(--text-secondary);
-      max-width: 800px;
-      margin: 0 auto;
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
     }
 
     /* セクション */
@@ -326,6 +317,165 @@
       text-align: center;
       margin: 24px 0;
     }
+
+    /* ヒーローセクション */
+    .hero-section {
+      margin-bottom: 32px;
+    }
+
+    .hero-image {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(0,51,102,0.9) 0%, rgba(0,51,102,0.6) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 24px;
+    }
+
+    .hero-overlay h1 {
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .hero-subtitle {
+      color: white;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 600px;
+      opacity: 0.95;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .page-title {
+      font-size: 1.8rem;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    /* モーダル（画像プレビュー） */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      animation: fadeIn 0.2s ease-out;
+    }
+
+    .modal-backdrop.active {
+      display: flex;
+    }
+
+    .modal {
+      width: min(90vw, 1200px);
+      max-height: 90vh;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      animation: scaleIn 0.3s ease-out;
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      background: var(--light);
+    }
+
+    .modal-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
+
+    .modal-close {
+      margin-left: auto;
+      padding: 8px 16px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+
+    .modal-close:hover {
+      background: var(--accent);
+    }
+
+    .modal-body {
+      padding: 0;
+      overflow: auto;
+      background: #f8fafc;
+      flex: 1;
+    }
+
+    .modal-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 80vh;
+      object-fit: contain;
+    }
+
+    /* クリッカブル画像 */
+    .ui-card img {
+      cursor: zoom-in;
+      transition: all 0.2s;
+    }
+
+    .ui-card img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .hero-image img {
+      cursor: zoom-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes scaleIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
   </style>
 </head>
 <body>
@@ -336,48 +486,52 @@
     </div>
     
     <ul class="nav-menu">
-      <li class="nav-item"><a class="nav-link active" href="#overview">1. プロジェクト概要</a></li>
-      <li class="nav-item"><a class="nav-link" href="#ui-design">2. UI/ビジュアル要件</a></li>
-      <li class="nav-item"><a class="nav-link" href="#company-info">3. 会社情報</a></li>
-      <li class="nav-item"><a class="nav-link" href="#site-structure">4. サイト設計</a></li>
-      <li class="nav-item"><a class="nav-link" href="#persona">5. ペルソナ設定</a></li>
-      <li class="nav-item"><a class="nav-link" href="#user-requirements">6. ユーザー要望一覧</a></li>
-      <li class="nav-item"><a class="nav-link" href="#functional-requirements">7. 機能要件</a></li>
-      <li class="nav-item"><a class="nav-link" href="#technical-requirements">8. 技術要件</a></li>
-      <li class="nav-item"><a class="nav-link" href="#seo-requirements">9. SEO・アクセシビリティ</a></li>
-      <li class="nav-item"><a class="nav-link" href="#security">10. セキュリティ要件</a></li>
-      <li class="nav-item"><a class="nav-link" href="#operations">11. 運用・保守要件</a></li>
-      <li class="nav-item"><a class="nav-link" href="#success-metrics">12. 成果測定</a></li>
-      <li class="nav-item"><a class="nav-link" href="#project-management">13. プロジェクト管理</a></li>
-      <li class="nav-item"><a class="nav-link" href="#deliverables">14. 納品物</a></li>
+      <li class="nav-item"><a class="nav-link active" href="#overview">1. 会社概要</a></li>
+      <li class="nav-item"><a class="nav-link" href="#ui-design">2. サービス・技術力</a></li>
+      <li class="nav-item"><a class="nav-link" href="#company-info">3. 会社情報・沿革</a></li>
+      <li class="nav-item"><a class="nav-link" href="#site-structure">4. 実績・事例</a></li>
+      <li class="nav-item"><a class="nav-link" href="#persona">5. ペルソナ・ターゲット</a></li>
+      <li class="nav-item"><a class="nav-link" href="#functional-requirements">6. 採用情報</a></li>
+      <li class="nav-item"><a class="nav-link" href="#security">7. セキュリティ・品質</a></li>
+      <li class="nav-item"><a class="nav-link" href="#technical-requirements">8. お問い合わせ</a></li>
     </ul>
   </nav>
 
   <main class="main-content">
+    <!-- ヒーローヘッダー画像 -->
+    <div class="hero-section">
+      <div class="hero-image">
+        <img src="takumi-engineering-ui-design-1.png" alt="匠機エンジニアリング 工場・設計現場" />
+        <div class="hero-overlay">
+          <h1>匠機エンジニアリング株式会社</h1>
+          <p class="hero-subtitle">製造業・建設業のプロフェッショナルに向けた信頼性と専門性を重視したコーポレートサイト</p>
+        </div>
+      </div>
+    </div>
+    
     <header class="header">
-      <h1>匠機エンジニアリング株式会社<br>コーポレートサイト制作 要件定義書</h1>
-      <p>製造業・建設業のプロフェッショナルに向けた信頼性と専門性を重視したコーポレートサイトの制作要件を定義します。</p>
+      <h2 class="page-title">コーポレートサイト制作 要件定義書</h2>
     </header>
 
     <section id="overview" class="section">
-      <h2 class="section-title">1. プロジェクト概要</h2>
+      <h2 class="section-title">1. 会社概要</h2>
       
       <div class="stats-grid">
         <div class="stat-card">
-          <div class="stat-number">2ヶ月</div>
-          <div class="stat-label">制作期間</div>
+          <div class="stat-number">20年</div>
+          <div class="stat-label">創業年数</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">5ページ</div>
-          <div class="stat-label">基本ページ数</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">45名</div>
+          <div class="stat-number">150名</div>
           <div class="stat-label">従業員数</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">15年</div>
-          <div class="stat-label">事業実績</div>
+          <div class="stat-number">500+</div>
+          <div class="stat-label">取引実績</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">ISO</div>
+          <div class="stat-label">9001認証</div>
         </div>
       </div>
 
@@ -598,71 +752,6 @@
       </div>
     </section>
 
-    <section id="user-requirements" class="section">
-      <h2 class="section-title">6. ユーザー要望一覧</h2>
-      
-      <div class="card">
-        <h3>要望一覧（優先度・難易度マトリックス）</h3>
-        <table>
-          <tr>
-            <th>要望内容</th>
-            <th>優先度</th>
-            <th>実装難易度</th>
-            <th>予想工数</th>
-            <th>備考</th>
-          </tr>
-          <tr>
-            <td>信頼感のあるデザイン</td>
-            <td><span class="badge badge-high">高</span></td>
-            <td><span class="badge badge-medium">中</span></td>
-            <td>40h</td>
-            <td>ブランドアイデンティティの確立</td>
-          </tr>
-          <tr>
-            <td>技術力アピール</td>
-            <td><span class="badge badge-high">高</span></td>
-            <td><span class="badge badge-low">低</span></td>
-            <td>24h</td>
-            <td>実績事例の効果的な表示</td>
-          </tr>
-          <tr>
-            <td>問い合わせフォーム最適化</td>
-            <td><span class="badge badge-high">高</span></td>
-            <td><span class="badge badge-low">低</span></td>
-            <td>16h</td>
-            <td>リード獲得の改善</td>
-          </tr>
-          <tr>
-            <td>スマートフォン対応</td>
-            <td><span class="badge badge-high">高</span></td>
-            <td><span class="badge badge-medium">中</span></td>
-            <td>32h</td>
-            <td>レスポンシブデザイン必須</td>
-          </tr>
-          <tr>
-            <td>SEO対策</td>
-            <td><span class="badge badge-medium">中</span></td>
-            <td><span class="badge badge-medium">中</span></td>
-            <td>20h</td>
-            <td>検索流入の向上</td>
-          </tr>
-          <tr>
-            <td>CMS導入</td>
-            <td><span class="badge badge-medium">中</span></td>
-            <td><span class="badge badge-medium">中</span></td>
-            <td>48h</td>
-            <td>WordPress + SWELL</td>
-          </tr>
-          <tr>
-            <td>多言語対応</td>
-            <td><span class="badge badge-low">低</span></td>
-            <td><span class="badge badge-high">高</span></td>
-            <td>80h</td>
-            <td>将来的な海外展開を見据えて</td>
-          </tr>
-        </table>
-      </div>
-    </section>
 
     <section id="functional-requirements" class="section">
       <h2 class="section-title">7. 機能要件</h2>
@@ -802,128 +891,24 @@
       </div>
     </section>
 
-    <section id="operations" class="section">
-      <h2 class="section-title">11. 運用・保守要件</h2>
-      
-      <div class="card">
-        <h3>コンテンツ更新頻度</h3>
-        <table>
-          <tr><th>コンテンツ種別</th><th>更新頻度</th><th>担当者</th></tr>
-          <tr><td>ニュース・お知らせ</td><td>月1-2回</td><td>広報担当</td></tr>
-          <tr><td>実績事例</td><td>四半期に1回</td><td>営業部</td></tr>
-          <tr><td>採用情報</td><td>必要に応じて</td><td>人事部</td></tr>
-          <tr><td>会社情報</td><td>年1回見直し</td><td>総務部</td></tr>
-        </table>
-      </div>
-
-      <div class="card">
-        <h3>技術保守スケジュール</h3>
-        <ul>
-          <li>WordPress更新: 月1回チェック・更新</li>
-          <li>プラグイン更新: 月1回チェック・更新</li>
-          <li>セキュリティチェック: 月1回</li>
-          <li>バックアップ確認: 月1回</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="success-metrics" class="section">
-      <h2 class="section-title">12. 成果測定</h2>
-      
-      <div class="card">
-        <h3>KPI設定</h3>
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-number">1,000</div>
-            <div class="stat-label">月間PV目標<br>(6ヶ月後)</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">3-5件</div>
-            <div class="stat-label">月間問い合わせ<br>目標件数</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">2分以上</div>
-            <div class="stat-label">平均セッション<br>時間目標</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">60%以下</div>
-            <div class="stat-label">直帰率<br>目標値</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>分析ツール</h3>
-        <ul>
-          <li>Google Analytics 4: 導入・設定</li>
-          <li>Google Search Console: 導入・設定</li>
-          <li>ヒートマップツール: 導入検討</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="project-management" class="section">
-      <h2 class="section-title">13. プロジェクト管理</h2>
-      
-      <div class="card">
-        <h3>制作体制</h3>
-        <table>
-          <tr><th>役割</th><th>人数</th><th>主な担当業務</th></tr>
-          <tr><td>プロジェクトマネージャー</td><td>1名</td><td>進行管理・品質管理</td></tr>
-          <tr><td>Webデザイナー</td><td>1名</td><td>UI/UXデザイン</td></tr>
-          <tr><td>WordPress開発者</td><td>1名</td><td>実装・技術開発</td></tr>
-          <tr><td>コンテンツライター</td><td>1名</td><td>文章作成・SEO対策</td></tr>
-        </table>
-      </div>
-
-      <div class="card">
-        <h3>制作スケジュール</h3>
-        <div class="mermaid">
-          gantt
-            title 匠機エンジニアリング コーポレートサイト制作スケジュール
-            dateFormat YYYY-MM-DD
-            section 設計フェーズ
-            要件定義・デザイン設計    :done, des1, 2025-09-01, 14d
-            section デザインフェーズ
-            デザイン作成・承認        :active, des2, 2025-09-15, 14d
-            section 開発フェーズ
-            WordPress実装            :dev1, 2025-09-29, 14d
-            section コンテンツフェーズ
-            コンテンツ制作・入力      :content, 2025-10-13, 7d
-            section テストフェーズ
-            テスト・調整・リリース    :test, 2025-10-20, 7d
-        </div>
-      </div>
-    </section>
-
-    <section id="deliverables" class="section">
-      <h2 class="section-title">14. 納品物</h2>
-      
-      <div class="card">
-        <h3>システム納品物</h3>
-        <ul>
-          <li>WordPressサイト一式</li>
-          <li>管理マニュアル</li>
-          <li>更新手順書</li>
-          <li>バックアップデータ</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>ドキュメント納品物</h3>
-        <ul>
-          <li>サイト仕様書</li>
-          <li>デザインガイドライン</li>
-          <li>SEO設定一覧</li>
-          <li>アクセス解析レポート</li>
-        </ul>
-      </div>
-    </section>
 
     <footer style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted);">
       <p><strong>作成日:</strong> 2025年8月25日 | <strong>バージョン:</strong> 1.0 | <strong>作成者:</strong> Claude Code</p>
     </footer>
   </main>
+
+  <!-- 画像プレビュー用モーダル -->
+  <div class="modal-backdrop" id="imgModal">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="imgModalTitle">
+      <div class="modal-header">
+        <div class="modal-title" id="imgModalTitle">画像プレビュー</div>
+        <button class="modal-close" id="imgCloseBtn">閉じる</button>
+      </div>
+      <div class="modal-body">
+        <img id="imgModalImage" class="modal-image" alt="preview" />
+      </div>
+    </div>
+  </div>
 
   <script>
     // Mermaid初期化
@@ -976,6 +961,69 @@
         if (link.getAttribute('href') === '#' + current) {
           link.classList.add('active');
         }
+      });
+    });
+
+    // 画像クリック時のポップアップ表示
+    function openImgModal(src, title) {
+      const modal = document.getElementById('imgModal');
+      const img = document.getElementById('imgModalImage');
+      const titleEl = document.getElementById('imgModalTitle');
+      const closeBtn = document.getElementById('imgCloseBtn');
+      
+      if (!modal || !img || !titleEl) return;
+      
+      img.src = src;
+      img.alt = title || '画像プレビュー';
+      titleEl.textContent = title || '画像プレビュー';
+      modal.classList.add('active');
+      
+      // クローズボタンのイベントリスナー
+      const closeModal = () => modal.classList.remove('active');
+      closeBtn.onclick = closeModal;
+      
+      // 背景クリックで閉じる
+      modal.onclick = (e) => {
+        if (e.target === modal) closeModal();
+      };
+      
+      // ESCキーで閉じる
+      const handleEsc = (e) => {
+        if (e.key === 'Escape') {
+          closeModal();
+          document.removeEventListener('keydown', handleEsc);
+        }
+      };
+      document.addEventListener('keydown', handleEsc);
+    }
+
+    // 全ての画像にクリックイベントを追加
+    document.addEventListener('DOMContentLoaded', function() {
+      // UIデザイン画像
+      document.querySelectorAll('.ui-card img').forEach(img => {
+        img.addEventListener('click', () => {
+          openImgModal(img.src, img.alt);
+        });
+      });
+      
+      // ヒーロー画像
+      const heroImg = document.querySelector('.hero-image img');
+      if (heroImg) {
+        heroImg.addEventListener('click', () => {
+          openImgModal(heroImg.src, heroImg.alt);
+        });
+      }
+      
+      // その他の画像（必要に応じて追加）
+      document.querySelectorAll('img[src]').forEach(img => {
+        // 既にイベントが追加されている画像をスキップ
+        if (img.closest('.ui-card') || img.closest('.hero-image')) return;
+        
+        // クリッカブルなスタイルを追加
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => {
+          openImgModal(img.src, img.alt);
+        });
       });
     });
   </script>

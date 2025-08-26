@@ -29,6 +29,9 @@
       "Bash(touch:*)",
       "Bash(rm:*)"
     ],
-    "deny": []
+    "deny": [],
+    "additionalDirectories": [
+      "s:\\MyProjects\\KAMUI_CODE\\generate\\2025-08-26_サイトサンプル：美容院"
+    ]
   }
 }
