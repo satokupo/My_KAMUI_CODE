@@ -27,11 +27,25 @@
       "Bash(git clone:*)",
       "Bash(cp:*)",
       "Bash(touch:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "mcp__t2i-kamui-flux-schnell__flux_schnell_submit",
+      "mcp__t2i-kamui-flux-schnell__flux_schnell_result",
+      "mcp__t2i-kamui-qwen-image__qwen_image_t2i_submit",
+      "mcp__t2i-kamui-qwen-image__qwen_image_t2i_result",
+      "mcp__file-upload-kamui-fal__kamui_file_upload_fal",
+      "Read(/s:\\MyProjects\\KAMUI_CODE\\_KAMUI\\helper/**)",
+      "Read(/s:\\MyProjects\\KAMUI_CODE/**)",
+      "Bash(mkdir:*)",
+      "mcp__i2i-kamui-qwen-image-edit__qwen_image_edit_result",
+      "mcp__i2i-kamui-qwen-image-edit__qwen_image_edit_status",
+      "mcp__i2i-kamui-flux-kontext-lora__flux_kontext_submit",
+      "mcp__i2i-kamui-qwen-image-edit__qwen_image_edit_submit",
+      "mcp__i2i-kamui-flux-kontext-lora__flux_kontext_result"
     ],
     "deny": [],
     "additionalDirectories": [
-      "s:\\MyProjects\\KAMUI_CODE\\generate\\2025-08-26_サイトサンプル：美容院"
+      "s:\\MyProjects\\KAMUI_CODE\\generate\\2025-08-26_サイトサンプル：美容院",
+      "s:\\MyProjects\\KAMUI_CODE"
     ]
   }
 }
