@@ -40,7 +40,13 @@
       "mcp__i2i-kamui-qwen-image-edit__qwen_image_edit_status",
       "mcp__i2i-kamui-flux-kontext-lora__flux_kontext_submit",
       "mcp__i2i-kamui-qwen-image-edit__qwen_image_edit_submit",
-      "mcp__i2i-kamui-flux-kontext-lora__flux_kontext_result"
+      "mcp__i2i-kamui-flux-kontext-lora__flux_kontext_result",
+      "Bash(git pull:*)",
+      "Bash(start takumi-kiko-engineering-site-requirements.html)",
+      "Bash(if [ -d .git ])",
+      "Bash(then mv .git .git-archived)",
+      "Bash(else echo \"No .git directory found\")",
+      "Bash(fi)"
     ],
     "deny": [],
     "additionalDirectories": [
