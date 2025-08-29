@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "nano-banana-edit-kamui": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/nano-banana/edit"
+    }
+  }
+}

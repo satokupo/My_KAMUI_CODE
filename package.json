@@ -5,6 +5,8 @@
 		"kc": "claude --mcp-config=./_KAMUI/mcp/mcp-kamui-code.json",
 		"kc-c": "claude --mcp-config=./_KAMUI/mcp/mcp-kamui-code.json -c",
 		"kcr": "claude --mcp-config=./_KAMUI/mcp/mcp-requirement.json",
-		"kcr-c": "claude --mcp-config=./_KAMUI/mcp/mcp-requirement.json -c"
+		"kcr-c": "claude --mcp-config=./_KAMUI/mcp/mcp-requirement.json -c",
+		"kcb": "claude --mcp-config=./_KAMUI/mcp/mcp-nano-banana-kamui.json",
+		"kcb-c": "claude --mcp-config=./_KAMUI/mcp/mcp-nano-banana-kamui.json -c"
 	}
 }
