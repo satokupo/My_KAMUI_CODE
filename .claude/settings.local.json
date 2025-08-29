@@ -46,7 +46,16 @@
       "Bash(if [ -d .git ])",
       "Bash(then mv .git .git-archived)",
       "Bash(else echo \"No .git directory found\")",
-      "Bash(fi)"
+      "Bash(fi)",
+      "mcp__nano-banana-edit-kamui__nano_banana_edit_submit",
+      "mcp__nano-banana-edit-kamui__nano_banana_edit_status",
+      "mcp__nano-banana-edit-kamui__nano_banana_edit_result",
+      "Bash(start:*)",
+      "Bash(chcp:*)",
+      "Bash(export PYTHONIOENCODING=utf-8)",
+      "WebFetch(domain:v3.fal.media)",
+      "WebFetch(domain:blog.fal.ai)",
+      "WebFetch(domain:fal.ai)"
     ],
     "deny": [],
     "additionalDirectories": [
