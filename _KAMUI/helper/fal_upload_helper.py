@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 FAL.ai ファイルアップロードヘルパー
 任意のファイルをfal.aiにアップロードし、各種AIモデルで使用可能なURLを取得
@@ -6,6 +7,12 @@ FAL.ai ファイルアップロードヘルパー
 
 import os
 import sys
+
+# UTF-8対応
+if sys.platform == "win32":
+    import codecs
+    sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
+    sys.stderr = codecs.getwriter("utf-8")(sys.stderr.detach())
 import fal_client
 from dotenv import load_dotenv
 from pathlib import Path
