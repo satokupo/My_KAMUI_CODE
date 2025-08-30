@@ -199,6 +199,10 @@
       "type": "http",
       "url": "https://kamui-code.ai/v2a/fal/thinksound/audio/standard",
       "description": "ThinkSound Video-to-Audio via Kamui Code ⭐"
+    },
+    "nano-banana-edit-kamui": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/nano-banana/edit"
     }
   }
 }
