@@ -75,7 +75,8 @@
       "mcp__t2i-kamui-imagen4-fast__imagen4_fast_status",
       "mcp__t2i-kamui-flux-schnell__flux_schnell_status",
       "mcp__t2i-kamui-ideogram-character-base__ideogram_character_base_status",
-      "mcp__t2i-kamui-qwen-image__qwen_image_t2i_status"
+      "mcp__t2i-kamui-qwen-image__qwen_image_t2i_status",
+      "Bash(mv:*)"
     ],
     "deny": [],
     "additionalDirectories": [
