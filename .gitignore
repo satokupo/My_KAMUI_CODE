@@ -36,3 +36,4 @@ __pycache__
 **/requirement-docs/mcp_*.png
 
 **/generate/
+**/settings.local.json
