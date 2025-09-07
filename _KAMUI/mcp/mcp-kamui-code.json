@@ -200,9 +200,20 @@
       "url": "https://kamui-code.ai/v2a/fal/thinksound/audio/standard",
       "description": "ThinkSound Video-to-Audio via Kamui Code ⭐"
     },
-    "nano-banana-edit-kamui": {
+    "r2v-kamui-bytedance-seedance-v1-lite": {
       "type": "http",
-      "url": "https://kamui-code.ai/i2i/fal/nano-banana/edit"
+      "url": "https://kamui-code.ai/r2v/fal/bytedance/seedance-v1-lite",
+      "description": "ByteDance Seedance V1 Lite Reference-to-Video via Kamui Code ⭐"
+    },
+    "s2v-kamui-wan-v2-2-14b": {
+      "type": "http",
+      "url": "https://kamui-code.ai/s2v/fal/wan/v2.2-14b",
+      "description": "WAN v2.2-14b Speech-to-Video via Kamui Code ⭐"
+    },
+    "t2i-kamui-nano-banana": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/nano-banana",
+      "description": "Nano Banana Text-to-Image via Kamui Code ⭐"
     }
   }
 }
