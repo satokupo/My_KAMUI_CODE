@@ -35,8 +35,8 @@ import time
 VIDEO_EXTS = {".mp4", ".mov", ".mkv", ".m4v", ".avi", ".webm"}
 
 CODEC_MAP = {
-    "h264": "libx264",
-    "hevc": "libx265",
+    "h264": "libopenh264",
+    "hevc": "libx265", 
     "av1":  "libaom-av1",  # CPUエンコード（遅いが高圧縮）
 }
 
@@ -171,7 +171,7 @@ def main():
             out_sz = tmp_out.stat().st_size
 
             # サイズ悪化時のガード
-            if (not args.force_retail := args.force_replace) and out_sz >= src_sz:
+            if not args.force_replace and out_sz >= src_sz:
                 print(f"[SKIP] 大きくなったため保留: {src.name} (src={human(src_sz)}, out={human(out_sz)})")
                 continue
 
@@ -182,4 +182,18 @@ def main():
             processed += 1
             print(f"[OK] {src.name} -> {dst.name}  {human(src_sz)} -> {human(out_sz)}  (saved {human(max(0,saved))}, {enc_ms:.0f} ms)")
         except ffmpeg.Error as e:
-            print(f"[ERR] {src.name}: {e.stderr.decode('ut
+            stderr_msg = ""
+            if hasattr(e, 'stderr') and e.stderr:
+                stderr_msg = e.stderr.decode('utf-8', errors='replace')
+            print(f"[ERR] {src.name}: ffmpeg error - {stderr_msg}")
+        except Exception as e:
+            print(f"[ERR] {src.name}: {e}")
+        finally:
+            # 一時ディレクトリ削除
+            if tmp_dir.exists():
+                shutil.rmtree(tmp_dir)
+
+    print(f"\n[完了] {processed} ファイル処理完了。合計節約サイズ: {human(total_saved)}")
+
+if __name__ == "__main__":
+    main()
