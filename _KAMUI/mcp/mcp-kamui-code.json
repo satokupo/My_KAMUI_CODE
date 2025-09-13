@@ -214,6 +214,46 @@
       "type": "http",
       "url": "https://kamui-code.ai/t2i/fal/nano-banana",
       "description": "Nano Banana Text-to-Image via Kamui Code ⭐"
+    },
+    "i2i-kamui-gemini-25-flash-image-edit": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/gemini-25-flash-image/edit",
+      "description": "Gemini 2.5 Flash Image Edit - State-of-the-art image editing via Kamui Code ⭐"
+    },
+    "t2i-kamui-gemini-25-flash-image": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/gemini-25-flash-image",
+      "description": "Gemini 2.5 Flash Image - State-of-the-art text-to-image generation via Kamui Code ⭐"
+    },
+    "v2v-kamui-hunyuan-video-foley": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2v/fal/hunyuan/video-foley",
+      "description": "Hunyuan Video Foley - Add sound effects to videos via Kamui Code ⭐"
+    },
+    "t2i-kamui-seedream-v4": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/bytedance/seedream/v4",
+      "description": "Bytedance Seedream V4 Text-to-Image - New-generation unified architecture via Kamui Code ⭐⭐"
+    },
+    "i2i-kamui-seedream-v4-edit": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/bytedance/seedream/v4",
+      "description": "Bytedance Seedream V4 Edit - Advanced image editing with unified architecture via Kamui Code ⭐⭐"
+    },
+    "t2visual-kamui-napkin": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2visual/napkin/visual",
+      "description": "Napkin AI Visual Generation - Transform text into beautiful professional visuals, diagrams, and graphics via Kamui Code ⭐⭐⭐"
+    },
+    "t2v-kamui-veo3": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2v/fal/veo3",
+      "description": "Google Veo3 Text-to-Video - Generate high-quality videos from text prompts using Google's Veo 3 model via Kamui Code ⭐⭐⭐"
+    },
+    "t2m-kamui-minimax-music-v15": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2m/fal/minimax/music/v1.5",
+      "description": "Minimax Music V1.5 Text-to-Music - Generate music from lyrics with style control via Kamui Code ⭐⭐"
     }
   }
 }
