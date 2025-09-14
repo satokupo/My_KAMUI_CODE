@@ -106,3 +106,18 @@ python _KAMUI/helper/fal_upload_helper.py ./image.jpg
 
 ### 文字コード
 - 指示がない限りUTF-8を利用すること
+
+### Python環境設定
+- このプロジェクトではPython仮想環境（venv）を使用している
+- ClaudeCodeCLI経由でPythonスクリプトを実行する際は、必ずvenv環境のPythonを明示的に指定すること
+- **必須**: Python実行時は `S:/MyProjects/KAMUI_CODE/.venv/Scripts/python.exe` を使用する
+- システムのpython（`python`コマンド）ではなく、venv環境のpythonを使用することで、必要なライブラリ（pillow-heif等）が正しく読み込まれる
+
+#### 実行例
+```bash
+# 正しい実行方法（venv環境のPythonを明示）
+S:/MyProjects/KAMUI_CODE/.venv/Scripts/python.exe _KAMUI/helper/script_name.py
+
+# 間違った実行方法（システムのPythonを使用してしまう）
+python _KAMUI/helper/script_name.py
+```
