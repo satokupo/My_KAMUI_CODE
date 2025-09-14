@@ -112,6 +112,7 @@ python _KAMUI/helper/fal_upload_helper.py ./image.jpg
 - ClaudeCodeCLI経由でPythonスクリプトを実行する際は、必ずvenv環境のPythonを明示的に指定すること
 - **必須**: Python実行時は `S:/MyProjects/KAMUI_CODE/.venv/Scripts/python.exe` を使用する
 - システムのpython（`python`コマンド）ではなく、venv環境のpythonを使用することで、必要なライブラリ（pillow-heif等）が正しく読み込まれる
+- ClaudeCodeは必要に応じて自動的にvenv環境を起動・使用するが、明示的なパス指定により確実性を担保する
 
 #### 実行例
 ```bash
