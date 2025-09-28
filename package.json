@@ -2,8 +2,10 @@
 	"name": "KAMUI CODE",
 	"private": true,
 	"scripts": {
-	  "kc": "claude --mcp-config=./_KAMUI/mcp/mcp-kamui-code.json",
-	  "kc-c": "claude --mcp-config=./_KAMUI/mcp/mcp-kamui-code.json -c",
+		"kc": "claude --mcp-config=./_KAMUI/mcp/mcp-kamui-code.json",
+		"kc-c": "claude --mcp-config=./_KAMUI/mcp/mcp-kamui-code.json -c",
+		"kc-i2i": "claude --mcp-config=./_KAMUI/mcp/my-mcp-kamui-i2i.json",
+		"kc-i2i-c": "claude --mcp-config=./_KAMUI/mcp/my-mcp-kamui-i2i.json -c",
 	  "kcr": "claude --mcp-config=./_KAMUI/mcp/mcp-requirement.json",
 	  "kcr-c": "claude --mcp-config=./_KAMUI/mcp/mcp-requirement.json -c",
 	  "kcb": "claude --mcp-config=./_KAMUI/mcp/mcp-nano-banana-kamui.json",

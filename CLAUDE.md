@@ -95,6 +95,8 @@ python _KAMUI/helper/fal_upload_helper.py ./image.jpg
 - **一時ファイルの取り扱い**: 保存やアップロード等で通常フローが失敗した場合は、Pythonの一時ファイルでのフォールバックを許可する。ただし有用と判断される場合は、後日`_KAMUI/helper`配下の正式ヘルパーとして格上げすることを提案する
 - **ドキュメント整備**: 作成したヘルパーには冒頭コメントで目的・入出力・依存関係・使用例（CLI実行例を含む）を簡潔に記載すること
 
+---
+
 ## 要件定義・ドキュメント作成
 
 ### ビジュアライズ要件定義
@@ -102,23 +104,38 @@ python _KAMUI/helper/fal_upload_helper.py ./image.jpg
 - 元になる資料が存在しない場合は、プロジェクトルートに作成する
 - `requirement-docs` 内に自動生成時に `.git` ディレクトリが作られる場合がある → gitリポジトリからの pull 完了後に `.git` を `.git-archived` にリネームし、親リポジトリ（KAMUI_CODE）配下で一元管理できるようにする
 
+---
+
 ## 基本設定
 
 ### 文字コード
 - 指示がない限りUTF-8を利用すること
 
-### Python環境設定
-- このプロジェクトではPython仮想環境（venv）を使用している
-- ClaudeCodeCLI経由でPythonスクリプトを実行する際は、必ずvenv環境のPythonを明示的に指定すること
-- **必須**: Python実行時は `S:/MyProjects/KAMUI_CODE/.venv/Scripts/python.exe` を使用する
-- システムのpython（`python`コマンド）ではなく、venv環境のpythonを使用することで、必要なライブラリ（pillow-heif等）が正しく読み込まれる
-- ClaudeCodeは必要に応じて自動的にvenv環境を起動・使用するが、明示的なパス指定により確実性を担保する
+---
 
-#### 実行例
+## Python環境について
+**このプロジェクトは仮想環境を使用します。グローバルのPythonは使わず、仮想環境内で全て処理してください。**
+
+### 基本ルール
+- **Python実行**: `.venv/Scripts/python.exe` を使用
+- **ライブラリインストール**: `.venv/Scripts/pip.exe` を使用
+- システムの `python` や `pip` コマンドは使用禁止
+
+### 実行例
 ```bash
-# 正しい実行方法（venv環境のPythonを明示）
-S:/MyProjects/KAMUI_CODE/.venv/Scripts/python.exe _KAMUI/helper/script_name.py
+# Python実行
+.venv/Scripts/python.exe _doc/helper/script_name.py
 
-# 間違った実行方法（システムのPythonを使用してしまう）
-python _KAMUI/helper/script_name.py
+# ライブラリインストール
+.venv/Scripts/pip.exe install pillow
+```
+
+### requirements.txt（ライブラリ管理ファイル）
+プロジェクトで使用するライブラリのリストを管理するファイルです。
+```bash
+# ライブラリ一覧を出力（現在の環境をバックアップ）
+.venv/Scripts/pip.exe freeze > requirements.txt
+
+# ライブラリ一覧から一括インストール（環境を復元）
+.venv/Scripts/pip.exe install -r requirements.txt
 ```
