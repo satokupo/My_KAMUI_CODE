@@ -1,0 +1,89 @@
+{
+  "mcpServers": {
+    "file-upload-kamui-fal": {
+      "type": "http",
+      "url": "https://kamui-code.ai/uploader/fal",
+      "description": "File Upload to FAL via Kamui Code (Local Uploader) ⭐⭐⭐"
+    },
+    "train-kamui-flux-kontext": {
+      "type": "http",
+      "url": "https://kamui-code.ai/train/fal/flux/kontext",
+      "description": "Flux Kontext Trainer via Kamui Code ⭐"
+    },
+    "video-analysis-kamui": {
+      "type": "http",
+      "url": "https://kamui-code.ai/video-analysis/google/gemini",
+      "description": "Gemini Video Analysis via Kamui Code ⭐"
+    },
+    "i2i-kamui-aura-sr": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/aura-sr",
+      "description": "AuraSR Image Upscaling via Kamui Code ⭐"
+    },
+    "i2i-kamui-flux-kontext-lora": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/flux/kontext",
+      "description": "Flux Kontext LoRA via Kamui Code ⭐"
+    },
+    "i2i-kamui-flux-kontext-max": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/flux/kontext/max",
+      "description": "Flux Kontext Max via Kamui Code ⭐"
+    },
+    "i2i-kamui-flux-krea-lora": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/flux-krea-lora/image-to-image",
+      "description": "FLUX Krea LoRA Image-to-Image via Kamui Code ⭐"
+    },
+    "i2i-kamui-ideogram-character-remix": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/ideogram/character-remix",
+      "description": "Ideogram Character Remix - Transform characters across styles via Kamui Code ⭐"
+    },
+    "i2i-kamui-qwen-image-edit": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/qwen/image-edit",
+      "description": "Qwen Image Edit - AI-powered image editing with text prompts via Kamui Code ⭐"
+    },
+    "i2v-kamui-hailuo-02-fast": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/minimax/hailuo-02/fast",
+      "description": "Hailuo-02 Fast Image-to-Video via Kamui Code ⭐"
+    },
+    "i2v-kamui-hailuo-02-pro": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/minimax/hailuo-02/pro",
+      "description": "Hailuo-02 Pro Image-to-Video via Kamui Code ⭐"
+    },
+    "i2v-kamui-omnihuman": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/bytedance/omnihuman",
+      "description": "ByteDance OmniHuman I2V via Kamui Code ⭐"
+    },
+    "i2v-kamui-seedance-v1-lite": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/bytedance/seedance-v1-lite",
+      "description": "ByteDance Seedance V1 Lite via Kamui Code ⭐"
+    },
+    "i2v-kamui-veo3-fast": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/veo3/fast",
+      "description": "Veo3 Fast Image-to-Video via Kamui Code ⭐"
+    },
+    "i2v-kamui-wan-v2-2-a14b": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/wan/v2.2-a14b",
+      "description": "WAN v2.2-a14b Image-to-Video via Kamui Code ⭐"
+    },
+    "i2i-kamui-gemini-25-flash-image-edit": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/gemini-25-flash-image/edit",
+      "description": "Gemini 2.5 Flash Image Edit - State-of-the-art image editing via Kamui Code ⭐"
+    },
+    "i2i-kamui-seedream-v4-edit": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/bytedance/seedream/v4",
+      "description": "Bytedance Seedream V4 Edit - Advanced image editing with unified architecture via Kamui Code ⭐⭐"
+    }
+  }
+}

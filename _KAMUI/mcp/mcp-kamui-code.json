@@ -30,6 +30,11 @@
       "url": "https://kamui-code.ai/t2i/fal/flux/schnell",
       "description": "Flux-1 Schnell (Fast) via Kamui Code ⭐"
     },
+    "t2i-kamui-flux-srpo": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/flux/srpo",
+      "description": "FLUX.1 [srpo] - Next generation text-to-image model with enhanced quality and control via Kamui Code ⭐⭐⭐"
+    },
     "t2i-kamui-ideogram-character-base": {
       "type": "http",
       "url": "https://kamui-code.ai/t2i/fal/ideogram/character-base",
@@ -120,6 +125,11 @@
       "url": "https://kamui-code.ai/i2v/fal/bytedance/omnihuman",
       "description": "ByteDance OmniHuman I2V via Kamui Code ⭐"
     },
+    "i2v-kamui-omnihuman-v15": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/bytedance/omnihuman-v1.5",
+      "description": "ByteDance OmniHuman v1.5 - Latest version with enhanced lip-sync and expression generation from images and audio via Kamui Code ⭐⭐⭐"
+    },
     "i2v-kamui-seedance-v1-lite": {
       "type": "http",
       "url": "https://kamui-code.ai/i2v/fal/bytedance/seedance-v1-lite",
@@ -185,11 +195,6 @@
       "url": "https://kamui-code.ai/t2s/fal/minimax/speech-02-turbo",
       "description": "MiniMax Speech-02-Turbo via Kamui Code ⭐"
     },
-    "t2s-kamui-minimax-speech-25-turbo-preview": {
-      "type": "http",
-      "url": "https://kamui-code.ai/t2s/minimax/speech-2-5-turbo-preview",
-      "description": "MiniMax Speech 2.5 Turbo Preview - Direct Async Long TTS (1M chars) via Kamui Code ⭐⭐⭐"
-    },
     "t2m-kamui-lyria": {
       "type": "http",
       "url": "https://kamui-code.ai/t2m/google/lyria",
@@ -214,6 +219,11 @@
       "type": "http",
       "url": "https://kamui-code.ai/t2i/fal/nano-banana",
       "description": "Nano Banana Text-to-Image via Kamui Code ⭐"
+    },
+    "i2i-kamui-nano-banana-edit": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/nano-banana/edit",
+      "description": "Nano Banana Edit - AI-powered image editing and transformation via Kamui Code ⭐"
     },
     "i2i-kamui-gemini-25-flash-image-edit": {
       "type": "http",
@@ -245,6 +255,11 @@
       "url": "https://kamui-code.ai/t2visual/napkin/visual",
       "description": "Napkin AI Visual Generation - Transform text into beautiful professional visuals, diagrams, and graphics via Kamui Code ⭐⭐⭐"
     },
+    "i2v-kamui-decart-lucy-14b": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/decart/lucy-14b",
+      "description": "Decart Lucy-14B Image-to-Video - Lightning fast image-to-video generation with high quality results via Kamui Code ⭐⭐⭐"
+    },
     "t2v-kamui-veo3": {
       "type": "http",
       "url": "https://kamui-code.ai/t2v/fal/veo3",
@@ -254,6 +269,86 @@
       "type": "http",
       "url": "https://kamui-code.ai/t2m/fal/minimax/music/v1.5",
       "description": "Minimax Music V1.5 Text-to-Music - Generate music from lyrics with style control via Kamui Code ⭐⭐"
+    },
+    "a2v-kamui-kling-video-v1-pro-ai-avatar": {
+      "type": "http",
+      "url": "https://kamui-code.ai/a2v/fal/kling-video/v1/pro/ai-avatar",
+      "description": "Kling Video V1 Pro AI Avatar - Generate realistic avatar videos from images and audio files via Kamui Code ⭐⭐⭐"
+    },
+    "tts-kamui-kling-video-v1": {
+      "type": "http",
+      "url": "https://kamui-code.ai/tts/fal/kling-video/v1",
+      "description": "Kling TTS V1 - Convert text to speech with diverse voice options via Kamui Code ⭐⭐⭐"
+    },
+    "t2v-kamui-kling-video-v25-turbo-pro": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2v/fal/kling-video/v25-turbo-pro",
+      "description": "Kling Video v2.5 Turbo Pro Text-to-Video - Generate high-quality videos from text prompts with enhanced performance and quality via Kamui Code ⭐⭐⭐⭐"
+    },
+    "i2v-kamui-kling-video-v25-turbo-pro": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/kling-video/v25-turbo-pro",
+      "description": "Kling Video v2.5 Turbo Pro Image-to-Video - Generate high-quality videos from images with text prompts using enhanced performance and quality via Kamui Code ⭐⭐⭐⭐"
+    },
+    "t2a-kamui-stable-audio-v25": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2a/fal/stable-audio/v2.5",
+      "description": "Stable Audio 2.5 Text-to-Audio - Generate high quality music and sound effects using StabilityAI's state-of-the-art audio generation model via Kamui Code ⭐⭐⭐"
+    },
+    "v2v-kamui-heygen-video-translate": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2v/replicate/heygen/video-translate",
+      "description": "HeyGen Video Translate - Translate videos into over 150 languages with natural voice cloning and lip-sync via Replicate API ⭐⭐⭐"
+    },
+    "v2sfx-kamui-mirelo-video-to-sfx": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2sfx/replicate/mirelo/video-to-sfx",
+      "description": "Mirelo Video to SFX - Generate sound effects from video content using Replicate API. Automatically trims videos to 10 seconds and produces 2-4 high-quality audio samples ⭐⭐⭐"
+    },
+    "i2i3d-kamui-hunyuan3d-v21": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i3d/fal/hunyuan/3d-v21",
+      "description": "Hunyuan3D v2.1 Image-to-3D Generation - Convert images to high-quality 3D models with PBR texturing via Kamui Code ⭐⭐⭐"
+    },
+    "v2v-kamui-decart-lucy-edit-pro": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2v/fal/decart/lucy-edit/pro",
+      "description": "Decart Lucy Edit Pro - Transform videos with AI video editing using text prompts. Convert scenes, change appearances, and apply creative transformations to existing videos via Kamui Code ⭐⭐⭐"
+    },
+    "i2i3d-kamui-tripo3d-image-to-3d": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i3d/fal/tripo3d/tripo/v25/image-to-3d",
+      "description": "Tripo3D Image-to-3D v2.5 - Convert single images into high-quality 3D models with advanced texturing, PBR materials, and multiple export formats via Kamui Code ⭐⭐⭐"
+    },
+    "i2i3d-kamui-trellis": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i3d/fal/trellis",
+      "description": "Trellis Image-to-3D - Convert single images into high-quality 3D models using advanced sparse structure and structured latent generation with customizable texture resolution via Kamui Code ⭐⭐⭐"
+    },
+    "i2i-kamui-qwen-image-edit-plus": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/qwen-image-edit-plus",
+      "description": "Qwen Image Edit Plus - Advanced multi-image editing with Qwen AI model, supporting array of images, customizable size, safety checker, and multiple output formats via Kamui Code ⭐⭐⭐"
+    },
+    "v2v-kamui-wan-v2-2-14b-animate-replace": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2v/fal/wan/v2.2-14b/animate/replace",
+      "description": "WAN v2.2-14b Animate Replace - Generate video from video and image with replace mode, supporting multiple resolutions and advanced video quality settings via Kamui Code ⭐⭐⭐"
+    },
+    "a2v-kamui-veed-fabric-1-0": {
+      "type": "http",
+      "url": "https://kamui-code.ai/a2v/fal/veed/fabric-1.0",
+      "description": "Veed Fabric 1.0 - Generate talking head videos from images and audio with advanced lip-sync and facial animation technology via Kamui Code ⭐⭐⭐"
+    },
+    "t2i-kamui-wan-25-preview": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/wan/25-preview",
+      "description": "WAN 2.5 Preview Text-to-Image - High-quality image generation with various artistic styles, supporting resolutions between 768×768 and 1440×1440, multiple images per request, and prompt expansion via Kamui Code ⭐⭐⭐"
+    },
+    "i2i-kamui-wan-25-preview": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/wan/25-preview",
+      "description": "WAN 2.5 Preview Image-to-Image - Advanced image editing with text prompts and multi-image fusion, supporting subject-consistent editing, resolutions between 384×384 and 5000×5000, and up to 4 images per request via Kamui Code ⭐⭐⭐"
     }
   }
 }
