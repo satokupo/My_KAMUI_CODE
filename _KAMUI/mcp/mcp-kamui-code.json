@@ -384,6 +384,15 @@
       "type": "http",
       "url": "https://kamui-code.ai/i2i/fal/qwen-image-edit-plus-lora",
       "description": "Qwen Image Edit Plus LoRA - Advanced multi-image editing with Qwen AI model and LoRA support. Features include editing multiple images (array), customizable size, LoRA weights (up to 3), safety checker, multiple output formats, and flexible inference steps via Kamui Code ⭐⭐⭐"
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "chrome-devtools-mcp@latest",
+        "--headless=false",
+        "--isolated=true",
+        "--executablePath=C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+      ]
     }
   }
 }
