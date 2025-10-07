@@ -8,7 +8,10 @@
 
 # **/.claude/
 
+# 一時ファイル
 **/_temp/
+**/temp/
+
 
 # 環境ファイル
 **/env/
@@ -38,3 +41,10 @@ __pycache__
 
 **/generate/
 **/settings.local.json
+
+
+
+# --------------------------------
+# Relume
+# --------------------------------
+Relume/ai-workbench/
