@@ -17,7 +17,7 @@ Relumeプロジェクトセットアップスクリプト
   3. HTML基本タグ（<!DOCTYPE>, <html>, <head>, <body>）でラップ
      - Tailwind CDN読み込み
      - assets/style/global.css読み込み
-     - assets/js/script.js読み込み
+     - assets/js/main.js読み込み
      - titleはディレクトリ名から自動生成（"01_ホーム" → "ホーム"）
   4. 既存コンテンツの各セクション（<section>, <div>, <header>, <footer>等の主要要素）にユニークIDを自動付与
      - ID命名規則: section-{連番} (例: section-1, section-2, ...)
@@ -31,7 +31,7 @@ Relumeプロジェクトセットアップスクリプト
      - docs/
   6. 空ファイルを生成
      - assets/style/global.css（CSSネストルール案内コメント付き）
-     - assets/js/script.js（空ファイル）
+     - assets/js/main.js（空ファイル）
   7. 修正されたHTMLを上書き保存
   8. 実行結果レポートをコンソールに出力
      - 生成されたディレクトリ一覧
@@ -82,12 +82,12 @@ def create_directory_structure(base_path):
         作成されたディレクトリのリスト
     """
     directories = [
-        "assets/js",
+        "assets/js/features",
         "assets/style",
         "assets/images",
         "screenshots",
         "temp",
-        "docs"
+        "docs/ai-workbench"
     ]
 
     created_dirs = []
@@ -139,7 +139,16 @@ def create_empty_files(base_path):
 
     files = {
         "assets/style/global.css": css_comment,
-        "assets/js/script.js": ""
+        "assets/js/main.js": """const modules = import.meta.glob('./features/*.js', { eager: true });
+
+document.addEventListener('DOMContentLoaded', () => {
+  Object.values(modules).forEach(module => {
+    if (module.init && typeof module.init === 'function') {
+      module.init();
+    }
+  });
+});
+"""
     }
 
     created_files = []
@@ -261,7 +270,7 @@ def wrap_with_html_template(content, title, base_path):
 </head>
 <body>
 {content}
-<script src="assets/js/script.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>"""
 
