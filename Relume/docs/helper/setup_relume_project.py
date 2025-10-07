@@ -20,11 +20,13 @@ Relumeプロジェクトセットアップスクリプト
      - assets/style/global.css読み込み
      - assets/js/main.js読み込み
      - titleはディレクトリ名から自動生成（"01_ホーム" → "ホーム"）
-  5. 既存コンテンツの各セクション（<section>, <div>, <header>, <footer>等の主要要素）にユニークIDを自動付与
+  5. 文書内で最初に現れる<section>を<header>でラップ
+     - 最初の<section>が存在しない場合はスキップ
+  6. 既存コンテンツの各セクション（<section>, <div>, <header>, <footer>等の主要要素）にユニークIDを自動付与
      - ID命名規則: section-{連番} (例: section-1, section-2, ...)
      - または意味のある名前を推測可能なら付与（例: header → section-header）
-  6. 修正されたHTMLを上書き保存
-  7. 実行結果レポートをコンソールに出力
+  7. 修正されたHTMLを上書き保存
+  8. 実行結果レポートをコンソールに出力
      - コピーされたファイル一覧
      - 付与されたセクションID一覧
 
@@ -151,6 +153,39 @@ def ask_section_name(section_index, section_element):
     return section_name
 
 
+def wrap_first_section_with_header(soup):
+    """
+    文書内で最初に現れる<section>を<header>でラップ
+
+    Args:
+        soup: BeautifulSoupオブジェクト
+
+    Returns:
+        処理が実行されたかどうか（True: 実行, False: スキップ）
+    """
+    # 最初の<section>を検索
+    first_section = soup.find('section')
+
+    # <section>が存在しない場合はスキップ
+    if not first_section:
+        print_info("文書内に<section>が見つかりませんでした。header ラップ処理をスキップします。")
+        return False
+
+    # 既に<header>の子要素になっている場合はスキップ
+    if first_section.parent and first_section.parent.name == 'header':
+        print_info("最初の<section>は既に<header>でラップされています。")
+        return False
+
+    # 新しい<header>要素を作成
+    new_header = soup.new_tag('header')
+
+    # 最初の<section>を<header>で置換
+    first_section.wrap(new_header)
+
+    print_success("最初の<section>を<header>でラップしました。")
+    return True
+
+
 def add_section_ids(soup):
     """
     セクションにユニークIDを付与（ユーザー対話型）
@@ -258,21 +293,29 @@ def process_page(page_path, template_path):
 
     # 既にラップされているかチェック
     if check_if_already_wrapped(html_content):
-        print_info("HTML基本タグは既に存在しています。セクションID付与のみ実行します。")
+        print_info("HTML基本タグは既に存在しています。header ラップとセクションID付与のみ実行します。")
+
+        # BeautifulSoupでパース
+        soup = BeautifulSoup(html_content, 'html.parser')
+
+        # 最初の<section>を<header>でラップ
+        wrap_first_section_with_header(soup)
 
         # セクションID付与
-        soup = BeautifulSoup(html_content, 'html.parser')
         assigned_ids = add_section_ids(soup)
 
         # HTMLを保存
         with open(html_path, 'w', encoding='utf-8') as f:
             f.write(str(soup.prettify()))
 
-        print_success(f"セクションID付与完了: {len(assigned_ids)}個のIDを付与")
+        print_success(f"処理完了: {len(assigned_ids)}個のIDを付与")
         return True
 
     # BeautifulSoupでパース
     soup = BeautifulSoup(html_content, 'html.parser')
+
+    # 最初の<section>を<header>でラップ
+    wrap_first_section_with_header(soup)
 
     # セクションにIDを付与
     assigned_ids = add_section_ids(soup)
