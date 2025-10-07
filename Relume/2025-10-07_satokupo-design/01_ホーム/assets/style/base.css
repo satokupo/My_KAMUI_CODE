@@ -11,6 +11,11 @@ body {
   --site-width: 1200px;
   --content-width: 900px;
 
+  --swl-headerH: 72px;
+  --swl-fix_headerH: 64px;
+  --swl-offset_y: 64px;
+  --swl-scrollbar_width: 15px;
+
   position: relative;
   display: block;
   overflow-x: clip;
@@ -53,13 +58,25 @@ body {
 
     }
 
+    @media not all and (min-width: 960px) {
+
+      header>* {
+        height: 48px;
+      }
+    }
+
     /* グローバルナビとフッター */
-    &>section.w-full,
-    &>footer {
+    header,
+    footer {
       width: 100vw;
       /* ビューポート全幅に広げる */
       margin-left: calc(50% - 50vw) !important;
       /* コンテナ中央寄せ分を打ち消す */
+    }
+
+    header>* {
+      height: var(--swl-headerH);
+
     }
 
   }
