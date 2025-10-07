@@ -12,7 +12,7 @@ Relume wireframeツールから出力されたTailwind CSSベースのHTMLを、
 │   ├── js/
 │   │   ├── main.js           # エントリーポイント(features/を自動読込)
 │   │   └── features/         # 機能別モジュール
-│   ├── style/                # CSS (global.css + セクション別CSS)
+│   ├── style/                # CSS (base.css,custom.css)
 │   └── images/               # 画像アセット
 ├── screenshots/              # AI検証用スクリーンショット
 ├── temp/                     # 一時ファイル
@@ -28,7 +28,7 @@ Relume wireframeツールから出力されたTailwind CSSベースのHTMLを、
 
 - **`js/main.js`** - エントリーポイント。`features/`配下のモジュールを自動検出・読込
 - **`js/features/`** - 機能別モジュール置き場。追加するだけで`main.js`が自動認識
-- **`style/`** - `global.css`に加え、セクションごとのCSSを追加可能
+- **`style/`** - `base.css`で基本のスタイル（ユーティリティ含む）を指定,`custom.css`を利用してセクションごとのスタイルを作成
 - **`images/`** - デザイン調整で使用する画像ファイル
 
 #### `screenshots/`
@@ -50,6 +50,41 @@ Relume wireframeツールから出力されたTailwind CSSベースのHTMLを、
 
 ## セットアップ
 
+### 1. Relumeからzipをダウンロード・解凍
+1. Relumeからプロジェクトzipファイルをダウンロード
+2. 任意のディレクトリに解凍（例: `Relume/2025-10-07_satokupo-design/`）
+
+### 2. HTMLファイルを`index.html`にリネーム
+
+RelumeからダウンロードしたHTMLファイルは日本語名やスペース含みの名前（例: `ホーム.html`, `Layout 324.html`）になっています。これを`index.html`にリネームします。
+
+#### 基本的な使い方（1ファイルずつ）
+
+```bash
+# dry-runで確認（実際の変更は行わない）
+.venv/Scripts/python.exe docs/helper/rename.py \
+  --path "s:/MyProjects/KAMUI_CODE/Relume/2025-10-07_satokupo-design/01_ホーム/ホーム.html" \
+  --new-name "index.html" \
+  --dry-run \
+  --verbose
+
+# 本実行
+.venv/Scripts/python.exe docs/helper/rename.py \
+  --path "s:/MyProjects/KAMUI_CODE/Relume/2025-10-07_satokupo-design/01_ホーム/ホーム.html" \
+  --new-name "index.html" \
+  --verbose
+```
+
+**オプション**:
+- `--path`: リネーム対象のファイルパス
+- `--new-name`: 新しいファイル名（`index.html`固定）
+- `--dry-run`: 実際の変更を行わず、実行内容のみ表示
+- `--verbose`: 詳細なログを出力
+
+**詳細**: `docs/初期フロー.md` の「2. HTMLファイルのリネーム」を参照
+
+### 3. セットアップスクリプト実行
+
 ```bash
 # 自動セットアップスクリプト実行
 .venv/Scripts/python.exe docs/helper/setup_relume_project.py <ページディレクトリパス>
@@ -61,7 +96,8 @@ Relume wireframeツールから出力されたTailwind CSSベースのHTMLを、
 スクリプトは以下を自動で実行:
 1. `docs/helper/setup_templates/`からディレクトリ構造とファイルをコピー
    - `assets/js/main.js`（features/自動読込コード付き）
-   - `assets/style/global.css`（CSSネストルール案内コメント付き）
+   - `assets/style/base.css`（CSSネストルール案内コメント付き）
+   - `assets/style/custom.css`（CSSネストルール案内コメント付き）
    - 各種ディレクトリ（features/, screenshots/, ai-workbench/等）
 2. `index.html`にHTML基本タグ追加とTailwind CDN読み込み
 3. セクション抽出とID割り当て（対話式）
@@ -97,7 +133,8 @@ Relume wireframeツールから出力されたTailwind CSSベースのHTMLを、
 ### Tailwind CSS との共存
 
 - Relume出力のTailwind CSSはそのまま維持
-- カスタムデザインは`global.css`や追加CSSファイルで上書き
+- 基本デザインは`base.css`ファイルで上書き
+- カスタムデザインは`custom.css`ファイルで上書き
 - CSSネストで優先度を制御
 
 ## JavaScript設計

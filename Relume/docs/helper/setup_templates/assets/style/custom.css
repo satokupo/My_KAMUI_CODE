@@ -1,0 +1,40 @@
+/*
+ * CSSネストルール遵守
+ * - 各セクションは必ずセクションIDで開始し、すべてのスタイルをその中に記述
+ * - 内容が他のセクションに漏れ出さないよう、必ずネスト構造を維持する
+ *
+ * 例:
+ * #section-hero {
+ *   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+ *
+ *   .hero-title {
+ *     font-size: 3rem;
+ *     font-weight: bold;
+ *   }
+ *
+ *   .hero-button {
+ *     background: white;
+ *     color: #667eea;
+ *   }
+ * }
+ */
+
+
+body {
+
+
+  /* ↓ 必要に合わせて変更 ↓ */
+  --color-primary: #444444;
+  --color-tertiary: #444444;
+  --color-quaternary: #444444;
+  --color-quinary: #444444;
+  --color-senary: #444444;
+  --color-septenary: #444444;
+  /* ↑ 必要に合わせて変更 ↑ */
+
+  /* ユーティリティ関数 */
+  .full-width{
+    width: 100vw;                     /* ビューポート全幅に広げる */
+    margin-left: calc(50% - 50vw);    /* コンテナ中央寄せ分を打ち消す */
+  }
+}

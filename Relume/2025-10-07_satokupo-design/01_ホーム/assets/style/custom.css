@@ -19,3 +19,22 @@
  * }
  */
 
+
+body {
+
+
+  /* ↓ 必要に合わせて変更 ↓ */
+  --color-primary: #444444;
+  --color-tertiary: #444444;
+  --color-quaternary: #444444;
+  --color-quinary: #444444;
+  --color-senary: #444444;
+  --color-septenary: #444444;
+  /* ↑ 必要に合わせて変更 ↑ */
+
+  /* ユーティリティ関数 */
+  .full-width{
+    width: 100vw;                     /* ビューポート全幅に広げる */
+    margin-left: calc(50% - 50vw);    /* コンテナ中央寄せ分を打ち消す */
+  }
+}

@@ -206,7 +206,8 @@ def wrap_with_html_template(content, title):
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/style/global.css">
+  <link rel="stylesheet" href="assets/style/base.css">
+  <link rel="stylesheet" href="assets/style/custom.css">
 </head>
 <body>
 {content}
