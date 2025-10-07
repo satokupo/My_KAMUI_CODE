@@ -4,23 +4,30 @@
  * - 内容が他のセクションに漏れ出さないよう、必ずネスト構造を維持する
  *
  * 例:
- * #section-hero {
- *   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+ * body{
+ *   ヒーローセクション
+ *   #section-hero {
+ *     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
  *
- *   .hero-title {
- *     font-size: 3rem;
- *     font-weight: bold;
+ *     .hero-title {
+ *       font-size: 3rem;
+ *       font-weight: bold;
+ *     }
+ *
+ *     .hero-button {
+ *       background: white;
+ *       color: #667eea;
+ *     }
  *   }
  *
- *   .hero-button {
- *     background: white;
- *     color: #667eea;
+ *   ベネフィットセクション
+ *   #section-hero {
  *   }
  * }
  */
 
 
-body {
+ body {
 
 
   /* ↓ 必要に合わせて変更 ↓ */
@@ -32,9 +39,20 @@ body {
   --color-septenary: #444444;
   /* ↑ 必要に合わせて変更 ↑ */
 
-  /* ユーティリティ関数 */
-  .full-width{
-    width: 100vw;                     /* ビューポート全幅に広げる */
-    margin-left: calc(50% - 50vw);    /* コンテナ中央寄せ分を打ち消す */
-  }
+
+  /* 必要に応じで有効化
+  @media not all and (min-width: 960px) {
+  } */
+}
+
+/* ユーティリティクラス */
+/* フルワイドセクション */
+section.full-wide {
+  width: 100vw;
+  margin-left: calc(50% - 50vw) !important;
+}
+/* 少し広めセクション */
+section.wide{
+  padding-right: 0px;
+  padding-left: 0px;
 }

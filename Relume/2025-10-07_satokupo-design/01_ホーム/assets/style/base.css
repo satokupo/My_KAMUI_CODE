@@ -69,9 +69,7 @@ body {
     header,
     footer {
       width: 100vw;
-      /* ビューポート全幅に広げる */
       margin-left: calc(50% - 50vw) !important;
-      /* コンテナ中央寄せ分を打ち消す */
     }
 
     header>* {
