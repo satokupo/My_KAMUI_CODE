@@ -3,10 +3,10 @@ root = true
 [*]
 
 # インデントの種類: space, tab
-indent_style = tab
+indent_style = space
 
 # インデントの大きさ
-indent_size = 4
+indent_size = 2
 
 # 改行コードの種類:  lf, cr, crlf
 end_of_line = lf
@@ -21,9 +21,9 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 
 # タブインデントが禁止、もしくは非推奨なものはスペースを利用
-[*.json, *.js, *.jsx, *.ts, *.tsx, *.yml, *.py]
-indent_style = space
-indent_size = 2
+[*.php]
+indent_style = tab
+indent_size = 4
 
 # ログファイルはBOMをつけておく
 [*.log]
