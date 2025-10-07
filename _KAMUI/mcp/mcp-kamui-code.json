@@ -310,6 +310,11 @@
       "url": "https://kamui-code.ai/i2i3d/fal/hunyuan/3d-v21",
       "description": "Hunyuan3D v2.1 Image-to-3D Generation - Convert images to high-quality 3D models with PBR texturing via Kamui Code ⭐⭐⭐"
     },
+    "t2i-kamui-hunyuan-image-v3": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/hunyuan-image/v3",
+      "description": "Hunyuan Image V3 Text-to-Image - Advanced text-to-image generation with high-quality output, multiple formats (PNG/JPEG), custom image sizes, safety checker, and precise guidance control via Kamui Code ⭐⭐⭐"
+    },
     "v2v-kamui-decart-lucy-edit-pro": {
       "type": "http",
       "url": "https://kamui-code.ai/v2v/fal/decart/lucy-edit/pro",
@@ -349,6 +354,36 @@
       "type": "http",
       "url": "https://kamui-code.ai/i2i/fal/wan/25-preview",
       "description": "WAN 2.5 Preview Image-to-Image - Advanced image editing with text prompts and multi-image fusion, supporting subject-consistent editing, resolutions between 384×384 and 5000×5000, and up to 4 images per request via Kamui Code ⭐⭐⭐"
+    },
+    "t2v-kamui-wan-25-preview": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2v/fal/wan/25-preview",
+      "description": "WAN 2.5 Preview Text-to-Video - Latest model with best visual quality and motion stability, supporting 480p/720p/1080p resolutions, multiple aspect ratios (16:9, 9:16, 1:1), 5 or 10-second video generation, and optional audio background music via Kamui Code ⭐⭐⭐"
+    },
+    "i2v-kamui-wan-25-preview": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/wan/25-preview",
+      "description": "WAN 2.5 Preview Image-to-Video - Generate video from an image using WAN 2.5 image-to-video model, supporting 480p/720p/1080p resolutions, 5 or 10-second video generation, motion generation based on text prompt, and optional audio background music via Kamui Code ⭐⭐⭐"
+    },
+    "i2v-kamui-ovi": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/ovi",
+      "description": "OVI Image-to-Video - Generate video from an image with audio synthesis support. Features include text prompt-guided video generation, natural audio synthesis using special tags (<S>...<E> for speech, <AUDCAP>...<ENDAUDCAP> for audio description), and customizable inference steps via Kamui Code ⭐⭐⭐"
+    },
+    "t2v-kamui-ovi": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2v/fal/ovi",
+      "description": "OVI Text-to-Video - Generate video from text prompts with audio synthesis support. Features include natural audio synthesis using special tags (<S>...<E> for speech, <AUDCAP>...<ENDAUDCAP> for audio description), multiple resolution options (512x992, 992x512, 960x512, 512x960, 720x720, 448x1120, 1120x448), and customizable inference steps via Kamui Code ⭐⭐⭐"
+    },
+    "i2i3d-kamui-hyper3d-rodin-v2": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i3d/fal/hyper3d/rodin/v2",
+      "description": "Hyper3D Rodin V2 - Advanced 3D model generation from text prompts or images (up to 5), supporting multiple file formats (GLB, USDZ, FBX, OBJ, STL), various quality options, and PBR materials via Kamui Code ⭐⭐⭐"
+    },
+    "i2i-kamui-qwen-image-edit-plus-lora": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/qwen-image-edit-plus-lora",
+      "description": "Qwen Image Edit Plus LoRA - Advanced multi-image editing with Qwen AI model and LoRA support. Features include editing multiple images (array), customizable size, LoRA weights (up to 3), safety checker, multiple output formats, and flexible inference steps via Kamui Code ⭐⭐⭐"
     }
   }
 }
