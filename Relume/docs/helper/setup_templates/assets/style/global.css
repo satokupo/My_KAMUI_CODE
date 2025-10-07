@@ -1,0 +1,21 @@
+/*
+ * CSSネストルール遵守
+ * - 各セクションは必ずセクションIDで開始し、すべてのスタイルをその中に記述
+ * - 内容が他のセクションに漏れ出さないよう、必ずネスト構造を維持する
+ *
+ * 例:
+ * #section-hero {
+ *   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+ *
+ *   .hero-title {
+ *     font-size: 3rem;
+ *     font-weight: bold;
+ *   }
+ *
+ *   .hero-button {
+ *     background: white;
+ *     color: #667eea;
+ *   }
+ * }
+ */
+

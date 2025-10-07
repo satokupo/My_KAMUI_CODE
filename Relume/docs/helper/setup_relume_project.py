@@ -13,29 +13,19 @@ Relumeプロジェクトセットアップスクリプト
 
 処理フロー:
   1. 引数からターゲットディレクトリパスを受け取る
-  2. ターゲットディレクトリ内のindex.htmlを読み込む
-  3. HTML基本タグ（<!DOCTYPE>, <html>, <head>, <body>）でラップ
+  2. setup_templates/ディレクトリ構造を丸ごとコピー
+  3. ターゲットディレクトリ内のindex.htmlを読み込む
+  4. HTML基本タグ（<!DOCTYPE>, <html>, <head>, <body>）でラップ
      - Tailwind CDN読み込み
      - assets/style/global.css読み込み
      - assets/js/main.js読み込み
      - titleはディレクトリ名から自動生成（"01_ホーム" → "ホーム"）
-  4. 既存コンテンツの各セクション（<section>, <div>, <header>, <footer>等の主要要素）にユニークIDを自動付与
+  5. 既存コンテンツの各セクション（<section>, <div>, <header>, <footer>等の主要要素）にユニークIDを自動付与
      - ID命名規則: section-{連番} (例: section-1, section-2, ...)
      - または意味のある名前を推測可能なら付与（例: header → section-header）
-  5. 必要なディレクトリ構造を生成
-     - assets/js/
-     - assets/style/
-     - assets/images/
-     - screenshots/
-     - temp/
-     - docs/
-  6. 空ファイルを生成
-     - assets/style/global.css（CSSネストルール案内コメント付き）
-     - assets/js/main.js（空ファイル）
-  7. 修正されたHTMLを上書き保存
-  8. 実行結果レポートをコンソールに出力
-     - 生成されたディレクトリ一覧
-     - 生成されたファイル一覧
+  6. 修正されたHTMLを上書き保存
+  7. 実行結果レポートをコンソールに出力
+     - コピーされたファイル一覧
      - 付与されたセクションID一覧
 
 注意事項:
@@ -52,6 +42,7 @@ Relumeプロジェクトセットアップスクリプト
 import sys
 import os
 import re
+import shutil
 from pathlib import Path
 from bs4 import BeautifulSoup
 
@@ -71,97 +62,47 @@ def print_error(message):
     print(f"[ERROR] {message}", file=sys.stderr)
 
 
-def create_directory_structure(base_path):
+def copy_template_structure(template_path, target_path):
     """
-    必要なディレクトリ構造を作成
+    テンプレートディレクトリ構造を対象ディレクトリにコピー
 
     Args:
-        base_path: ベースとなるディレクトリパス
+        template_path: テンプレートディレクトリのパス
+        target_path: コピー先のディレクトリパス
 
     Returns:
-        作成されたディレクトリのリスト
+        コピーされたファイル・ディレクトリのリスト
     """
-    directories = [
-        "assets/js/features",
-        "assets/style",
-        "assets/images",
-        "screenshots",
-        "temp",
-        "docs/ai-workbench"
-    ]
+    copied_items = []
 
-    created_dirs = []
-    for dir_path in directories:
-        full_path = base_path / dir_path
-        if not full_path.exists():
-            full_path.mkdir(parents=True, exist_ok=True)
-            created_dirs.append(str(full_path))
-            print_info(f"ディレクトリ作成: {full_path}")
+    if not template_path.exists():
+        print_error(f"テンプレートディレクトリが見つかりません: {template_path}")
+        return copied_items
+
+    # テンプレート内のすべてのファイル・ディレクトリを走査
+    for item in template_path.rglob('*'):
+        # 相対パスを計算
+        relative_path = item.relative_to(template_path)
+        target_item = target_path / relative_path
+
+        # ディレクトリの場合
+        if item.is_dir():
+            if not target_item.exists():
+                target_item.mkdir(parents=True, exist_ok=True)
+                copied_items.append(f"[DIR] {target_item}")
+                print_info(f"ディレクトリ作成: {target_item}")
+            else:
+                print_info(f"ディレクトリ既存: {target_item}")
+        # ファイルの場合
         else:
-            print_info(f"ディレクトリ既存: {full_path}")
+            if not target_item.exists():
+                shutil.copy2(item, target_item)
+                copied_items.append(f"[FILE] {target_item}")
+                print_info(f"ファイルコピー: {target_item}")
+            else:
+                print_info(f"ファイル既存: {target_item}")
 
-    return created_dirs
-
-
-def create_empty_files(base_path):
-    """
-    空ファイルを作成
-
-    Args:
-        base_path: ベースとなるディレクトリパス
-
-    Returns:
-        作成されたファイルのリスト
-    """
-    # global.css用のコメント（CSSネストルール案内）
-    css_comment = """/*
- * CSSネストルール遵守
- * - 各セクションは必ずセクションIDで開始し、すべてのスタイルをその中に記述
- * - 内容が他のセクションに漏れ出さないよう、必ずネスト構造を維持する
- *
- * 例:
- * #section-hero {
- *   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
- *
- *   .hero-title {
- *     font-size: 3rem;
- *     font-weight: bold;
- *   }
- *
- *   .hero-button {
- *     background: white;
- *     color: #667eea;
- *   }
- * }
- */
-
-"""
-
-    files = {
-        "assets/style/global.css": css_comment,
-        "assets/js/main.js": """const modules = import.meta.glob('./features/*.js', { eager: true });
-
-document.addEventListener('DOMContentLoaded', () => {
-  Object.values(modules).forEach(module => {
-    if (module.init && typeof module.init === 'function') {
-      module.init();
-    }
-  });
-});
-"""
-    }
-
-    created_files = []
-    for file_path, content in files.items():
-        full_path = base_path / file_path
-        if not full_path.exists():
-            full_path.write_text(content, encoding="utf-8")
-            created_files.append(str(full_path))
-            print_info(f"ファイル作成: {full_path}")
-        else:
-            print_info(f"ファイル既存: {full_path}")
-
-    return created_files
+    return copied_items
 
 
 def extract_page_title(dir_name):
@@ -247,14 +188,13 @@ def add_section_ids(soup):
     return assigned_ids
 
 
-def wrap_with_html_template(content, title, base_path):
+def wrap_with_html_template(content, title):
     """
     コンテンツをHTML基本タグでラップ
 
     Args:
         content: 既存のHTMLコンテンツ
         title: ページタイトル
-        base_path: ベースとなるディレクトリパス
 
     Returns:
         ラップされたHTML文字列
@@ -270,7 +210,7 @@ def wrap_with_html_template(content, title, base_path):
 </head>
 <body>
 {content}
-<script src="assets/js/main.js"></script>
+<script type="module" src="assets/js/main.js"></script>
 </body>
 </html>"""
 
@@ -290,12 +230,13 @@ def check_if_already_wrapped(html_content):
     return html_content.strip().startswith('<!DOCTYPE html>')
 
 
-def process_page(page_path):
+def process_page(page_path, template_path):
     """
     ページディレクトリを処理
 
     Args:
         page_path: ページディレクトリのパス
+        template_path: テンプレートディレクトリのパス
     """
     page_path = Path(page_path)
     html_path = page_path / "index.html"
@@ -307,11 +248,8 @@ def process_page(page_path):
 
     print_info(f"処理開始: {page_path}")
 
-    # ディレクトリ構造を作成
-    created_dirs = create_directory_structure(page_path)
-
-    # 空ファイルを作成
-    created_files = create_empty_files(page_path)
+    # テンプレート構造をコピー
+    copied_items = copy_template_structure(template_path, page_path)
 
     # HTMLファイルを読み込み
     with open(html_path, 'r', encoding='utf-8') as f:
@@ -342,7 +280,7 @@ def process_page(page_path):
     title = extract_page_title(page_path.name)
 
     # HTML基本タグでラップ
-    wrapped_html = wrap_with_html_template(str(soup), title, page_path)
+    wrapped_html = wrap_with_html_template(str(soup), title)
 
     # HTMLファイルを上書き保存
     with open(html_path, 'w', encoding='utf-8') as f:
@@ -350,8 +288,7 @@ def process_page(page_path):
 
     # レポート出力
     print_success(f"\n=== 処理完了: {page_path.name} ===")
-    print(f"生成ディレクトリ数: {len(created_dirs)}")
-    print(f"生成ファイル数: {len(created_files)}")
+    print(f"コピーされた項目数: {len(copied_items)}")
     print(f"付与セクションID数: {len(assigned_ids)}")
     print(f"付与されたID: {', '.join(assigned_ids)}")
 
@@ -372,8 +309,12 @@ def main():
         print_error(f"指定されたパスが存在しません: {target_path}")
         sys.exit(1)
 
+    # テンプレートディレクトリのパスを取得（スクリプトと同じディレクトリ内）
+    script_dir = Path(__file__).parent
+    template_path = script_dir / "setup_templates"
+
     # 処理実行
-    success = process_page(target_path)
+    success = process_page(target_path, template_path)
 
     if success:
         print_success("\n全ての処理が正常に完了しました!")

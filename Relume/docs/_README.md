@@ -52,14 +52,19 @@ Relume wireframeツールから出力されたTailwind CSSベースのHTMLを、
 
 ```bash
 # 自動セットアップスクリプト実行
-.venv/Scripts/python.exe setup_relume_project.py
+.venv/Scripts/python.exe docs/helper/setup_relume_project.py <ページディレクトリパス>
+
+# 例
+.venv/Scripts/python.exe docs/helper/setup_relume_project.py "s:/MyProjects/KAMUI_CODE/Relume/2025-10-07_satokupo-design/01_ホーム"
 ```
 
 スクリプトは以下を自動で実行:
-1. ディレクトリ構造作成
-2. `.html`ファイル検出
-3. セクション抽出とID割り当て(対話式)
-4. `global.css`と`main.js`の生成・リンク挿入
+1. `docs/helper/setup_templates/`からディレクトリ構造とファイルをコピー
+   - `assets/js/main.js`（features/自動読込コード付き）
+   - `assets/style/global.css`（CSSネストルール案内コメント付き）
+   - 各種ディレクトリ（features/, screenshots/, ai-workbench/等）
+2. `index.html`にHTML基本タグ追加とTailwind CDN読み込み
+3. セクション抽出とID割り当て（対話式）
 
 ## CSS設計ルール
 
