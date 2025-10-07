@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<link
+  rel="preload"
+  as="image"
+  href="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
+/>
+<section
+  class="z-[999] flex w-full items-center border-b border-scheme-border bg-scheme-background lg:min-h-18 lg:px-[5%]"
+>
+  <div class="size-full lg:flex lg:items-center lg:justify-between">
+    <div
+      class="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0"
+    >
+      <a href="#"
+        ><img
+          src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
+          alt="Logo image" /></a
+      ><button
+        class="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden"
+      >
+        <span class="my-[3px] h-0.5 w-6 bg-neutral-darkest"></span
+        ><span class="my-[3px] h-0.5 w-6 bg-neutral-darkest"></span
+        ><span class="my-[3px] h-0.5 w-6 bg-neutral-darkest"></span>
+      </button>
+    </div>
+    <div
+      class="overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
+      style="height:var(--height-closed, 0)"
+    >
+      <a
+        href="#"
+        class="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
+        >ホーム</a
+      ><a
+        href="#"
+        class="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
+        >サービス内容</a
+      ><a
+        href="#"
+        class="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
+        >料金</a
+      ><a
+        href="#"
+        class="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
+        >デザイン</a
+      >
+      <div
+        class="mt-6 flex flex-col items-center gap-4 lg:mt-0 lg:ml-4 lg:flex-row"
+      >
+        <button
+          data-slot="button"
+          class="inline-flex items-center justify-center gap-3 rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border border-scheme-border bg-scheme-background text-scheme-text px-5 py-2 w-full"
+          title="お問い合わせ"
+        >
+          お問い合わせ</button
+        ><button
+          data-slot="button"
+          class="inline-flex items-center justify-center gap-3 rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border border-scheme-border bg-neutral-darkest text-white px-5 py-2 w-full"
+          title="資料請求"
+        >
+          資料請求
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<link
+  rel="preload"
+  as="image"
+  href="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+/>
+<section class="relative px-[5%] py-16 md:py-24 lg:py-28">
+  <div class="relative z-10 container">
+    <div
+      class="grid grid-cols-1 items-start gap-x-12 gap-y-5 md:grid-cols-2 lg:gap-x-20 lg:gap-y-16"
+    >
+      <div>
+        <h1 class="heading-h1 font-bold text-white">お問い合わせについて</h1>
+      </div>
+      <div>
+        <p class="text-medium text-white">
+          私たちのウェブサイト作成サービスに関するご質問やご要望がございましたら、お気軽にお問い合わせください。お客様のニーズに合わせた最適なソリューションをご提案いたします。
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="absolute inset-0 z-0">
+    <img
+      src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+      class="size-full object-cover"
+      alt="Relume placeholder image"
+    />
+    <div class="absolute inset-0 bg-neutral-darkest/50"></div>
+  </div>
+</section>
+
+<section class="px-[5%] py-16 md:py-24 lg:py-28">
+  <div class="container max-w-lg">
+    <div class="mx-auto mb-8 w-full max-w-lg text-center md:mb-10 lg:mb-12">
+      <p class="mb-3 font-semibold md:mb-4">お申し込み</p>
+      <h2 class="heading-h2 mb-5 font-bold md:mb-6">お問い合わせ</h2>
+      <p class="text-medium">
+        カスタマイズされたウェブソリューションについて詳しくお聞きください。
+      </p>
+    </div>
+    <form class="grid grid-cols-1 grid-rows-[auto_auto] gap-6">
+      <div class="grid grid-cols-2 gap-6">
+        <div class="grid w-full items-center">
+          <label
+            data-slot="label"
+            class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 mb-2"
+            for="firstName"
+            >名前</label
+          >
+          <div class="relative flex w-full items-center">
+            <input
+              type="text"
+              data-slot="input"
+              class="flex size-full rounded-form align-middle transition-all duration-200 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 border border-scheme-border bg-scheme-background min-h-11 px-3 py-2"
+              id="firstName"
+            />
+          </div>
+        </div>
+        <div class="grid w-full items-center">
+          <label
+            data-slot="label"
+            class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 mb-2"
+            for="lastName"
+            >苗字</label
+          >
+          <div class="relative flex w-full items-center">
+            <input
+              type="text"
+              data-slot="input"
+              class="flex size-full rounded-form align-middle transition-all duration-200 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 border border-scheme-border bg-scheme-background min-h-11 px-3 py-2"
+              id="lastName"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div class="grid w-full items-center">
+          <label
+            data-slot="label"
+            class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 mb-2"
+            for="email"
+            >メール</label
+          >
+          <div class="relative flex w-full items-center">
+            <input
+              type="email"
+              data-slot="input"
+              class="flex size-full rounded-form align-middle transition-all duration-200 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 border border-scheme-border bg-scheme-background min-h-11 px-3 py-2"
+              id="email"
+            />
+          </div>
+        </div>
+        <div class="grid w-full items-center">
+          <label
+            data-slot="label"
+            class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 mb-2"
+            for="phone"
+            >電話番号</label
+          >
+          <div class="relative flex w-full items-center">
+            <input
+              type="text"
+              data-slot="input"
+              class="flex size-full rounded-form align-middle transition-all duration-200 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 border border-scheme-border bg-scheme-background min-h-11 px-3 py-2"
+              id="phone"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="grid w-full items-center">
+        <label
+          data-slot="label"
+          class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 mb-2"
+          >お問い合わせ内容</label
+        ><button
+          type="button"
+          role="combobox"
+          aria-controls="radix-«R5e»"
+          aria-expanded="false"
+          aria-autocomplete="none"
+          dir="ltr"
+          data-state="closed"
+          data-placeholder=""
+          data-slot="select-trigger"
+          class="flex w-full items-center justify-between gap-1 rounded-form border whitespace-nowrap focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&amp;&gt;span]:line-clamp-1 [&amp;[data-state=open]&gt;svg]:rotate-180 border-scheme-border bg-scheme-background text-scheme-text min-h-11 px-3 py-2"
+        >
+          <span data-slot="select-value" style="pointer-events:none"
+            >選択してください</span
+          ><svg
+            stroke="currentColor"
+            fill="none"
+            stroke-width="0"
+            viewBox="0 0 15 15"
+            class="size-5 text-scheme-text transition-transform duration-300"
+            aria-hidden="true"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+              fill="currentColor"
+            ></path>
+          </svg></button
+        ><select
+          aria-hidden="true"
+          tabindex="-1"
+          style="position:absolute;border:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;word-wrap:normal"
+        >
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="grid w-full items-center py-3 md:py-4">
+        <label
+          data-slot="label"
+          class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 mb-3 md:mb-4"
+          >あなたの立場を教えてください</label
+        >
+        <div
+          role="radiogroup"
+          aria-required="false"
+          dir="ltr"
+          data-slot="radio-group"
+          class="gap-2 grid grid-cols-2 gap-x-6 gap-y-3.5"
+          tabindex="-1"
+          style="outline:none"
+        >
+          <div class="flex items-center space-x-2">
+            <button
+              type="button"
+              role="radio"
+              aria-checked="false"
+              data-state="unchecked"
+              value="個人事業主"
+              data-slot="radio-group-item"
+              id="#first_choice"
+              class="aspect-square size-[1.125rem] rounded-full focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 border border-scheme-border data-[state=checked]:bg-neutral-darkest data-[state=checked]:text-white"
+              tabindex="-1"
+              data-radix-collection-item=""
+            ></button
+            ><input
+              type="radio"
+              aria-hidden="true"
+              style="transform:translateX(-100%);position:absolute;pointer-events:none;opacity:0;margin:0"
+              tabindex="-1"
+              value="個人事業主"
+            /><label
+              data-slot="label"
+              class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50"
+              for="#first_choice"
+              >個人事業主</label
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <button
+              type="button"
+              role="radio"
+              aria-checked="false"
+              data-state="unchecked"
+              value="First choice"
+              data-slot="radio-group-item"
+              id="#second_choice"
+              class="aspect-square size-[1.125rem] rounded-full focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 border border-scheme-border data-[state=checked]:bg-neutral-darkest data-[state=checked]:text-white"
+              tabindex="-1"
+              data-radix-collection-item=""
+            ></button
+            ><input
+              type="radio"
+              aria-hidden="true"
+              style="transform:translateX(-100%);position:absolute;pointer-events:none;opacity:0;margin:0"
+              tabindex="-1"
+              value="First choice"
+            /><label
+              data-slot="label"
+              class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50"
+              for="#second_choice"
+              >中小企業</label
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <button
+              type="button"
+              role="radio"
+              aria-checked="false"
+              data-state="unchecked"
+              value="First choice"
+              data-slot="radio-group-item"
+              id="#third_choice"
+              class="aspect-square size-[1.125rem] rounded-full focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 border border-scheme-border data-[state=checked]:bg-neutral-darkest data-[state=checked]:text-white"
+              tabindex="-1"
+              data-radix-collection-item=""
+            ></button
+            ><input
+              type="radio"
+              aria-hidden="true"
+              style="transform:translateX(-100%);position:absolute;pointer-events:none;opacity:0;margin:0"
+              tabindex="-1"
+              value="First choice"
+            /><label
+              data-slot="label"
+              class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50"
+              for="#third_choice"
+              >大企業</label
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <button
+              type="button"
+              role="radio"
+              aria-checked="false"
+              data-state="unchecked"
+              value="First choice"
+              data-slot="radio-group-item"
+              id="#fourth_choice"
+              class="aspect-square size-[1.125rem] rounded-full focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 border border-scheme-border data-[state=checked]:bg-neutral-darkest data-[state=checked]:text-white"
+              tabindex="-1"
+              data-radix-collection-item=""
+            ></button
+            ><input
+              type="radio"
+              aria-hidden="true"
+              style="transform:translateX(-100%);position:absolute;pointer-events:none;opacity:0;margin:0"
+              tabindex="-1"
+              value="First choice"
+            /><label
+              data-slot="label"
+              class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50"
+              for="#fourth_choice"
+              >フリーランス</label
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <button
+              type="button"
+              role="radio"
+              aria-checked="false"
+              data-state="unchecked"
+              value="First choice"
+              data-slot="radio-group-item"
+              id="#fifth_choice"
+              class="aspect-square size-[1.125rem] rounded-full focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 border border-scheme-border data-[state=checked]:bg-neutral-darkest data-[state=checked]:text-white"
+              tabindex="-1"
+              data-radix-collection-item=""
+            ></button
+            ><input
+              type="radio"
+              aria-hidden="true"
+              style="transform:translateX(-100%);position:absolute;pointer-events:none;opacity:0;margin:0"
+              tabindex="-1"
+              value="First choice"
+            /><label
+              data-slot="label"
+              class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50"
+              for="#fifth_choice"
+              >学生</label
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <button
+              type="button"
+              role="radio"
+              aria-checked="false"
+              data-state="unchecked"
+              value="First choice"
+              data-slot="radio-group-item"
+              id="#other"
+              class="aspect-square size-[1.125rem] rounded-full focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 border border-scheme-border data-[state=checked]:bg-neutral-darkest data-[state=checked]:text-white"
+              tabindex="-1"
+              data-radix-collection-item=""
+            ></button
+            ><input
+              type="radio"
+              aria-hidden="true"
+              style="transform:translateX(-100%);position:absolute;pointer-events:none;opacity:0;margin:0"
+              tabindex="-1"
+              value="First choice"
+            /><label
+              data-slot="label"
+              class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50"
+              for="#other"
+              >その他</label
+            >
+          </div>
+        </div>
+      </div>
+      <div class="grid w-full items-center">
+        <label
+          data-slot="label"
+          class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 mb-2"
+          for="message"
+          >メッセージ</label
+        ><textarea
+          data-slot="textarea"
+          class="flex w-full rounded-form focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 border border-scheme-border bg-scheme-background p-3 min-h-[11.25rem] overflow-auto"
+          id="message"
+          placeholder="メッセージを入力してください"
+        ></textarea>
+      </div>
+      <div class="text-small mb-3 flex items-center space-x-2 md:mb-4">
+        <button
+          type="button"
+          role="checkbox"
+          aria-checked="false"
+          data-state="unchecked"
+          value="on"
+          data-slot="checkbox"
+          class="size-[1.125rem] rounded-checkbox transition-all duration-200 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 border border-scheme-border data-[state=checked]:bg-neutral-darkest data-[state=checked]:text-white"
+          id="terms"
+        ></button
+        ><input
+          type="checkbox"
+          aria-hidden="true"
+          style="transform:translateX(-100%);position:absolute;pointer-events:none;opacity:0;margin:0"
+          tabindex="-1"
+          value="on"
+        /><label
+          data-slot="label"
+          class="flex items-center gap-2 select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 cursor-pointer"
+          for="terms"
+          >利用規約に同意します</label
+        >
+      </div>
+      <div class="text-center">
+        <button
+          data-slot="button"
+          class="inline-flex items-center justify-center gap-3 rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border border-scheme-border bg-neutral-darkest text-white px-6 py-3"
+          title="送信"
+        >
+          送信
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<link
+  rel="preload"
+  as="image"
+  href="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
+/>
+<footer class="px-[5%] py-12 md:py-18 lg:py-20">
+  <div class="container">
+    <div class="flex flex-col items-center pb-12 md:pb-18 lg:pb-20">
+      <a href="#" class="mb-8"
+        ><img
+          src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
+          alt="Logo image"
+          class="inline-block"
+      /></a>
+      <ul
+        class="grid grid-flow-row grid-cols-1 items-start justify-center justify-items-center gap-6 md:grid-flow-col md:grid-cols-[max-content] md:justify-center md:justify-items-start"
+      >
+        <li class="font-semibold"><a href="#">初めての方</a></li>
+        <li class="font-semibold"><a href="#">よくある質問</a></li>
+      </ul>
+    </div>
+    <div class="h-px w-full bg-scheme-border"></div>
+    <div
+      class="text-small flex flex-col-reverse items-center justify-between pt-6 pb-4 text-center md:flex-row md:pt-8 md:pb-0"
+    >
+      <p class="mt-8 md:mt-0">© 2024 Relume. All rights reserved.</p>
+      <ul
+        class="text-small grid grid-flow-row grid-cols-[max-content] justify-center gap-y-4 md:grid-flow-col md:gap-x-6 md:gap-y-0"
+      >
+        <li class="underline"><a href="#">プライバシーポリシー</a></li>
+        <li class="underline"><a href="#">クッキポリシー</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

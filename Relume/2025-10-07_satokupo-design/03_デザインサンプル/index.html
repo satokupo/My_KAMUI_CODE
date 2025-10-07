@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>デザインサンプル</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<link
+  rel="preload"
+  as="image"
+  href="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
+/>
+<section
+  class="z-[999] flex w-full items-center border-b border-scheme-border bg-scheme-background lg:min-h-18 lg:px-[5%]"
+>
+  <div class="size-full lg:flex lg:items-center lg:justify-between">
+    <div
+      class="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0"
+    >
+      <a href="#"
+        ><img
+          src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
+          alt="Logo image" /></a
+      ><button
+        class="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden"
+      >
+        <span class="my-[3px] h-0.5 w-6 bg-neutral-darkest"></span
+        ><span class="my-[3px] h-0.5 w-6 bg-neutral-darkest"></span
+        ><span class="my-[3px] h-0.5 w-6 bg-neutral-darkest"></span>
+      </button>
+    </div>
+    <div
+      class="overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
+      style="height:var(--height-closed, 0)"
+    >
+      <a
+        href="#"
+        class="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
+        >ホーム</a
+      ><a
+        href="#"
+        class="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
+        >サービス内容</a
+      ><a
+        href="#"
+        class="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
+        >料金</a
+      ><a
+        href="#"
+        class="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
+        >デザイン</a
+      >
+      <div
+        class="mt-6 flex flex-col items-center gap-4 lg:mt-0 lg:ml-4 lg:flex-row"
+      >
+        <button
+          data-slot="button"
+          class="inline-flex items-center justify-center gap-3 rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border border-scheme-border bg-scheme-background text-scheme-text px-5 py-2 w-full"
+          title="お問い合わせ"
+        >
+          お問い合わせ</button
+        ><button
+          data-slot="button"
+          class="inline-flex items-center justify-center gap-3 rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border border-scheme-border bg-neutral-darkest text-white px-5 py-2 w-full"
+          title="資料請求"
+        >
+          資料請求
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<link
+  rel="preload"
+  as="image"
+  href="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+/>
+<section class="relative px-[5%] py-16 md:py-24 lg:py-28">
+  <div class="relative z-10 container">
+    <div
+      class="grid grid-cols-1 items-start gap-x-12 gap-y-5 md:grid-cols-2 lg:gap-x-20 lg:gap-y-16"
+    >
+      <div>
+        <h1 class="heading-h1 font-bold text-white">デザインサンプル</h1>
+      </div>
+      <div>
+        <p class="text-medium text-white">
+          私たちのデザインサンプルは、革新と美しさが融合した作品の数々です。各プロジェクトは、クライアントの期待を超えるために、精巧に作り上げられています。
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="absolute inset-0 z-0">
+    <img
+      src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+      class="size-full object-cover"
+      alt="Relume placeholder image"
+    />
+    <div class="absolute inset-0 bg-neutral-darkest/50"></div>
+  </div>
+</section>
+
+<link
+  rel="preload"
+  as="image"
+  href="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+/>
+<section class="px-[5%] py-16 md:py-24 lg:py-28">
+  <div class="container">
+    <div class="mb-12 text-center md:mb-18 lg:mb-20">
+      <h2 class="heading-h2 mb-5 font-bold md:mb-6">Image Gallery</h2>
+      <p class="text-medium">
+        革新的なデザインと機能的な美しさを融合させた厳選されたプロジェクト
+      </p>
+    </div>
+    <div
+      class="grid grid-cols-1 items-start justify-center gap-6 md:grid-cols-2 md:gap-8"
+    >
+      <a href="#"
+        ><img
+          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+          alt="Relume placeholder image 1"
+          class="size-full rounded-image object-cover" /></a
+      ><a href="#"
+        ><img
+          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+          alt="Relume placeholder image 2"
+          class="size-full rounded-image object-cover"
+      /></a>
+    </div>
+  </div>
+</section>
+
+<link
+  rel="preload"
+  as="image"
+  href="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
+/>
+<section class="px-[5%] py-16 md:py-24 lg:py-28">
+  <div class="container">
+    <div
+      class="mb-12 grid grid-cols-1 items-start gap-5 md:mb-18 md:grid-cols-2 md:gap-x-12 lg:mb-20 lg:gap-x-20"
+    >
+      <div><h2 class="heading-h3 font-bold">上記デザインの説明</h2></div>
+      <div>
+        <p class="text-medium">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+          ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+          Suspendisse varius enim in eros elementum tristique. Duis cursus, mi
+          quis viverra ornare, eros dolor interdum nulla.
+        </p>
+      </div>
+    </div>
+    <div
+      class="grid grid-cols-1 items-start gap-y-12 md:grid-cols-3 md:gap-x-8 lg:gap-x-12"
+    >
+      <div>
+        <div class="mb-5 md:mb-6">
+          <img
+            src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
+            class="size-12"
+            alt="Relume logo"
+          />
+        </div>
+        <h3 class="heading-h5 mb-3 font-bold md:mb-4">
+          Long heading is what you see here in this feature section
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+          ornare, eros dolor interdum nulla.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
+          <button
+            data-slot="button"
+            class="inline-flex items-center justify-center rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 gap-2 text-scheme-text p-0"
+          >
+            Button<svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="0"
+              viewBox="0 0 15 15"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div>
+        <div class="mb-5 md:mb-6">
+          <img
+            src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
+            class="size-12"
+            alt="Relume logo"
+          />
+        </div>
+        <h3 class="heading-h5 mb-3 font-bold md:mb-4">
+          Long heading is what you see here in this feature section
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+          ornare, eros dolor interdum nulla.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
+          <button
+            data-slot="button"
+            class="inline-flex items-center justify-center rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 gap-2 text-scheme-text p-0"
+          >
+            Button<svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="0"
+              viewBox="0 0 15 15"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div>
+        <div class="mb-5 md:mb-6">
+          <img
+            src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
+            class="size-12"
+            alt="Relume logo"
+          />
+        </div>
+        <h3 class="heading-h5 mb-3 font-bold md:mb-4">
+          Long heading is what you see here in this feature section
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+          ornare, eros dolor interdum nulla.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
+          <button
+            data-slot="button"
+            class="inline-flex items-center justify-center rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 gap-2 text-scheme-text p-0"
+          >
+            Button<svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="0"
+              viewBox="0 0 15 15"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<link
+  rel="preload"
+  as="image"
+  href="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+/>
+<section class="px-[5%] py-16 md:py-24 lg:py-28">
+  <div class="container">
+    <div class="mb-12 md:mb-18 lg:mb-20">
+      <div class="mx-auto w-full max-w-lg text-center">
+        <p class="mb-3 font-semibold md:mb-4">ブログ</p>
+        <h2 class="heading-h2 mb-5 font-bold md:mb-6">サンプルサイト</h2>
+        <p class="text-medium">各プロジェクトの魅力を深く掘り下げます</p>
+      </div>
+    </div>
+    <div
+      class="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 md:gap-y-16 lg:grid-cols-3"
+    >
+      <div
+        data-slot="card"
+        class="overflow-hidden rounded-card border border-scheme-border bg-scheme-foreground text-scheme-text flex size-full flex-col items-center justify-start"
+      >
+        <a href="#" class="w-full"
+          ><img
+            src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+            alt="Relume placeholder image"
+            class="aspect-[3/2] size-full object-cover"
+        /></a>
+        <div class="px-5 py-6 md:p-6">
+          <div class="mb-4 flex w-full items-center justify-start">
+            <span
+              data-slot="badge"
+              class="inline-flex items-center rounded-badge px-2 py-1 text-sm font-semibold focus:outline-none border border-transparent bg-neutral-lightest text-neutral-darkest mr-4"
+              >カテゴリー</span
+            >
+            <p class="text-small inline font-semibold">5分で読む</p>
+          </div>
+          <a class="mb-2 block max-w-full" href="#"
+            ><h2 class="heading-h5 font-bold">最新のデザイントレンド</h2></a
+          >
+          <p>革新的なデザインがどのように実現されるかを探ります。</p>
+          <button
+            data-slot="button"
+            class="rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 gap-2 text-scheme-text p-0 mt-6 flex items-center justify-center gap-x-2"
+            title="続きを読む"
+          >
+            続きを読む<svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="0"
+              viewBox="0 0 15 15"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        data-slot="card"
+        class="overflow-hidden rounded-card border border-scheme-border bg-scheme-foreground text-scheme-text flex size-full flex-col items-center justify-start"
+      >
+        <a href="#" class="w-full"
+          ><img
+            src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+            alt="Relume placeholder image"
+            class="aspect-[3/2] size-full object-cover"
+        /></a>
+        <div class="px-5 py-6 md:p-6">
+          <div class="mb-4 flex w-full items-center justify-start">
+            <span
+              data-slot="badge"
+              class="inline-flex items-center rounded-badge px-2 py-1 text-sm font-semibold focus:outline-none border border-transparent bg-neutral-lightest text-neutral-darkest mr-4"
+              >カテゴリー</span
+            >
+            <p class="text-small inline font-semibold">5分で読む</p>
+          </div>
+          <a class="mb-2 block max-w-full" href="#"
+            ><h2 class="heading-h5 font-bold">成功事例のご紹介</h2></a
+          >
+          <p>私たちのデザインがもたらした成果をお伝えします。</p>
+          <button
+            data-slot="button"
+            class="rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 gap-2 text-scheme-text p-0 mt-6 flex items-center justify-center gap-x-2"
+            title="続きを読む"
+          >
+            続きを読む<svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="0"
+              viewBox="0 0 15 15"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        data-slot="card"
+        class="overflow-hidden rounded-card border border-scheme-border bg-scheme-foreground text-scheme-text flex size-full flex-col items-center justify-start"
+      >
+        <a href="#" class="w-full"
+          ><img
+            src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+            alt="Relume placeholder image"
+            class="aspect-[3/2] size-full object-cover"
+        /></a>
+        <div class="px-5 py-6 md:p-6">
+          <div class="mb-4 flex w-full items-center justify-start">
+            <span
+              data-slot="badge"
+              class="inline-flex items-center rounded-badge px-2 py-1 text-sm font-semibold focus:outline-none border border-transparent bg-neutral-lightest text-neutral-darkest mr-4"
+              >カテゴリー</span
+            >
+            <p class="text-small inline font-semibold">5分で読む</p>
+          </div>
+          <a class="mb-2 block max-w-full" href="#"
+            ><h2 class="heading-h5 font-bold">クライアントの成功事例</h2></a
+          >
+          <p>実際のプロジェクトがどのように成功を収めたかを見てみましょう。</p>
+          <button
+            data-slot="button"
+            class="rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 gap-2 text-scheme-text p-0 mt-6 flex items-center justify-center gap-x-2"
+            title="続きを読む"
+          >
+            続きを読む<svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="0"
+              viewBox="0 0 15 15"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center justify-center">
+      <button
+        data-slot="button"
+        class="inline-flex items-center justify-center gap-3 rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border border-scheme-border bg-scheme-background text-scheme-text px-6 py-3 mt-10 md:mt-14 lg:mt-16"
+        title="すべて見る"
+      >
+        すべて見る
+      </button>
+    </div>
+  </div>
+</section>
+
+<link
+  rel="preload"
+  as="image"
+  href="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+/>
+<section class="px-[5%] py-16 md:py-24 lg:py-28">
+  <div class="container">
+    <div class="mb-12 text-center md:mb-18 lg:mb-20">
+      <h2 class="heading-h2 mb-5 font-bold md:mb-6">デザインギャラリー</h2>
+      <p class="text-medium">管理画面スクショなど</p>
+    </div>
+    <div
+      class="grid grid-cols-2 items-start justify-center gap-6 md:gap-8 lg:grid-cols-3"
+    >
+      <a href="#"
+        ><img
+          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+          alt="Relume placeholder image 1"
+          class="size-full rounded-image object-cover" /></a
+      ><a href="#"
+        ><img
+          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+          alt="Relume placeholder image 2"
+          class="size-full rounded-image object-cover" /></a
+      ><a href="#"
+        ><img
+          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+          alt="Relume placeholder image 3"
+          class="size-full rounded-image object-cover" /></a
+      ><a href="#"
+        ><img
+          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+          alt="Relume placeholder image 4"
+          class="size-full rounded-image object-cover" /></a
+      ><a href="#"
+        ><img
+          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+          alt="Relume placeholder image 5"
+          class="size-full rounded-image object-cover" /></a
+      ><a href="#"
+        ><img
+          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+          alt="Relume placeholder image 6"
+          class="size-full rounded-image object-cover"
+      /></a>
+    </div>
+  </div>
+</section>
+
+<link
+  rel="preload"
+  as="image"
+  href="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
+/>
+<footer class="px-[5%] py-12 md:py-18 lg:py-20">
+  <div class="container">
+    <div class="flex flex-col items-center pb-12 md:pb-18 lg:pb-20">
+      <a href="#" class="mb-8"
+        ><img
+          src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
+          alt="Logo image"
+          class="inline-block"
+      /></a>
+      <ul
+        class="grid grid-flow-row grid-cols-1 items-start justify-center justify-items-center gap-6 md:grid-flow-col md:grid-cols-[max-content] md:justify-center md:justify-items-start"
+      >
+        <li class="font-semibold"><a href="#">初めての方</a></li>
+        <li class="font-semibold"><a href="#">よくある質問</a></li>
+      </ul>
+    </div>
+    <div class="h-px w-full bg-scheme-border"></div>
+    <div
+      class="text-small flex flex-col-reverse items-center justify-between pt-6 pb-4 text-center md:flex-row md:pt-8 md:pb-0"
+    >
+      <p class="mt-8 md:mt-0">© 2024 Relume. All rights reserved.</p>
+      <ul
+        class="text-small grid grid-flow-row grid-cols-[max-content] justify-center gap-y-4 md:grid-flow-col md:gap-x-6 md:gap-y-0"
+      >
+        <li class="underline"><a href="#">プライバシーポリシー</a></li>
+        <li class="underline"><a href="#">クッキポリシー</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
