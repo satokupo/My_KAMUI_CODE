@@ -213,13 +213,33 @@ def wrap_first_section_with_header(soup):
     return True
 
 
+def parse_section_spec(section_spec):
+    """
+    セクション指定文字列をパース
+
+    Args:
+        section_spec: セクション指定文字列（例: "hero:full-wide", "cta", "features:wide"）
+
+    Returns:
+        (section_id, width_class) のタプル
+        width_classはNone, "full-wide", "wide"のいずれか
+    """
+    if ':' in section_spec:
+        parts = section_spec.split(':', 1)
+        section_id = parts[0].strip()
+        width_class = parts[1].strip() if parts[1].strip() in ['full-wide', 'wide'] else None
+        return (section_id, width_class)
+    else:
+        return (section_spec.strip(), None)
+
+
 def add_section_ids(soup, section_names, page_name, count_wrapped_header=False):
     """
     セクションにユニークIDを付与（引数ベース）
 
     Args:
         soup: BeautifulSoupオブジェクト
-        section_names: セクション名リスト
+        section_names: セクション名リスト（幅指定含む可能性あり）
         page_name: ページ名（エラー表示用）
         count_wrapped_header: ラップされた<header>をカウントに含めるか（デフォルト: False）
 
@@ -239,7 +259,8 @@ def add_section_ids(soup, section_names, page_name, count_wrapped_header=False):
     print_info(f"{len(sections)}個のセクションを検出しました")
 
     for index, section in enumerate(sections):
-        section_id = section_names[index]
+        # セクション指定をパース
+        section_id, width_class = parse_section_spec(section_names[index])
 
         # 既にIDが付与されている場合は上書き
         if section.get('id'):
@@ -249,6 +270,16 @@ def add_section_ids(soup, section_names, page_name, count_wrapped_header=False):
         section['id'] = section_id
         assigned_ids.append(section_id)
         print_success(f"ID '{section_id}' を付与しました")
+
+        # 幅指定クラスを付与
+        if width_class:
+            existing_class = section.get('class', [])
+            if isinstance(existing_class, str):
+                existing_class = existing_class.split()
+            if width_class not in existing_class:
+                existing_class.append(width_class)
+                section['class'] = existing_class
+                print_success(f"  └─ クラス '{width_class}' を追加しました")
 
     return assigned_ids
 
@@ -361,7 +392,8 @@ def process_page(page_path, template_path, section_names):
         print_info(f"{len(sections_in_content)}個のセクションにIDを付与します")
 
         for index, section in enumerate(sections_in_content):
-            section_id = section_names[index]
+            # セクション指定をパース
+            section_id, width_class = parse_section_spec(section_names[index])
 
             if section.get('id'):
                 print_info(f"セクション {index + 1} の既存ID '{section['id']}' を '{section_id}' に更新")
@@ -369,6 +401,16 @@ def process_page(page_path, template_path, section_names):
             section['id'] = section_id
             assigned_ids.append(section_id)
             print_success(f"ID '{section_id}' を付与しました")
+
+            # 幅指定クラスを付与
+            if width_class:
+                existing_class = section.get('class', [])
+                if isinstance(existing_class, str):
+                    existing_class = existing_class.split()
+                if width_class not in existing_class:
+                    existing_class.append(width_class)
+                    section['class'] = existing_class
+                    print_success(f"  └─ クラス '{width_class}' を追加しました")
 
         # HTMLを保存
         with open(html_path, 'w', encoding='utf-8') as f:
@@ -406,7 +448,8 @@ def process_page(page_path, template_path, section_names):
     print_info(f"{len(sections_in_body)}個のセクションにIDを付与します")
 
     for index, section in enumerate(sections_in_body):
-        section_id = section_names[index]
+        # セクション指定をパース
+        section_id, width_class = parse_section_spec(section_names[index])
 
         if section.get('id'):
             print_info(f"セクション {index + 1} の既存ID '{section['id']}' を '{section_id}' に更新")
@@ -414,6 +457,16 @@ def process_page(page_path, template_path, section_names):
         section['id'] = section_id
         assigned_ids.append(section_id)
         print_success(f"ID '{section_id}' を付与しました")
+
+        # 幅指定クラスを付与
+        if width_class:
+            existing_class = section.get('class', [])
+            if isinstance(existing_class, str):
+                existing_class = existing_class.split()
+            if width_class not in existing_class:
+                existing_class.append(width_class)
+                section['class'] = existing_class
+                print_success(f"  └─ クラス '{width_class}' を追加しました")
 
     # ページタイトルを生成
     title = extract_page_title(page_path.name)
