@@ -26,9 +26,11 @@ Relumeプロジェクトセットアップスクリプト
      - assets/style/base.css, custom.css読み込み
      - assets/js/main.js読み込み
   5. 文書内で最初に現れる<section>を<header>でラップ
-  6. 引数で指定されたセクション名を順番に適用（セクション数検証あり）
-  7. 修正されたHTMLを上書き保存
-  8. 実行結果レポートをコンソールに出力
+  6. 最後の<footer>タグを特定
+  7. #content-area内の<section>のみカウント（header/footer除外）
+  8. 引数で指定されたセクション名を順番に適用（セクション数検証あり）
+  9. 修正されたHTMLを上書き保存
+  10. 実行結果レポートをコンソールに出力
 
 注意事項:
   - index.htmlが存在しない場合はエラー終了
@@ -333,25 +335,32 @@ def process_page(page_path, template_path, section_names):
         # BeautifulSoupでパース
         soup = BeautifulSoup(html_content, 'html.parser')
 
-        # wrap前のセクション数を検証
-        section_tags = ['section', 'footer', 'main', 'nav', 'aside']  # headerは除外
-        sections_before_wrap = soup.find_all(section_tags)
-
-        if not validate_section_count(sections_before_wrap, section_names, page_name):
-            print_error(f"[{page_name}] セクション数不一致のため処理を中断しました")
-            return False
-
         # 最初の<section>を<header>でラップ
         wrap_first_section_with_header(soup)
 
-        # wrap後のセクションにIDを付与（headerは除外してsectionのみ）
-        section_tags_for_id = ['section', 'footer', 'main', 'nav', 'aside']
-        sections_for_id = soup.find_all(section_tags_for_id)
+        # #content-area内の<section>のみを取得（header/footer除外）
+        content_area = soup.find(id='content-area')
+        if not content_area:
+            print_error(f"#content-areaが見つかりません")
+            return False
 
+        # content-area直下のsectionのみを取得
+        sections_in_content = []
+        for child in content_area.children:
+            if hasattr(child, 'name'):
+                if child.name == 'section':
+                    sections_in_content.append(child)
+
+        # セクション数検証
+        if not validate_section_count(sections_in_content, section_names, page_name):
+            print_error(f"[{page_name}] セクション数不一致のため処理を中断しました")
+            return False
+
+        # セクションにIDを付与
         assigned_ids = []
-        print_info(f"{len(sections_for_id)}個のセクションにIDを付与します")
+        print_info(f"{len(sections_in_content)}個のセクションにIDを付与します")
 
-        for index, section in enumerate(sections_for_id):
+        for index, section in enumerate(sections_in_content):
             section_id = section_names[index]
 
             if section.get('id'):
@@ -371,25 +380,32 @@ def process_page(page_path, template_path, section_names):
     # BeautifulSoupでパース
     soup = BeautifulSoup(html_content, 'html.parser')
 
-    # wrap前のセクション数を検証
-    section_tags = ['section', 'footer', 'main', 'nav', 'aside']  # headerは除外
-    sections_before_wrap = soup.find_all(section_tags)
-
-    if not validate_section_count(sections_before_wrap, section_names, page_name):
-        print_error(f"[{page_name}] セクション数不一致のため処理を中断しました")
-        return False
-
     # 最初の<section>を<header>でラップ
     wrap_first_section_with_header(soup)
 
-    # wrap後のセクションにIDを付与（headerは除外してsectionのみ）
-    section_tags_for_id = ['section', 'footer', 'main', 'nav', 'aside']
-    sections_for_id = soup.find_all(section_tags_for_id)
+    # ボディ内の<section>のみを取得（header/footer除外）
+    body = soup.find('body')
+    if not body:
+        # bodyタグがない場合は全体から取得
+        sections_in_body = [tag for tag in soup.find_all('section') if tag.name == 'section' and tag.parent.name != 'header']
+    else:
+        # body直下のsectionのみを取得（footerは除外）
+        sections_in_body = []
+        for child in body.children:
+            if hasattr(child, 'name'):
+                if child.name == 'section':
+                    sections_in_body.append(child)
 
+    # セクション数検証
+    if not validate_section_count(sections_in_body, section_names, page_name):
+        print_error(f"[{page_name}] セクション数不一致のため処理を中断しました")
+        return False
+
+    # セクションにIDを付与
     assigned_ids = []
-    print_info(f"{len(sections_for_id)}個のセクションにIDを付与します")
+    print_info(f"{len(sections_in_body)}個のセクションにIDを付与します")
 
-    for index, section in enumerate(sections_for_id):
+    for index, section in enumerate(sections_in_body):
         section_id = section_names[index]
 
         if section.get('id'):
