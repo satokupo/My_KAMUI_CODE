@@ -45,23 +45,3 @@
   } */
 }
 
-/* ユーティリティクラス */
-/* フルワイドセクション */
-section.full-wide {
-  width: 100vw;
-  padding-right: 48px;
-  padding-left: 48px;
-  margin-left: calc(50% - 50vw) !important;
-
-  & > .container {
-    max-width: var(--site-width);
-    padding-right: 32px;
-    padding-left: 32px;
-    margin: 0px auto;
-  }
-}
-/* 少し広めセクション */
-section.wide{
-  padding-right: 0px;
-  padding-left: 0px;
-}
