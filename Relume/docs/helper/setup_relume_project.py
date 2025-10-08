@@ -273,7 +273,9 @@ def wrap_with_html_template(content, title):
   <link rel="stylesheet" href="assets/style/custom.css">
 </head>
 <body>
+<div id="content-area">
 {content}
+</div>
 <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>"""
