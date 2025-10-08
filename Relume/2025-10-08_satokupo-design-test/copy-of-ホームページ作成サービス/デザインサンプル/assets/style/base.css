@@ -1,0 +1,87 @@
+/*
+ * CSSネストルール遵守
+ * - このファイルは基本スタイルなので変更禁止
+ * - 変更が必要な場合はcustom.cssの方で上書きすること
+ */
+
+ body {
+  --color-bg: #ffffff;
+  --color-text: #333333;
+
+  --site-width: 1200px;
+  --content-width: 900px;
+
+  --swl-headerH: 72px;
+  --swl-fix_headerH: 64px;
+  --swl-offset_y: 64px;
+  --swl-scrollbar_width: 15px;
+
+  position: relative;
+  display: block;
+  overflow-x: clip;
+  min-width: 100%;
+  max-width: 100%;
+  line-height: 1.6;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+
+  font-size: 1rem;
+
+  div#content-area {
+    position: relative;
+    z-index: 1;
+    max-width: var(--site-width);
+    padding-right: 48px;
+    padding-left: 48px;
+    margin: 0 auto 6em;
+
+    &>section {
+      padding-right: 32px;
+      padding-left: 32px;
+      margin-right: calc((100% - var(--content-width)) /2);
+      margin-left: calc((100% - var(--content-width)) /2);
+
+      h1 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+    }
+
+    @media not all and (min-width: 960px) {
+
+      header>* {
+        height: 48px;
+      }
+    }
+
+    /* グローバルナビとフッター */
+    header,
+    footer {
+      width: 100vw;
+      /* ビューポート全幅に広げる */
+      margin-left: calc(50% - 50vw) !important;
+      /* コンテナ中央寄せ分を打ち消す */
+    }
+
+    header>* {
+      height: var(--swl-headerH);
+
+    }
+
+  }
+}
+
+.bg-neutral-darkest {
+  background-color: var(--color-text);
+}

@@ -1,654 +1,230 @@
-<link
-  rel="preload"
-  as="image"
-  href="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
-/>
-<section
-  class="z-[999] flex w-full items-center border-b border-scheme-border bg-scheme-background lg:min-h-18 lg:px-[5%]"
->
-  <div class="size-full lg:flex lg:items-center lg:justify-between">
-    <div
-      class="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0"
-    >
-      <a href="#"
-        ><img
-          src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
-          alt="Logo image" /></a
-      ><button
-        class="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden"
-      >
-        <span class="my-[3px] h-0.5 w-6 bg-neutral-darkest"></span
-        ><span class="my-[3px] h-0.5 w-6 bg-neutral-darkest"></span
-        ><span class="my-[3px] h-0.5 w-6 bg-neutral-darkest"></span>
-      </button>
-    </div>
-    <div
-      class="overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
-      style="height:var(--height-closed, 0)"
-    >
-      <a
-        href="#"
-        class="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
-        >ホーム</a
-      ><a
-        href="#"
-        class="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
-        >サービス内容</a
-      ><a
-        href="#"
-        class="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
-        >料金</a
-      ><a
-        href="#"
-        class="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2"
-        >デザイン</a
-      >
-      <div
-        class="mt-6 flex flex-col items-center gap-4 lg:mt-0 lg:ml-4 lg:flex-row"
-      >
-        <button
-          data-slot="button"
-          class="inline-flex items-center justify-center gap-3 rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border border-scheme-border bg-scheme-background text-scheme-text px-5 py-2 w-full"
-          title="お問い合わせ"
-        >
-          お問い合わせ</button
-        ><button
-          data-slot="button"
-          class="inline-flex items-center justify-center gap-3 rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border border-scheme-border bg-neutral-darkest text-white px-5 py-2 w-full"
-          title="資料請求"
-        >
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>初めての方へ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/style/base.css">
+  <link rel="stylesheet" href="assets/style/custom.css">
+</head>
+<body>
+<link as="image" href="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg" rel="preload"/>
+<header><section class="z-[999] flex w-full items-center border-b border-scheme-border bg-scheme-background lg:min-h-18 lg:px-[5%]" id="nav">
+<div class="size-full lg:flex lg:items-center lg:justify-between">
+<div class="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
+<a href="#"><img alt="Logo image" src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"/></a><button class="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden">
+<span class="my-[3px] h-0.5 w-6 bg-neutral-darkest"></span><span class="my-[3px] h-0.5 w-6 bg-neutral-darkest"></span><span class="my-[3px] h-0.5 w-6 bg-neutral-darkest"></span>
+</button>
+</div>
+<div class="overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]" style="height:var(--height-closed, 0)">
+<a class="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2" href="#">ホーム</a><a class="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2" href="#">サービス内容</a><a class="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2" href="#">料金</a><a class="text-regular block py-3 first:pt-7 lg:px-4 lg:py-2 first:lg:pt-2" href="#">デザイン</a>
+<div class="mt-6 flex flex-col items-center gap-4 lg:mt-0 lg:ml-4 lg:flex-row">
+<button class="inline-flex items-center justify-center gap-3 rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border border-scheme-border bg-scheme-background text-scheme-text px-5 py-2 w-full" data-slot="button" title="お問い合わせ">
+          お問い合わせ</button><button class="inline-flex items-center justify-center gap-3 rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border border-scheme-border bg-neutral-darkest text-white px-5 py-2 w-full" data-slot="button" title="資料請求">
           資料請求
         </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="px-[5%] py-16 md:py-24 lg:py-28">
-  <div class="container max-w-lg text-center">
-    <h1 class="heading-h1 mb-5 font-bold md:mb-6">私について</h1>
-    <p class="text-medium">
+</div>
+</div>
+</div>
+</section></header>
+<section class="px-[5%] py-16 md:py-24 lg:py-28" id="header">
+<div class="container max-w-lg text-center">
+<h1 class="heading-h1 mb-5 font-bold md:mb-6">私について</h1>
+<p class="text-medium">
       ウェブサイト制作の未来を形作り、お客様のデジタルビジョンを革新的な方法で実現するパートナーです。
     </p>
-  </div>
+</div>
 </section>
-
-<link
-  rel="preload"
-  as="image"
-  href="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-/><link
-  rel="preload"
-  as="image"
-  href="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-/>
-<section class="px-[5%] py-16 md:py-24 lg:py-28">
-  <div class="container">
-    <div
-      class="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20"
-    >
-      <div>
-        <p class="mb-3 font-semibold md:mb-4">革新</p>
-        <h1 class="heading-h2 mb-5 font-bold md:mb-6">
+<link as="image" href="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg" rel="preload"/><link as="image" href="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg" rel="preload"/>
+<section class="px-[5%] py-16 md:py-24 lg:py-28" id="profile">
+<div class="container">
+<div class="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
+<div>
+<p class="mb-3 font-semibold md:mb-4">革新</p>
+<h1 class="heading-h2 mb-5 font-bold md:mb-6">
           私たちの歴史と情熱的なミッション
         </h1>
-        <p class="text-medium mb-5 md:mb-6">
+<p class="text-medium mb-5 md:mb-6">
           2010年に設立され、デジタル世界の変革を目指してきました。お客様のオンラインプレゼンスを最大限に引き出すことに全力を注いでいます。
         </p>
-        <ul class="grid grid-cols-1 gap-4 py-2">
-          <li class="flex self-start">
-            <div class="mr-4 flex-none self-start">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                alt="Relume logo 1"
-                class="size-6"
-              />
-            </div>
-            <span>クリエイティブな解決策</span>
-          </li>
-          <li class="flex self-start">
-            <div class="mr-4 flex-none self-start">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                alt="Relume logo 1"
-                class="size-6"
-              />
-            </div>
-            <span>顧客中心のアプローチ</span>
-          </li>
-          <li class="flex self-start">
-            <div class="mr-4 flex-none self-start">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                alt="Relume logo 1"
-                class="size-6"
-              />
-            </div>
-            <span>継続的な技術革新</span>
-          </li>
-        </ul>
-        <div class="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-          <button
-            data-slot="button"
-            class="inline-flex items-center justify-center gap-3 rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border border-scheme-border bg-scheme-background text-scheme-text px-6 py-3"
-            title="詳細"
-          >
-            詳細</button
-          ><button
-            data-slot="button"
-            class="inline-flex items-center justify-center rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 gap-2 text-scheme-text p-0"
-            title="お問い合わせ"
-          >
-            お問い合わせ<svg
-              stroke="currentColor"
-              fill="none"
-              stroke-width="0"
-              viewBox="0 0 15 15"
-              height="1em"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div>
-        <img
-          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-          class="w-full rounded-image object-cover"
-          alt="Relume placeholder image"
-        />
-      </div>
-    </div>
-  </div>
+<ul class="grid grid-cols-1 gap-4 py-2">
+<li class="flex self-start">
+<div class="mr-4 flex-none self-start">
+<img alt="Relume logo 1" class="size-6" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+</div>
+<span>クリエイティブな解決策</span>
+</li>
+<li class="flex self-start">
+<div class="mr-4 flex-none self-start">
+<img alt="Relume logo 1" class="size-6" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+</div>
+<span>顧客中心のアプローチ</span>
+</li>
+<li class="flex self-start">
+<div class="mr-4 flex-none self-start">
+<img alt="Relume logo 1" class="size-6" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+</div>
+<span>継続的な技術革新</span>
+</li>
+</ul>
+<div class="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
+<button class="inline-flex items-center justify-center gap-3 rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border border-scheme-border bg-scheme-background text-scheme-text px-6 py-3" data-slot="button" title="詳細">
+            詳細</button><button class="inline-flex items-center justify-center rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 gap-2 text-scheme-text p-0" data-slot="button" title="お問い合わせ">
+            お問い合わせ<svg fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</div>
+<div>
+<img alt="Relume placeholder image" class="w-full rounded-image object-cover" src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"/>
+</div>
+</div>
+</div>
 </section>
-
-<section class="px-[5%] py-16 md:py-24 lg:py-28">
-  <div
-    class="container grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-12 lg:grid-cols-[.75fr,1fr] lg:gap-x-20"
-  >
-    <div>
-      <h2 class="heading-h2 mb-5 font-bold md:mb-6">よくある質問</h2>
-      <p class="text-medium">
+<section class="px-[5%] py-16 md:py-24 lg:py-28" id="faq">
+<div class="container grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-12 lg:grid-cols-[.75fr,1fr] lg:gap-x-20">
+<div>
+<h2 class="heading-h2 mb-5 font-bold md:mb-6">よくある質問</h2>
+<p class="text-medium">
         私たちのサービスについてよくいただく質問にお答えします。
       </p>
-      <div class="mt-6 md:mt-8">
-        <button
-          data-slot="button"
-          class="inline-flex items-center justify-center gap-3 rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border border-scheme-border bg-scheme-background text-scheme-text px-6 py-3"
-          title="お問い合わせ"
-        >
+<div class="mt-6 md:mt-8">
+<button class="inline-flex items-center justify-center gap-3 rounded-button whitespace-nowrap transition-all duration-200 ease-in-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border border-scheme-border bg-scheme-background text-scheme-text px-6 py-3" data-slot="button" title="お問い合わせ">
           お問い合わせ
         </button>
-      </div>
-    </div>
-    <div data-slot="accordion" data-orientation="vertical">
-      <div
-        data-slot="card"
-        class="overflow-hidden rounded-card border border-scheme-border bg-scheme-foreground text-scheme-text"
-      >
-        <div
-          data-state="closed"
-          data-orientation="vertical"
-          data-slot="accordion-item"
-          class="border-b border-scheme-border first:border-t border-none px-5 md:px-6"
-        >
-          <h3
-            data-orientation="vertical"
-            data-state="closed"
-            class="flex w-full"
-          >
-            <button
-              type="button"
-              aria-controls="radix-«R36»"
-              aria-expanded="false"
-              data-state="closed"
-              data-orientation="vertical"
-              id="radix-«R16»"
-              data-slot="accordion-trigger"
-              class="flex flex-1 items-center justify-between py-4 font-bold transition-all focus-visible:ring-0 focus-visible:outline-none text-medium md:py-5 [&amp;[data-state=open]&gt;svg]:rotate-45"
-              data-radix-collection-item=""
-            >
-              ウェブサイト制作の費用は？<svg
-                stroke="currentColor"
-                fill="none"
-                stroke-width="0"
-                viewBox="0 0 15 15"
-                class="size-7 shrink-0 text-scheme-text transition-transform duration-300 md:size-8"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M8 2.75C8 2.47386 7.77614 2.25 7.5 2.25C7.22386 2.25 7 2.47386 7 2.75V7H2.75C2.47386 7 2.25 7.22386 2.25 7.5C2.25 7.77614 2.47386 8 2.75 8H7V12.25C7 12.5261 7.22386 12.75 7.5 12.75C7.77614 12.75 8 12.5261 8 12.25V8H12.25C12.5261 8 12.75 7.77614 12.75 7.5C12.75 7.22386 12.5261 7 12.25 7H8V2.75Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </button>
-          </h3>
-          <div
-            data-state="closed"
-            id="radix-«R36»"
-            hidden=""
-            role="region"
-            aria-labelledby="radix-«R16»"
-            data-orientation="vertical"
-            data-slot="accordion-content"
-            class="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-            style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)"
-          ></div>
-        </div>
-      </div>
-      <div
-        data-slot="card"
-        class="overflow-hidden rounded-card border border-scheme-border bg-scheme-foreground text-scheme-text"
-      >
-        <div
-          data-state="closed"
-          data-orientation="vertical"
-          data-slot="accordion-item"
-          class="border-b border-scheme-border first:border-t border-none px-5 md:px-6"
-        >
-          <h3
-            data-orientation="vertical"
-            data-state="closed"
-            class="flex w-full"
-          >
-            <button
-              type="button"
-              aria-controls="radix-«R3a»"
-              aria-expanded="false"
-              data-state="closed"
-              data-orientation="vertical"
-              id="radix-«R1a»"
-              data-slot="accordion-trigger"
-              class="flex flex-1 items-center justify-between py-4 font-bold transition-all focus-visible:ring-0 focus-visible:outline-none text-medium md:py-5 [&amp;[data-state=open]&gt;svg]:rotate-45"
-              data-radix-collection-item=""
-            >
-              制作期間はどのくらいですか？<svg
-                stroke="currentColor"
-                fill="none"
-                stroke-width="0"
-                viewBox="0 0 15 15"
-                class="size-7 shrink-0 text-scheme-text transition-transform duration-300 md:size-8"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M8 2.75C8 2.47386 7.77614 2.25 7.5 2.25C7.22386 2.25 7 2.47386 7 2.75V7H2.75C2.47386 7 2.25 7.22386 2.25 7.5C2.25 7.77614 2.47386 8 2.75 8H7V12.25C7 12.5261 7.22386 12.75 7.5 12.75C7.77614 12.75 8 12.5261 8 12.25V8H12.25C12.5261 8 12.75 7.77614 12.75 7.5C12.75 7.22386 12.5261 7 12.25 7H8V2.75Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </button>
-          </h3>
-          <div
-            data-state="closed"
-            id="radix-«R3a»"
-            hidden=""
-            role="region"
-            aria-labelledby="radix-«R1a»"
-            data-orientation="vertical"
-            data-slot="accordion-content"
-            class="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-            style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)"
-          ></div>
-        </div>
-      </div>
-      <div
-        data-slot="card"
-        class="overflow-hidden rounded-card border border-scheme-border bg-scheme-foreground text-scheme-text"
-      >
-        <div
-          data-state="closed"
-          data-orientation="vertical"
-          data-slot="accordion-item"
-          class="border-b border-scheme-border first:border-t border-none px-5 md:px-6"
-        >
-          <h3
-            data-orientation="vertical"
-            data-state="closed"
-            class="flex w-full"
-          >
-            <button
-              type="button"
-              aria-controls="radix-«R3e»"
-              aria-expanded="false"
-              data-state="closed"
-              data-orientation="vertical"
-              id="radix-«R1e»"
-              data-slot="accordion-trigger"
-              class="flex flex-1 items-center justify-between py-4 font-bold transition-all focus-visible:ring-0 focus-visible:outline-none text-medium md:py-5 [&amp;[data-state=open]&gt;svg]:rotate-45"
-              data-radix-collection-item=""
-            >
-              サポートは提供されますか？<svg
-                stroke="currentColor"
-                fill="none"
-                stroke-width="0"
-                viewBox="0 0 15 15"
-                class="size-7 shrink-0 text-scheme-text transition-transform duration-300 md:size-8"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M8 2.75C8 2.47386 7.77614 2.25 7.5 2.25C7.22386 2.25 7 2.47386 7 2.75V7H2.75C2.47386 7 2.25 7.22386 2.25 7.5C2.25 7.77614 2.47386 8 2.75 8H7V12.25C7 12.5261 7.22386 12.75 7.5 12.75C7.77614 12.75 8 12.5261 8 12.25V8H12.25C12.5261 8 12.75 7.77614 12.75 7.5C12.75 7.22386 12.5261 7 12.25 7H8V2.75Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </button>
-          </h3>
-          <div
-            data-state="closed"
-            id="radix-«R3e»"
-            hidden=""
-            role="region"
-            aria-labelledby="radix-«R1e»"
-            data-orientation="vertical"
-            data-slot="accordion-content"
-            class="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-            style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)"
-          ></div>
-        </div>
-      </div>
-      <div
-        data-slot="card"
-        class="overflow-hidden rounded-card border border-scheme-border bg-scheme-foreground text-scheme-text"
-      >
-        <div
-          data-state="closed"
-          data-orientation="vertical"
-          data-slot="accordion-item"
-          class="border-b border-scheme-border first:border-t border-none px-5 md:px-6"
-        >
-          <h3
-            data-orientation="vertical"
-            data-state="closed"
-            class="flex w-full"
-          >
-            <button
-              type="button"
-              aria-controls="radix-«R3i»"
-              aria-expanded="false"
-              data-state="closed"
-              data-orientation="vertical"
-              id="radix-«R1i»"
-              data-slot="accordion-trigger"
-              class="flex flex-1 items-center justify-between py-4 font-bold transition-all focus-visible:ring-0 focus-visible:outline-none text-medium md:py-5 [&amp;[data-state=open]&gt;svg]:rotate-45"
-              data-radix-collection-item=""
-            >
-              カスタマイズは可能ですか？<svg
-                stroke="currentColor"
-                fill="none"
-                stroke-width="0"
-                viewBox="0 0 15 15"
-                class="size-7 shrink-0 text-scheme-text transition-transform duration-300 md:size-8"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M8 2.75C8 2.47386 7.77614 2.25 7.5 2.25C7.22386 2.25 7 2.47386 7 2.75V7H2.75C2.47386 7 2.25 7.22386 2.25 7.5C2.25 7.77614 2.47386 8 2.75 8H7V12.25C7 12.5261 7.22386 12.75 7.5 12.75C7.77614 12.75 8 12.5261 8 12.25V8H12.25C12.5261 8 12.75 7.77614 12.75 7.5C12.75 7.22386 12.5261 7 12.25 7H8V2.75Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </button>
-          </h3>
-          <div
-            data-state="closed"
-            id="radix-«R3i»"
-            hidden=""
-            role="region"
-            aria-labelledby="radix-«R1i»"
-            data-orientation="vertical"
-            data-slot="accordion-content"
-            class="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-            style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)"
-          ></div>
-        </div>
-      </div>
-      <div
-        data-slot="card"
-        class="overflow-hidden rounded-card border border-scheme-border bg-scheme-foreground text-scheme-text"
-      >
-        <div
-          data-state="closed"
-          data-orientation="vertical"
-          data-slot="accordion-item"
-          class="border-b border-scheme-border first:border-t border-none px-5 md:px-6"
-        >
-          <h3
-            data-orientation="vertical"
-            data-state="closed"
-            class="flex w-full"
-          >
-            <button
-              type="button"
-              aria-controls="radix-«R3m»"
-              aria-expanded="false"
-              data-state="closed"
-              data-orientation="vertical"
-              id="radix-«R1m»"
-              data-slot="accordion-trigger"
-              class="flex flex-1 items-center justify-between py-4 font-bold transition-all focus-visible:ring-0 focus-visible:outline-none text-medium md:py-5 [&amp;[data-state=open]&gt;svg]:rotate-45"
-              data-radix-collection-item=""
-            >
-              SEO対策は含まれていますか？<svg
-                stroke="currentColor"
-                fill="none"
-                stroke-width="0"
-                viewBox="0 0 15 15"
-                class="size-7 shrink-0 text-scheme-text transition-transform duration-300 md:size-8"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M8 2.75C8 2.47386 7.77614 2.25 7.5 2.25C7.22386 2.25 7 2.47386 7 2.75V7H2.75C2.47386 7 2.25 7.22386 2.25 7.5C2.25 7.77614 2.47386 8 2.75 8H7V12.25C7 12.5261 7.22386 12.75 7.5 12.75C7.77614 12.75 8 12.5261 8 12.25V8H12.25C12.5261 8 12.75 7.77614 12.75 7.5C12.75 7.22386 12.5261 7 12.25 7H8V2.75Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </button>
-          </h3>
-          <div
-            data-state="closed"
-            id="radix-«R3m»"
-            hidden=""
-            role="region"
-            aria-labelledby="radix-«R1m»"
-            data-orientation="vertical"
-            data-slot="accordion-content"
-            class="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-            style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)"
-          ></div>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+<div data-orientation="vertical" data-slot="accordion">
+<div class="overflow-hidden rounded-card border border-scheme-border bg-scheme-foreground text-scheme-text" data-slot="card">
+<div class="border-b border-scheme-border first:border-t border-none px-5 md:px-6" data-orientation="vertical" data-slot="accordion-item" data-state="closed">
+<h3 class="flex w-full" data-orientation="vertical" data-state="closed">
+<button aria-controls="radix-«R36»" aria-expanded="false" class="flex flex-1 items-center justify-between py-4 font-bold transition-all focus-visible:ring-0 focus-visible:outline-none text-medium md:py-5 [&amp;[data-state=open]&gt;svg]:rotate-45" data-orientation="vertical" data-radix-collection-item="" data-slot="accordion-trigger" data-state="closed" id="radix-«R16»" type="button">
+              ウェブサイト制作の費用は？<svg class="size-7 shrink-0 text-scheme-text transition-transform duration-300 md:size-8" fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M8 2.75C8 2.47386 7.77614 2.25 7.5 2.25C7.22386 2.25 7 2.47386 7 2.75V7H2.75C2.47386 7 2.25 7.22386 2.25 7.5C2.25 7.77614 2.47386 8 2.75 8H7V12.25C7 12.5261 7.22386 12.75 7.5 12.75C7.77614 12.75 8 12.5261 8 12.25V8H12.25C12.5261 8 12.75 7.77614 12.75 7.5C12.75 7.22386 12.5261 7 12.25 7H8V2.75Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</button>
+</h3>
+<div aria-labelledby="radix-«R16»" class="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-slot="accordion-content" data-state="closed" hidden="" id="radix-«R36»" role="region" style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)"></div>
+</div>
+</div>
+<div class="overflow-hidden rounded-card border border-scheme-border bg-scheme-foreground text-scheme-text" data-slot="card">
+<div class="border-b border-scheme-border first:border-t border-none px-5 md:px-6" data-orientation="vertical" data-slot="accordion-item" data-state="closed">
+<h3 class="flex w-full" data-orientation="vertical" data-state="closed">
+<button aria-controls="radix-«R3a»" aria-expanded="false" class="flex flex-1 items-center justify-between py-4 font-bold transition-all focus-visible:ring-0 focus-visible:outline-none text-medium md:py-5 [&amp;[data-state=open]&gt;svg]:rotate-45" data-orientation="vertical" data-radix-collection-item="" data-slot="accordion-trigger" data-state="closed" id="radix-«R1a»" type="button">
+              制作期間はどのくらいですか？<svg class="size-7 shrink-0 text-scheme-text transition-transform duration-300 md:size-8" fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M8 2.75C8 2.47386 7.77614 2.25 7.5 2.25C7.22386 2.25 7 2.47386 7 2.75V7H2.75C2.47386 7 2.25 7.22386 2.25 7.5C2.25 7.77614 2.47386 8 2.75 8H7V12.25C7 12.5261 7.22386 12.75 7.5 12.75C7.77614 12.75 8 12.5261 8 12.25V8H12.25C12.5261 8 12.75 7.77614 12.75 7.5C12.75 7.22386 12.5261 7 12.25 7H8V2.75Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</button>
+</h3>
+<div aria-labelledby="radix-«R1a»" class="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-slot="accordion-content" data-state="closed" hidden="" id="radix-«R3a»" role="region" style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)"></div>
+</div>
+</div>
+<div class="overflow-hidden rounded-card border border-scheme-border bg-scheme-foreground text-scheme-text" data-slot="card">
+<div class="border-b border-scheme-border first:border-t border-none px-5 md:px-6" data-orientation="vertical" data-slot="accordion-item" data-state="closed">
+<h3 class="flex w-full" data-orientation="vertical" data-state="closed">
+<button aria-controls="radix-«R3e»" aria-expanded="false" class="flex flex-1 items-center justify-between py-4 font-bold transition-all focus-visible:ring-0 focus-visible:outline-none text-medium md:py-5 [&amp;[data-state=open]&gt;svg]:rotate-45" data-orientation="vertical" data-radix-collection-item="" data-slot="accordion-trigger" data-state="closed" id="radix-«R1e»" type="button">
+              サポートは提供されますか？<svg class="size-7 shrink-0 text-scheme-text transition-transform duration-300 md:size-8" fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M8 2.75C8 2.47386 7.77614 2.25 7.5 2.25C7.22386 2.25 7 2.47386 7 2.75V7H2.75C2.47386 7 2.25 7.22386 2.25 7.5C2.25 7.77614 2.47386 8 2.75 8H7V12.25C7 12.5261 7.22386 12.75 7.5 12.75C7.77614 12.75 8 12.5261 8 12.25V8H12.25C12.5261 8 12.75 7.77614 12.75 7.5C12.75 7.22386 12.5261 7 12.25 7H8V2.75Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</button>
+</h3>
+<div aria-labelledby="radix-«R1e»" class="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-slot="accordion-content" data-state="closed" hidden="" id="radix-«R3e»" role="region" style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)"></div>
+</div>
+</div>
+<div class="overflow-hidden rounded-card border border-scheme-border bg-scheme-foreground text-scheme-text" data-slot="card">
+<div class="border-b border-scheme-border first:border-t border-none px-5 md:px-6" data-orientation="vertical" data-slot="accordion-item" data-state="closed">
+<h3 class="flex w-full" data-orientation="vertical" data-state="closed">
+<button aria-controls="radix-«R3i»" aria-expanded="false" class="flex flex-1 items-center justify-between py-4 font-bold transition-all focus-visible:ring-0 focus-visible:outline-none text-medium md:py-5 [&amp;[data-state=open]&gt;svg]:rotate-45" data-orientation="vertical" data-radix-collection-item="" data-slot="accordion-trigger" data-state="closed" id="radix-«R1i»" type="button">
+              カスタマイズは可能ですか？<svg class="size-7 shrink-0 text-scheme-text transition-transform duration-300 md:size-8" fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M8 2.75C8 2.47386 7.77614 2.25 7.5 2.25C7.22386 2.25 7 2.47386 7 2.75V7H2.75C2.47386 7 2.25 7.22386 2.25 7.5C2.25 7.77614 2.47386 8 2.75 8H7V12.25C7 12.5261 7.22386 12.75 7.5 12.75C7.77614 12.75 8 12.5261 8 12.25V8H12.25C12.5261 8 12.75 7.77614 12.75 7.5C12.75 7.22386 12.5261 7 12.25 7H8V2.75Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</button>
+</h3>
+<div aria-labelledby="radix-«R1i»" class="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-slot="accordion-content" data-state="closed" hidden="" id="radix-«R3i»" role="region" style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)"></div>
+</div>
+</div>
+<div class="overflow-hidden rounded-card border border-scheme-border bg-scheme-foreground text-scheme-text" data-slot="card">
+<div class="border-b border-scheme-border first:border-t border-none px-5 md:px-6" data-orientation="vertical" data-slot="accordion-item" data-state="closed">
+<h3 class="flex w-full" data-orientation="vertical" data-state="closed">
+<button aria-controls="radix-«R3m»" aria-expanded="false" class="flex flex-1 items-center justify-between py-4 font-bold transition-all focus-visible:ring-0 focus-visible:outline-none text-medium md:py-5 [&amp;[data-state=open]&gt;svg]:rotate-45" data-orientation="vertical" data-radix-collection-item="" data-slot="accordion-trigger" data-state="closed" id="radix-«R1m»" type="button">
+              SEO対策は含まれていますか？<svg class="size-7 shrink-0 text-scheme-text transition-transform duration-300 md:size-8" fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M8 2.75C8 2.47386 7.77614 2.25 7.5 2.25C7.22386 2.25 7 2.47386 7 2.75V7H2.75C2.47386 7 2.25 7.22386 2.25 7.5C2.25 7.77614 2.47386 8 2.75 8H7V12.25C7 12.5261 7.22386 12.75 7.5 12.75C7.77614 12.75 8 12.5261 8 12.25V8H12.25C12.5261 8 12.75 7.77614 12.75 7.5C12.75 7.22386 12.5261 7 12.25 7H8V2.75Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</button>
+</h3>
+<div aria-labelledby="radix-«R1m»" class="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-slot="accordion-content" data-state="closed" hidden="" id="radix-«R3m»" role="region" style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)"></div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-<link
-  rel="preload"
-  as="image"
-  href="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-/>
-<section class="px-[5%] py-16 md:py-24 lg:py-28">
-  <div class="container">
-    <div class="mb-12 flex max-w-lg flex-col justify-start md:mb-18 lg:mb-20">
-      <p class="mb-3 font-semibold md:mb-4">グローバル</p>
-      <h2 class="heading-h2 mb-5 font-bold md:mb-6">拠点</h2>
-      <p class="text-medium">
+<link as="image" href="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg" rel="preload"/>
+<section class="px-[5%] py-16 md:py-24 lg:py-28" id="access">
+<div class="container">
+<div class="mb-12 flex max-w-lg flex-col justify-start md:mb-18 lg:mb-20">
+<p class="mb-3 font-semibold md:mb-4">グローバル</p>
+<h2 class="heading-h2 mb-5 font-bold md:mb-6">拠点</h2>
+<p class="text-medium">
         世界各地に拠点を持ち、グローバルな視点でサービスを提供しています。
       </p>
-    </div>
-    <div
-      dir="ltr"
-      data-orientation="vertical"
-      data-slot="tabs"
-      class="relative grid auto-cols-fr grid-cols-1 gap-12 md:grid-cols-[.5fr_1fr] md:gap-y-16 lg:gap-x-20 lg:gap-y-16"
-    >
-      <div
-        role="tablist"
-        aria-orientation="vertical"
-        data-slot="tabs-list"
-        class="relative grid h-full auto-cols-fr grid-cols-1 gap-x-4 gap-y-10"
-        tabindex="-1"
-        data-orientation="vertical"
-        style="outline:none"
-      >
-        <button
-          type="button"
-          role="tab"
-          aria-selected="true"
-          aria-controls="radix-«R2»-content-tab-1"
-          data-state="active"
-          id="radix-«R2»-trigger-tab-1"
-          data-slot="tabs-trigger"
-          class="inline-flex rounded-button px-6 whitespace-nowrap focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border-scheme-border text-scheme-text data-[state=inactive]:border-transparent items-start justify-start border-0 border-l-2 py-0 pr-0 pl-8 data-[state=active]:bg-transparent"
-          tabindex="-1"
-          data-orientation="vertical"
-          data-radix-collection-item=""
-        >
-          <div class="text-left">
-            <h3 class="heading-h5 mb-3 font-bold md:mb-4">東京</h3>
-            <p class="inline-block whitespace-normal">
+</div>
+<div class="relative grid auto-cols-fr grid-cols-1 gap-12 md:grid-cols-[.5fr_1fr] md:gap-y-16 lg:gap-x-20 lg:gap-y-16" data-orientation="vertical" data-slot="tabs" dir="ltr">
+<div aria-orientation="vertical" class="relative grid h-full auto-cols-fr grid-cols-1 gap-x-4 gap-y-10" data-orientation="vertical" data-slot="tabs-list" role="tablist" style="outline:none" tabindex="-1">
+<button aria-controls="radix-«R2»-content-tab-1" aria-selected="true" class="inline-flex rounded-button px-6 whitespace-nowrap focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border-scheme-border text-scheme-text data-[state=inactive]:border-transparent items-start justify-start border-0 border-l-2 py-0 pr-0 pl-8 data-[state=active]:bg-transparent" data-orientation="vertical" data-radix-collection-item="" data-slot="tabs-trigger" data-state="active" id="radix-«R2»-trigger-tab-1" role="tab" tabindex="-1" type="button">
+<div class="text-left">
+<h3 class="heading-h5 mb-3 font-bold md:mb-4">東京</h3>
+<p class="inline-block whitespace-normal">
               東京都渋谷区恵比寿1-2-3
             </p>
-            <div class="mt-5 font-semibold md:mt-6"><p>オフィス詳細</p></div>
-          </div></button
-        ><button
-          type="button"
-          role="tab"
-          aria-selected="false"
-          aria-controls="radix-«R2»-content-tab-2"
-          data-state="inactive"
-          id="radix-«R2»-trigger-tab-2"
-          data-slot="tabs-trigger"
-          class="inline-flex rounded-button px-6 whitespace-nowrap focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border-scheme-border text-scheme-text data-[state=inactive]:border-transparent items-start justify-start border-0 border-l-2 py-0 pr-0 pl-8 data-[state=active]:bg-transparent"
-          tabindex="-1"
-          data-orientation="vertical"
-          data-radix-collection-item=""
-        >
-          <div class="text-left">
-            <h3 class="heading-h5 mb-3 font-bold md:mb-4">大阪</h3>
-            <p class="inline-block whitespace-normal">大阪市北区梅田2-4-5</p>
-            <div class="mt-5 font-semibold md:mt-6"><p>オフィス詳細</p></div>
-          </div></button
-        ><button
-          type="button"
-          role="tab"
-          aria-selected="false"
-          aria-controls="radix-«R2»-content-tab-3"
-          data-state="inactive"
-          id="radix-«R2»-trigger-tab-3"
-          data-slot="tabs-trigger"
-          class="inline-flex rounded-button px-6 whitespace-nowrap focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border-scheme-border text-scheme-text data-[state=inactive]:border-transparent items-start justify-start border-0 border-l-2 py-0 pr-0 pl-8 data-[state=active]:bg-transparent"
-          tabindex="-1"
-          data-orientation="vertical"
-          data-radix-collection-item=""
-        >
-          <div class="text-left">
-            <h3 class="heading-h5 mb-3 font-bold md:mb-4">福岡</h3>
-            <p class="inline-block whitespace-normal">
+<div class="mt-5 font-semibold md:mt-6"><p>オフィス詳細</p></div>
+</div></button><button aria-controls="radix-«R2»-content-tab-2" aria-selected="false" class="inline-flex rounded-button px-6 whitespace-nowrap focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border-scheme-border text-scheme-text data-[state=inactive]:border-transparent items-start justify-start border-0 border-l-2 py-0 pr-0 pl-8 data-[state=active]:bg-transparent" data-orientation="vertical" data-radix-collection-item="" data-slot="tabs-trigger" data-state="inactive" id="radix-«R2»-trigger-tab-2" role="tab" tabindex="-1" type="button">
+<div class="text-left">
+<h3 class="heading-h5 mb-3 font-bold md:mb-4">大阪</h3>
+<p class="inline-block whitespace-normal">大阪市北区梅田2-4-5</p>
+<div class="mt-5 font-semibold md:mt-6"><p>オフィス詳細</p></div>
+</div></button><button aria-controls="radix-«R2»-content-tab-3" aria-selected="false" class="inline-flex rounded-button px-6 whitespace-nowrap focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border-scheme-border text-scheme-text data-[state=inactive]:border-transparent items-start justify-start border-0 border-l-2 py-0 pr-0 pl-8 data-[state=active]:bg-transparent" data-orientation="vertical" data-radix-collection-item="" data-slot="tabs-trigger" data-state="inactive" id="radix-«R2»-trigger-tab-3" role="tab" tabindex="-1" type="button">
+<div class="text-left">
+<h3 class="heading-h5 mb-3 font-bold md:mb-4">福岡</h3>
+<p class="inline-block whitespace-normal">
               福岡市博多区博多駅前1-1-1
             </p>
-            <div class="mt-5 font-semibold md:mt-6"><p>オフィス詳細</p></div>
-          </div>
-        </button>
-      </div>
-      <div
-        data-state="active"
-        data-orientation="vertical"
-        role="tabpanel"
-        aria-labelledby="radix-«R2»-trigger-tab-1"
-        id="radix-«R2»-content-tab-1"
-        tabindex="0"
-        data-slot="tabs-content"
-        class="focus-visible:outline-none data-[state=active]:animate-tabs"
-        style="animation-duration:0s"
-      >
-        <div class="relative size-full">
-          <img
-            src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-            alt="Relume placeholder image 1"
-            class="size-full rounded-image object-cover"
-          />
-        </div>
-      </div>
-      <div
-        data-state="inactive"
-        data-orientation="vertical"
-        role="tabpanel"
-        aria-labelledby="radix-«R2»-trigger-tab-2"
-        hidden=""
-        id="radix-«R2»-content-tab-2"
-        tabindex="0"
-        data-slot="tabs-content"
-        class="focus-visible:outline-none data-[state=active]:animate-tabs"
-      ></div>
-      <div
-        data-state="inactive"
-        data-orientation="vertical"
-        role="tabpanel"
-        aria-labelledby="radix-«R2»-trigger-tab-3"
-        hidden=""
-        id="radix-«R2»-content-tab-3"
-        tabindex="0"
-        data-slot="tabs-content"
-        class="focus-visible:outline-none data-[state=active]:animate-tabs"
-      ></div>
-    </div>
-  </div>
+<div class="mt-5 font-semibold md:mt-6"><p>オフィス詳細</p></div>
+</div>
+</button>
+</div>
+<div aria-labelledby="radix-«R2»-trigger-tab-1" class="focus-visible:outline-none data-[state=active]:animate-tabs" data-orientation="vertical" data-slot="tabs-content" data-state="active" id="radix-«R2»-content-tab-1" role="tabpanel" style="animation-duration:0s" tabindex="0">
+<div class="relative size-full">
+<img alt="Relume placeholder image 1" class="size-full rounded-image object-cover" src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"/>
+</div>
+</div>
+<div aria-labelledby="radix-«R2»-trigger-tab-2" class="focus-visible:outline-none data-[state=active]:animate-tabs" data-orientation="vertical" data-slot="tabs-content" data-state="inactive" hidden="" id="radix-«R2»-content-tab-2" role="tabpanel" tabindex="0"></div>
+<div aria-labelledby="radix-«R2»-trigger-tab-3" class="focus-visible:outline-none data-[state=active]:animate-tabs" data-orientation="vertical" data-slot="tabs-content" data-state="inactive" hidden="" id="radix-«R2»-content-tab-3" role="tabpanel" tabindex="0"></div>
+</div>
+</div>
 </section>
-
-<link
-  rel="preload"
-  as="image"
-  href="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
-/>
-<footer class="px-[5%] py-12 md:py-18 lg:py-20">
-  <div class="container">
-    <div class="flex flex-col items-center pb-12 md:pb-18 lg:pb-20">
-      <a href="#" class="mb-8"
-        ><img
-          src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
-          alt="Logo image"
-          class="inline-block"
-      /></a>
-      <ul
-        class="grid grid-flow-row grid-cols-1 items-start justify-center justify-items-center gap-6 md:grid-flow-col md:grid-cols-[max-content] md:justify-center md:justify-items-start"
-      >
-        <li class="font-semibold"><a href="#">初めての方</a></li>
-        <li class="font-semibold"><a href="#">よくある質問</a></li>
-      </ul>
-    </div>
-    <div class="h-px w-full bg-scheme-border"></div>
-    <div
-      class="text-small flex flex-col-reverse items-center justify-between pt-6 pb-4 text-center md:flex-row md:pt-8 md:pb-0"
-    >
-      <p class="mt-8 md:mt-0">© 2024 Relume. All rights reserved.</p>
-      <ul
-        class="text-small grid grid-flow-row grid-cols-[max-content] justify-center gap-y-4 md:grid-flow-col md:gap-x-6 md:gap-y-0"
-      >
-        <li class="underline"><a href="#">プライバシーポリシー</a></li>
-        <li class="underline"><a href="#">クッキポリシー</a></li>
-      </ul>
-    </div>
-  </div>
+<link as="image" href="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg" rel="preload"/>
+<footer class="px-[5%] py-12 md:py-18 lg:py-20" id="footer">
+<div class="container">
+<div class="flex flex-col items-center pb-12 md:pb-18 lg:pb-20">
+<a class="mb-8" href="#"><img alt="Logo image" class="inline-block" src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"/></a>
+<ul class="grid grid-flow-row grid-cols-1 items-start justify-center justify-items-center gap-6 md:grid-flow-col md:grid-cols-[max-content] md:justify-center md:justify-items-start">
+<li class="font-semibold"><a href="#">初めての方</a></li>
+<li class="font-semibold"><a href="#">よくある質問</a></li>
+</ul>
+</div>
+<div class="h-px w-full bg-scheme-border"></div>
+<div class="text-small flex flex-col-reverse items-center justify-between pt-6 pb-4 text-center md:flex-row md:pt-8 md:pb-0">
+<p class="mt-8 md:mt-0">© 2024 Relume. All rights reserved.</p>
+<ul class="text-small grid grid-flow-row grid-cols-[max-content] justify-center gap-y-4 md:grid-flow-col md:gap-x-6 md:gap-y-0">
+<li class="underline"><a href="#">プライバシーポリシー</a></li>
+<li class="underline"><a href="#">クッキポリシー</a></li>
+</ul>
+</div>
+</div>
 </footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
