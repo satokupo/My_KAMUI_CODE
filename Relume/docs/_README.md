@@ -52,45 +52,20 @@ Relume wireframeツールから出力されたTailwind CSSベースのHTMLを、
 
 ### 1. Relumeからzipをダウンロード・解凍
 1. Relumeからプロジェクトzipファイルをダウンロード
-2. 任意のディレクトリに解凍（例: `Relume/2025-10-07_satokupo-design/`）
+2. 任意のディレクトリに解凍（例: `Relume/2025-10-08_satokupo-design-test/`）
 
-### 2. HTMLファイルを`index.html`にリネーム
+**注意**: Relumeから出力されるディレクトリ構造は以下の通り:
+- ディレクトリ名: 日本語名またはスペース含み（例: `ホーム/`, `初めての方へ/`, `Layout 324/`）
+- 各ディレクトリ内: `index.html`が既に配置済み
 
-RelumeからダウンロードしたHTMLファイルは日本語名やスペース含みの名前（例: `ホーム.html`, `Layout 324.html`）になっています。これを`index.html`にリネームします。
-
-#### 基本的な使い方（1ファイルずつ）
-
-```bash
-# dry-runで確認（実際の変更は行わない）
-.venv/Scripts/python.exe docs/helper/rename.py \
-  --path "s:/MyProjects/KAMUI_CODE/Relume/2025-10-07_satokupo-design/01_ホーム/ホーム.html" \
-  --new-name "index.html" \
-  --dry-run \
-  --verbose
-
-# 本実行
-.venv/Scripts/python.exe docs/helper/rename.py \
-  --path "s:/MyProjects/KAMUI_CODE/Relume/2025-10-07_satokupo-design/01_ホーム/ホーム.html" \
-  --new-name "index.html" \
-  --verbose
-```
-
-**オプション**:
-- `--path`: リネーム対象のファイルパス
-- `--new-name`: 新しいファイル名（`index.html`固定）
-- `--dry-run`: 実際の変更を行わず、実行内容のみ表示
-- `--verbose`: 詳細なログを出力
-
-**詳細**: `docs/初期フロー.md` の「2. HTMLファイルのリネーム」を参照
-
-### 3. セットアップスクリプト実行
+### 2. セットアップスクリプト実行
 
 ```bash
 # 自動セットアップスクリプト実行
 .venv/Scripts/python.exe docs/helper/setup_relume_project.py <ページディレクトリパス>
 
 # 例
-.venv/Scripts/python.exe docs/helper/setup_relume_project.py "s:/MyProjects/KAMUI_CODE/Relume/2025-10-07_satokupo-design/01_ホーム"
+.venv/Scripts/python.exe docs/helper/setup_relume_project.py "s:/MyProjects/KAMUI_CODE/Relume/2025-10-08_satokupo-design-test/copy-of-ホームページ作成サービス/ホーム"
 ```
 
 スクリプトは以下を自動で実行:

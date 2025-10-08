@@ -8,45 +8,46 @@ Relumeプロジェクトセットアップスクリプト
   デザインブラッシュアップ可能な状態に自動セットアップする
 
 使用方法:
-  python setup_relume_project.py <ターゲットディレクトリパス>
-  例: python setup_relume_project.py "s:/MyProjects/KAMUI_CODE/Relume/2025-10-07_satokupo-design/01_ホーム"
+  # 単一ページ処理
+  python setup_relume_project.py --page-dir "<ページディレクトリパス>" --sections "nav,hero,features,footer"
+
+  # 複数ページ一括処理
+  python setup_relume_project.py \
+    --root-dir "<ルートディレクトリ>" \
+    --page "ホーム:nav,hero,features,footer" \
+    --page "料金:nav,pricing,faq,footer"
 
 処理フロー:
-  1. 引数からターゲットディレクトリパスを受け取る
+  1. 引数からセクション構成情報を受け取る
   2. setup_templates/ディレクトリ構造を丸ごとコピー
   3. ターゲットディレクトリ内のindex.htmlを読み込む
   4. HTML基本タグ（<!DOCTYPE>, <html>, <head>, <body>）でラップ
      - Tailwind CDN読み込み
-     - assets/style/global.css読み込み
+     - assets/style/base.css, custom.css読み込み
      - assets/js/main.js読み込み
-     - titleはディレクトリ名から自動生成（"01_ホーム" → "ホーム"）
   5. 文書内で最初に現れる<section>を<header>でラップ
-     - 最初の<section>が存在しない場合はスキップ
-  6. 既存コンテンツの各セクション（<section>, <div>, <header>, <footer>等の主要要素）にユニークIDを自動付与
-     - ID命名規則: section-{連番} (例: section-1, section-2, ...)
-     - または意味のある名前を推測可能なら付与（例: header → section-header）
+  6. 引数で指定されたセクション名を順番に適用（セクション数検証あり）
   7. 修正されたHTMLを上書き保存
   8. 実行結果レポートをコンソールに出力
-     - コピーされたファイル一覧
-     - 付与されたセクションID一覧
 
 注意事項:
   - index.htmlが存在しない場合はエラー終了
-  - すでにHTML基本タグが存在する場合はスキップ（冪等性確保）
+  - セクション数が一致しない場合はエラー表示して中断
   - 既存ディレクトリ・ファイルは上書きしない（存在チェック）
-
-今後の拡張可能性:
-  - 複数ページを一括処理するオプション（--all等）
-  - セクションID命名規則のカスタマイズオプション
-  - テンプレートのカスタマイズ（meta tagの追加等）
 """
 
 import sys
 import os
+import io
 import re
 import shutil
+import argparse
 from pathlib import Path
 from bs4 import BeautifulSoup
+
+# Windows環境での文字コード問題を解決
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 
 def print_info(message):
@@ -112,7 +113,7 @@ def extract_page_title(dir_name):
     ディレクトリ名からページタイトルを抽出
 
     Args:
-        dir_name: ディレクトリ名（例: "01_ホーム"）
+        dir_name: ディレクトリ名（例: "01_ホーム", "ホーム"）
 
     Returns:
         タイトル（例: "ホーム"）
@@ -122,35 +123,59 @@ def extract_page_title(dir_name):
     return title
 
 
-def ask_section_name(section_index, section_element):
+def get_section_preview(section_element):
     """
-    ユーザーにセクション名を質問
+    セクションの概要を取得（デバッグ用）
 
     Args:
-        section_index: セクションのインデックス
         section_element: セクションのBeautifulSoup要素
 
     Returns:
-        セクション名
+        セクション概要文字列
     """
-    # セクション内のテキストを取得（最初の50文字）
-    text_content = section_element.get_text(strip=True)[:50]
+    tag_name = section_element.name
+    classes = ' '.join(section_element.get('class', []))
+    text_preview = section_element.get_text(strip=True)[:60]
 
-    print(f"\n--- セクション {section_index + 1} ---")
-    print(f"内容: {text_content}...")
+    return f"<{tag_name} class=\"{classes}\"> {text_preview}..."
 
-    # ユーザーに入力を求める
-    section_name = input(f"このセクションの名前を入力してください（例: hero, features, contact）: ").strip()
 
-    # 入力が空の場合はデフォルト名
-    if not section_name:
-        section_name = f"section-{section_index + 1}"
-    else:
-        # セクション名をID形式に整形（英数字とハイフンのみ）
-        section_name = re.sub(r'[^a-zA-Z0-9-]', '', section_name.lower())
-        section_name = f"section-{section_name}"
+def validate_section_count(sections, section_names, page_name):
+    """
+    セクション数を検証
 
-    return section_name
+    Args:
+        sections: HTML内のセクション要素リスト
+        section_names: ユーザー指定のセクション名リスト
+        page_name: ページ名
+
+    Returns:
+        True: 一致, False: 不一致
+    """
+    actual_count = len(sections)
+    expected_count = len(section_names)
+
+    if actual_count == expected_count:
+        return True
+
+    # エラーメッセージを表示
+    print_error(f"\n⚠️  [{page_name}] セクション数が一致しません")
+    print(f"\n  【引数で指定】: {expected_count}個")
+    print(f"    {', '.join(section_names)}")
+    print(f"\n  【HTML内の実際】: {actual_count}個\n")
+
+    # 各セクションの概要を表示
+    print("  各セクションの概要:")
+    for i, section in enumerate(sections):
+        preview = get_section_preview(section)
+        print(f"    [{i+1}] {preview}")
+
+    print("\n  考えられる原因:")
+    print("    - ビジュアル的に1つに見えるが、コード上は2つのセクションに分かれている")
+    print("    - または、ビジュアル的に2つに見えるが、コード上は1つのセクションになっている")
+    print("\n  上記を確認の上、正しいセクション名リストを指定してください。\n")
+
+    return False
 
 
 def wrap_first_section_with_header(soup):
@@ -186,34 +211,36 @@ def wrap_first_section_with_header(soup):
     return True
 
 
-def add_section_ids(soup):
+def add_section_ids(soup, section_names, page_name):
     """
-    セクションにユニークIDを付与（ユーザー対話型）
+    セクションにユニークIDを付与（引数ベース）
 
     Args:
         soup: BeautifulSoupオブジェクト
+        section_names: セクション名リスト
+        page_name: ページ名（エラー表示用）
 
     Returns:
-        付与されたID一覧
+        付与されたID一覧（成功時）、Noneまたは空リスト（失敗時）
     """
     # 主要なセクション要素を検出
     section_tags = ['section', 'header', 'footer', 'main', 'nav', 'aside']
     sections = soup.find_all(section_tags)
 
+    # セクション数の検証
+    if not validate_section_count(sections, section_names, page_name):
+        return None
+
     assigned_ids = []
 
     print_info(f"{len(sections)}個のセクションを検出しました")
-    print("\n各セクションに意味のあるIDを付与します。")
 
     for index, section in enumerate(sections):
-        # 既にIDが付与されている場合はスキップ
-        if section.get('id'):
-            print_info(f"セクション {index + 1} は既にID '{section['id']}' を持っています")
-            assigned_ids.append(section['id'])
-            continue
+        section_id = section_names[index]
 
-        # ユーザーにセクション名を質問
-        section_id = ask_section_name(index, section)
+        # 既にIDが付与されている場合は上書き
+        if section.get('id'):
+            print_info(f"セクション {index + 1} の既存ID '{section['id']}' を '{section_id}' に更新")
 
         # IDを付与
         section['id'] = section_id
@@ -266,16 +293,21 @@ def check_if_already_wrapped(html_content):
     return html_content.strip().startswith('<!DOCTYPE html>')
 
 
-def process_page(page_path, template_path):
+def process_page(page_path, template_path, section_names):
     """
     ページディレクトリを処理
 
     Args:
         page_path: ページディレクトリのパス
         template_path: テンプレートディレクトリのパス
+        section_names: セクション名リスト
+
+    Returns:
+        True: 成功, False: 失敗
     """
     page_path = Path(page_path)
     html_path = page_path / "index.html"
+    page_name = page_path.name
 
     # index.htmlの存在チェック
     if not html_path.exists():
@@ -301,8 +333,12 @@ def process_page(page_path, template_path):
         # 最初の<section>を<header>でラップ
         wrap_first_section_with_header(soup)
 
-        # セクションID付与
-        assigned_ids = add_section_ids(soup)
+        # セクションID付与（検証あり）
+        assigned_ids = add_section_ids(soup, section_names, page_name)
+
+        if assigned_ids is None:
+            print_error(f"[{page_name}] セクション数不一致のため処理を中断しました")
+            return False
 
         # HTMLを保存
         with open(html_path, 'w', encoding='utf-8') as f:
@@ -317,8 +353,12 @@ def process_page(page_path, template_path):
     # 最初の<section>を<header>でラップ
     wrap_first_section_with_header(soup)
 
-    # セクションにIDを付与
-    assigned_ids = add_section_ids(soup)
+    # セクションにIDを付与（検証あり）
+    assigned_ids = add_section_ids(soup, section_names, page_name)
+
+    if assigned_ids is None:
+        print_error(f"[{page_name}] セクション数不一致のため処理を中断しました")
+        return False
 
     # ページタイトルを生成
     title = extract_page_title(page_path.name)
@@ -341,30 +381,77 @@ def process_page(page_path, template_path):
 
 def main():
     """メイン処理"""
-    # コマンドライン引数をチェック
-    if len(sys.argv) < 2:
-        print_error("使用方法: python setup_relume_project.py <ターゲットディレクトリパス>")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(
+        description='Relumeプロジェクトセットアップスクリプト',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+使用例:
+  # 単一ページ処理
+  python setup_relume_project.py --page-dir "path/to/ホーム" --sections "nav,hero,features,footer"
 
-    target_path = sys.argv[1]
+  # 複数ページ一括処理
+  python setup_relume_project.py \\
+    --root-dir "path/to/root" \\
+    --page "ホーム:nav,hero,features,footer" \\
+    --page "料金:nav,pricing,faq,footer"
+        """
+    )
 
-    # パスの存在チェック
-    if not os.path.exists(target_path):
-        print_error(f"指定されたパスが存在しません: {target_path}")
-        sys.exit(1)
+    parser.add_argument('--page-dir', type=str, help='単一ページディレクトリのパス')
+    parser.add_argument('--sections', type=str, help='セクション名（カンマ区切り）')
+    parser.add_argument('--root-dir', type=str, help='複数ページ処理時のルートディレクトリ')
+    parser.add_argument('--page', action='append', help='ページ設定（ページ名:section1,section2,...）')
 
-    # テンプレートディレクトリのパスを取得（スクリプトと同じディレクトリ内）
+    args = parser.parse_args()
+
+    # テンプレートディレクトリのパスを取得
     script_dir = Path(__file__).parent
     template_path = script_dir / "setup_templates"
 
-    # 処理実行
-    success = process_page(target_path, template_path)
+    # 単一ページ処理
+    if args.page_dir and args.sections:
+        section_list = [s.strip() for s in args.sections.split(',')]
+        success = process_page(args.page_dir, template_path, section_list)
 
-    if success:
-        print_success("\n全ての処理が正常に完了しました!")
-        sys.exit(0)
+        if success:
+            print_success("\n全ての処理が正常に完了しました!")
+            sys.exit(0)
+        else:
+            print_error("\n処理中にエラーが発生しました")
+            sys.exit(1)
+
+    # 複数ページ一括処理
+    elif args.root_dir and args.page:
+        root_path = Path(args.root_dir)
+        all_success = True
+
+        for page_spec in args.page:
+            if ':' not in page_spec:
+                print_error(f"ページ設定の形式が不正です: {page_spec}")
+                print_error("正しい形式: ページ名:section1,section2,...")
+                sys.exit(1)
+
+            page_name, sections = page_spec.split(':', 1)
+            page_path = root_path / page_name
+            section_list = [s.strip() for s in sections.split(',')]
+
+            print(f"\n{'='*60}")
+            print(f"ページ処理: {page_name}")
+            print(f"{'='*60}\n")
+
+            success = process_page(page_path, template_path, section_list)
+            if not success:
+                all_success = False
+
+        if all_success:
+            print_success("\n全ページの処理が正常に完了しました!")
+            sys.exit(0)
+        else:
+            print_error("\n一部のページで処理エラーが発生しました")
+            sys.exit(1)
+
     else:
-        print_error("\n処理中にエラーが発生しました")
+        parser.print_help()
         sys.exit(1)
 
 
