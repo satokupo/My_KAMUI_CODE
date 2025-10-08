@@ -211,7 +211,7 @@ def wrap_first_section_with_header(soup):
     return True
 
 
-def add_section_ids(soup, section_names, page_name):
+def add_section_ids(soup, section_names, page_name, count_wrapped_header=False):
     """
     セクションにユニークIDを付与（引数ベース）
 
@@ -219,6 +219,7 @@ def add_section_ids(soup, section_names, page_name):
         soup: BeautifulSoupオブジェクト
         section_names: セクション名リスト
         page_name: ページ名（エラー表示用）
+        count_wrapped_header: ラップされた<header>をカウントに含めるか（デフォルト: False）
 
     Returns:
         付与されたID一覧（成功時）、Noneまたは空リスト（失敗時）
@@ -330,15 +331,33 @@ def process_page(page_path, template_path, section_names):
         # BeautifulSoupでパース
         soup = BeautifulSoup(html_content, 'html.parser')
 
+        # wrap前のセクション数を検証
+        section_tags = ['section', 'footer', 'main', 'nav', 'aside']  # headerは除外
+        sections_before_wrap = soup.find_all(section_tags)
+
+        if not validate_section_count(sections_before_wrap, section_names, page_name):
+            print_error(f"[{page_name}] セクション数不一致のため処理を中断しました")
+            return False
+
         # 最初の<section>を<header>でラップ
         wrap_first_section_with_header(soup)
 
-        # セクションID付与（検証あり）
-        assigned_ids = add_section_ids(soup, section_names, page_name)
+        # wrap後のセクションにIDを付与（検証スキップ、既に検証済み）
+        section_tags_with_header = ['section', 'header', 'footer', 'main', 'nav', 'aside']
+        sections_after_wrap = soup.find_all(section_tags_with_header)
 
-        if assigned_ids is None:
-            print_error(f"[{page_name}] セクション数不一致のため処理を中断しました")
-            return False
+        assigned_ids = []
+        print_info(f"{len(sections_after_wrap)}個のセクション（wrap後）にIDを付与します")
+
+        for index, section in enumerate(sections_after_wrap):
+            section_id = section_names[index]
+
+            if section.get('id'):
+                print_info(f"セクション {index + 1} の既存ID '{section['id']}' を '{section_id}' に更新")
+
+            section['id'] = section_id
+            assigned_ids.append(section_id)
+            print_success(f"ID '{section_id}' を付与しました")
 
         # HTMLを保存
         with open(html_path, 'w', encoding='utf-8') as f:
@@ -350,15 +369,33 @@ def process_page(page_path, template_path, section_names):
     # BeautifulSoupでパース
     soup = BeautifulSoup(html_content, 'html.parser')
 
+    # wrap前のセクション数を検証
+    section_tags = ['section', 'footer', 'main', 'nav', 'aside']  # headerは除外
+    sections_before_wrap = soup.find_all(section_tags)
+
+    if not validate_section_count(sections_before_wrap, section_names, page_name):
+        print_error(f"[{page_name}] セクション数不一致のため処理を中断しました")
+        return False
+
     # 最初の<section>を<header>でラップ
     wrap_first_section_with_header(soup)
 
-    # セクションにIDを付与（検証あり）
-    assigned_ids = add_section_ids(soup, section_names, page_name)
+    # wrap後のセクションにIDを付与（検証スキップ、既に検証済み）
+    section_tags_with_header = ['section', 'header', 'footer', 'main', 'nav', 'aside']
+    sections_after_wrap = soup.find_all(section_tags_with_header)
 
-    if assigned_ids is None:
-        print_error(f"[{page_name}] セクション数不一致のため処理を中断しました")
-        return False
+    assigned_ids = []
+    print_info(f"{len(sections_after_wrap)}個のセクション（wrap後）にIDを付与します")
+
+    for index, section in enumerate(sections_after_wrap):
+        section_id = section_names[index]
+
+        if section.get('id'):
+            print_info(f"セクション {index + 1} の既存ID '{section['id']}' を '{section_id}' に更新")
+
+        section['id'] = section_id
+        assigned_ids.append(section_id)
+        print_success(f"ID '{section_id}' を付与しました")
 
     # ページタイトルを生成
     title = extract_page_title(page_path.name)
