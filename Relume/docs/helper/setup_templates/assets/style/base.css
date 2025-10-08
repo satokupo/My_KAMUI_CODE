@@ -4,7 +4,7 @@
  * - 変更が必要な場合はcustom.cssの方で上書きすること
  */
 
- body {
+body {
   --color-bg: #ffffff;
   --color-text: #333333;
 
@@ -66,8 +66,8 @@
       &>section {
         padding-right: 5%;
         padding-left: 5%;
-        margin-right: 0px;
-        margin-left: 0px;
+        margin-right: 0px !important;
+        margin-left: 0px !important;
       }
 
       header>* {
@@ -97,23 +97,35 @@
   background-color: var(--color-text);
 }
 
-/* ユーティリティクラス */
-/* フルワイドセクション */
+/* ----- ▼ユーティリティクラス▼ ----- */
+/* フルワイドセクション
+* フルワイド指定したセクションのインナーブロックはブログ幅になります。
+* インナーブロックをサイト幅まで広げる場合はwide-innerを付与します */
 section.full-wide {
   width: 100vw;
   padding-right: 48px;
   padding-left: 48px;
   margin-left: calc(50% - 50vw) !important;
 
-  & > .container {
+  &>.container {
     max-width: var(--site-width);
     padding-right: 32px;
     padding-left: 32px;
     margin: 0px auto;
+
+    &>div:not(.wide-inner) {
+      margin-right: calc((100% - var(--content-width)) /2);
+      margin-left: calc((100% - var(--content-width)) /2);
+    }
   }
 }
-/* 少し広めセクション */
-section.wide{
+
+/* 少し広めセクション
+* サイト幅までセクションを広げます。
+* インナーブロックも連動して広がります */
+section.wide {
   padding-right: 0px;
   padding-left: 0px;
 }
+
+/* ----- ▲ユーティリティクラス▲ ----- */

@@ -58,24 +58,47 @@ Relume wireframeツールから出力されたTailwind CSSベースのHTMLを、
 - ディレクトリ名: 日本語名またはスペース含み（例: `ホーム/`, `初めての方へ/`, `Layout 324/`）
 - 各ディレクトリ内: `index.html`が既に配置済み
 
-### 2. セットアップスクリプト実行
+### 2. ページ連番付与
+
+ページディレクトリに連番を付与します（ワークフロー順序に従う）。
 
 ```bash
-# 自動セットアップスクリプト実行
-.venv/Scripts/python.exe docs/helper/setup_relume_project.py <ページディレクトリパス>
-
-# 例
-.venv/Scripts/python.exe docs/helper/setup_relume_project.py "s:/MyProjects/KAMUI_CODE/Relume/2025-10-08_satokupo-design-test/copy-of-ホームページ作成サービス/ホーム"
+.venv/Scripts/python.exe Relume/docs/helper/rename.py \
+  --root-dir "プロジェクトルート" \
+  --mapping '{"ホーム":"01_ホーム","サービス紹介":"02_サービス紹介",...}'
 ```
 
+### 3. セットアップスクリプト実行
+
+各ページのセクション構成を聞き取り後、セットアップを実行します。
+
+```bash
+# 単一ページ処理（ヘッダーナビ・フッター除く）
+.venv/Scripts/python.exe docs/helper/setup_relume_project.py \
+  --page-dir "<ページディレクトリパス>" \
+  --sections "section1,section2:full-wide,section3:wide,..."
+
+# 例：幅指定あり
+.venv/Scripts/python.exe docs/helper/setup_relume_project.py \
+  --page-dir "s:/MyProjects/KAMUI_CODE/Relume/2025-10-08_satokupo-design-test/copy-of-ホームページ作成サービス/01_ホーム" \
+  --sections "hero:full-wide,empathy-section,mini-benefit:full-wide,cta-section"
+```
+
+**幅指定の形式:**
+- `section-name:full-wide` → フルワイド（画面幅いっぱい）
+- `section-name:wide` → 少し広め（サイト幅まで）
+- `section-name` → 通常幅（コンテンツ幅）
+
 スクリプトは以下を自動で実行:
-1. `docs/helper/setup_templates/`からディレクトリ構造とファイルをコピー
+1. 最初の`<section>`を`<header>`でラップ（ヘッダーナビ化）
+2. `docs/helper/setup_templates/`からディレクトリ構造とファイルをコピー
    - `assets/js/main.js`（features/自動読込コード付き）
-   - `assets/style/base.css`（CSSネストルール案内コメント付き）
-   - `assets/style/custom.css`（CSSネストルール案内コメント付き）
+   - `assets/style/base.css`（ユーティリティクラス・レスポンシブ設定付き）
+   - `assets/style/custom.css`（セクション別スタイル記述用）
    - 各種ディレクトリ（features/, screenshots/, ai-workbench/等）
-2. `index.html`にHTML基本タグ追加とTailwind CDN読み込み
-3. セクション抽出とID割り当て（対話式）
+3. `index.html`にHTML基本タグ追加とTailwind CDN読み込み
+4. コンテンツエリア内の`<section>`にID付与と幅指定クラス追加
+   - ヘッダーナビ・フッターはID付与対象外
 
 ## CSS設計ルール
 
@@ -108,9 +131,47 @@ Relume wireframeツールから出力されたTailwind CSSベースのHTMLを、
 ### Tailwind CSS との共存
 
 - Relume出力のTailwind CSSはそのまま維持
-- 基本デザインは`base.css`ファイルで上書き
-- カスタムデザインは`custom.css`ファイルで上書き
+- `base.css`ファイル:
+  - サイト全体の基本設定（カラー変数、フォント、サイト幅等）
+  - ユーティリティクラス（`full-wide`, `wide`, `wide-inner`）
+  - レスポンシブ設定（スマホ対応）
+- `custom.css`ファイル:
+  - セクション別のカスタムスタイル
+  - セクションIDでネストして記述
 - CSSネストで優先度を制御
+
+### ユーティリティクラス（base.cssで定義）
+
+#### `full-wide` - フルワイドセクション
+画面幅いっぱいにセクションを広げます。インナーブロックはコンテンツ幅（ブログ幅）になります。
+
+```html
+<section class="full-wide" id="hero">
+  <div class="container">
+    <div>コンテンツ幅</div>
+    <div class="wide-inner">サイト幅まで広げる</div>
+  </div>
+</section>
+```
+
+#### `wide` - 少し広めセクション
+サイト幅までセクションを広げます。インナーブロックも連動して広がります。
+
+```html
+<section class="wide" id="features">
+  <div class="container">サイト幅</div>
+</section>
+```
+
+#### `wide-inner` - インナーブロック拡張
+`full-wide`セクション内で、特定のインナーブロックをサイト幅まで広げます。
+
+```css
+/* base.cssでの定義 */
+section.full-wide > .container > div:not(.wide-inner) {
+  /* コンテンツ幅に制限 */
+}
+```
 
 ## JavaScript設計
 
