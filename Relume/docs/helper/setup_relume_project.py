@@ -342,14 +342,14 @@ def process_page(page_path, template_path, section_names):
         # 最初の<section>を<header>でラップ
         wrap_first_section_with_header(soup)
 
-        # wrap後のセクションにIDを付与（検証スキップ、既に検証済み）
-        section_tags_with_header = ['section', 'header', 'footer', 'main', 'nav', 'aside']
-        sections_after_wrap = soup.find_all(section_tags_with_header)
+        # wrap後のセクションにIDを付与（headerは除外してsectionのみ）
+        section_tags_for_id = ['section', 'footer', 'main', 'nav', 'aside']
+        sections_for_id = soup.find_all(section_tags_for_id)
 
         assigned_ids = []
-        print_info(f"{len(sections_after_wrap)}個のセクション（wrap後）にIDを付与します")
+        print_info(f"{len(sections_for_id)}個のセクションにIDを付与します")
 
-        for index, section in enumerate(sections_after_wrap):
+        for index, section in enumerate(sections_for_id):
             section_id = section_names[index]
 
             if section.get('id'):
@@ -380,14 +380,14 @@ def process_page(page_path, template_path, section_names):
     # 最初の<section>を<header>でラップ
     wrap_first_section_with_header(soup)
 
-    # wrap後のセクションにIDを付与（検証スキップ、既に検証済み）
-    section_tags_with_header = ['section', 'header', 'footer', 'main', 'nav', 'aside']
-    sections_after_wrap = soup.find_all(section_tags_with_header)
+    # wrap後のセクションにIDを付与（headerは除外してsectionのみ）
+    section_tags_for_id = ['section', 'footer', 'main', 'nav', 'aside']
+    sections_for_id = soup.find_all(section_tags_for_id)
 
     assigned_ids = []
-    print_info(f"{len(sections_after_wrap)}個のセクション（wrap後）にIDを付与します")
+    print_info(f"{len(sections_for_id)}個のセクションにIDを付与します")
 
-    for index, section in enumerate(sections_after_wrap):
+    for index, section in enumerate(sections_for_id):
         section_id = section_names[index]
 
         if section.get('id'):
