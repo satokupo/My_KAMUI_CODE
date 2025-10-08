@@ -4,7 +4,7 @@
  * - 変更が必要な場合はcustom.cssの方で上書きすること
  */
 
-body {
+ body {
   --color-bg: #ffffff;
   --color-text: #333333;
 
@@ -58,9 +58,8 @@ body {
 
     }
 
+    /* スマホ */
     @media not all and (min-width: 960px) {
-
-
       padding-right: 0px;
       padding-left: 0px;
 
@@ -75,6 +74,7 @@ body {
         height: 48px;
       }
     }
+
 
     /* グローバルナビとフッター */
     header,
