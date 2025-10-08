@@ -405,9 +405,10 @@ def process_page(page_path, template_path, section_names):
     # HTML基本タグでラップ
     wrapped_html = wrap_with_html_template(str(soup), title)
 
-    # HTMLファイルを上書き保存
+    # HTMLファイルを上書き保存（インデント整形）
+    soup_final = BeautifulSoup(wrapped_html, 'html.parser')
     with open(html_path, 'w', encoding='utf-8') as f:
-        f.write(wrapped_html)
+        f.write(soup_final.prettify())
 
     # レポート出力
     print_success(f"\n=== 処理完了: {page_path.name} ===")
