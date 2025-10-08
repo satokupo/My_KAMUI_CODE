@@ -1,0 +1,21 @@
+{
+  "mcp_servers": {
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--headless=false",
+        "--isolated=true",
+        "--executablePath=C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ]
+    }
+  }
+}
