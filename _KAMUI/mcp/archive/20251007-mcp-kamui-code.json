@@ -389,16 +389,6 @@
       "type": "http",
       "url": "https://kamui-code.ai/t2v/openai/sora",
       "description": "OpenAI Sora - State-of-the-art video generation with text-to-video, image-to-video (first frame reference), and remix capabilities. Two models available: 'sora-2' (fast, flexible, good for iteration) and 'sora-2-pro' (production-grade quality). Supports multiple resolutions (720p, 1080p, portrait HD), customizable duration, and 24-hour download URLs for generated videos via Kamui Code ⭐⭐⭐"
-    },
-    "chrome-devtools": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "chrome-devtools-mcp@latest",
-        "--headless=false",
-        "--isolated=true",
-        "--executablePath=C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
-      ]
     }
   }
 }
