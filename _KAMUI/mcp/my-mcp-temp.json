@@ -1,10 +1,175 @@
 {
   "mcpServers": {
-    "t2v-kamui-openai-sora": {
+    "file-upload-kamui-fal": {
       "type": "http",
-      "url": "https://kamui-code.ai/t2v/openai/sora",
-      "description": "OpenAI Sora - State-of-the-art video generation with text-to-video, image-to-video (first frame reference), and remix capabilities. Two models available: 'sora-2' (fast, flexible, good for iteration) and 'sora-2-pro' (production-grade quality). Supports multiple resolutions (720p, 1080p, portrait HD), customizable duration, and 24-hour download URLs for generated videos via Kamui Code ⭐⭐⭐"
+      "url": "https://kamui-code.ai/uploader/fal",
+      "description": "File Upload to FAL via Kamui Code (Local Uploader) ⭐⭐⭐"
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--headless=false",
+        "--isolated=true",
+        "--executablePath=C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+      ],
+      "description": "AIがChromeのDevToolsを直接操作できるようにする"
+    },
+    "t2i-kamui-flux-srpo": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/flux/srpo",
+      "description": "FLUX.1 [srpo] - Next generation text-to-image model with enhanced quality and control via Kamui Code ⭐⭐⭐"
+    },
+    "t2i-kamui-gemini-25-flash-image": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/gemini-25-flash-image",
+      "description": "Gemini 2.5 Flash Image - State-of-the-art text-to-image generation via Kamui Code ⭐"
+    },
+    "t2i-kamui-seedream-v4": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/bytedance/seedream/v4",
+      "description": "Bytedance Seedream V4 Text-to-Image - New-generation unified architecture via Kamui Code ⭐⭐"
+    },
+    "t2i-kamui-hunyuan-image-v3": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/hunyuan-image/v3",
+      "description": "Hunyuan Image V3 Text-to-Image - Advanced text-to-image generation with high-quality output, multiple formats (PNG/JPEG), custom image sizes, safety checker, and precise guidance control via Kamui Code ⭐⭐⭐"
+    },
+    "t2i-kamui-ideogram-character-base": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/ideogram/character-base",
+      "description": "Ideogram Character Base - Create consistent characters via Kamui Code ⭐"
+    },
+    "t2i-kamui-wan-25-preview": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/wan/25-preview",
+      "description": "WAN 2.5 Preview Text-to-Image - High-quality image generation with various artistic styles, supporting resolutions between 768×768 and 1440×1440, multiple images per request, and prompt expansion via Kamui Code ⭐⭐⭐"
+    },
+    "t2visual-kamui-napkin": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2visual/napkin/visual",
+      "description": "Napkin AI Visual Generation - Transform text into beautiful professional visuals, diagrams, and graphics via Kamui Code ⭐⭐⭐"
+    },
+    "t2i-kamui-flux-schnell": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/flux/schnell",
+      "description": "Flux-1 Schnell (Fast) via Kamui Code ⭐"
+    },
+    "t2i-kamui-nano-banana": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/nano-banana",
+      "description": "Nano Banana Text-to-Image via Kamui Code ⭐"
+    },
+    "t2i-kamui-flux-krea-lora": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/flux-krea-lora",
+      "description": "FLUX Krea LoRA Text-to-Image via Kamui Code ⭐"
+    },
+    "t2i-kamui-dreamina-v31": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/bytedance/dreamina/v3.1/text-to-image",
+      "description": "Bytedance Dreamina v3.1 Text-to-Image via Kamui Code ⭐"
+    },
+    "t2i-kamui-imagen3": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/google/imagen",
+      "description": "Google Imagen 3 via Kamui Code ⭐"
+    },
+    "t2i-kamui-imagen4-fast": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/imagen4/fast",
+      "description": "Imagen4 Fast (Speed Optimized) via Kamui Code ⭐"
+    },
+    "t2i-kamui-imagen4-ultra": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/imagen4/ultra",
+      "description": "Imagen4 Ultra (High Quality) via Kamui Code ⭐"
+    },
+    "t2i-kamui-qwen-image": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/qwen-image",
+      "description": "Qwen-Image Text-to-Image via Kamui Code ⭐"
+    },
+    "i2i-kamui-flux-kontext-max": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/flux/kontext/max",
+      "description": "Flux Kontext Max via Kamui Code ⭐"
+    },
+    "i2i-kamui-gemini-25-flash-image-edit": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/gemini-25-flash-image/edit",
+      "description": "Gemini 2.5 Flash Image Edit - State-of-the-art image editing via Kamui Code ⭐"
+    },
+    "i2i-kamui-qwen-image-edit-plus-lora": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/qwen-image-edit-plus-lora",
+      "description": "Qwen Image Edit Plus LoRA - Advanced multi-image editing with Qwen AI model and LoRA support. Features include editing multiple images (array), customizable size, LoRA weights (up to 3), safety checker, multiple output formats, and flexible inference steps via Kamui Code ⭐⭐⭐"
+    },
+    "i2i-kamui-seedream-v4-edit": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/bytedance/seedream/v4",
+      "description": "Bytedance Seedream V4 Edit - Advanced image editing with unified architecture via Kamui Code ⭐⭐"
+    },
+    "i2i-kamui-wan-25-preview": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/wan/25-preview",
+      "description": "WAN 2.5 Preview Image-to-Image - Advanced image editing with text prompts and multi-image fusion, supporting subject-consistent editing, resolutions between 384×384 and 5000×5000, and up to 4 images per request via Kamui Code ⭐⭐⭐"
+    },
+    "i2i-kamui-flux-kontext-lora": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/flux/kontext",
+      "description": "Flux Kontext LoRA via Kamui Code ⭐"
+    },
+    "i2i-kamui-flux-krea-lora": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/flux-krea-lora/image-to-image",
+      "description": "FLUX Krea LoRA Image-to-Image via Kamui Code ⭐"
+    },
+    "i2i-kamui-ideogram-character-remix": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/ideogram/character-remix",
+      "description": "Ideogram Character Remix - Transform characters across styles via Kamui Code ⭐"
+    },
+    "i2i-kamui-qwen-image-edit": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/qwen/image-edit",
+      "description": "Qwen Image Edit - AI-powered image editing with text prompts via Kamui Code ⭐"
+    },
+    "i2i-kamui-qwen-image-edit-plus": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/qwen-image-edit-plus",
+      "description": "Qwen Image Edit Plus - Advanced multi-image editing with Qwen AI model, supporting array of images, customizable size, safety checker, and multiple output formats via Kamui Code ⭐⭐⭐"
+    },
+    "i2i-kamui-nano-banana-edit": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/nano-banana/edit",
+      "description": "Nano Banana Edit - AI-powered image editing and transformation via Kamui Code ⭐"
+    },
+    "i2i-kamui-aura-sr": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/aura-sr",
+      "description": "AuraSR Image Upscaling via Kamui Code ⭐"
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ],
+      "description": "コードベースから関連性の高いライブラリを自動で判断し、その最新ドキュメントを自動参照"
+    },
+    "serena": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "desktop-app"
+      ],
+      "description": "LSP（Language Server Protocol）の活用によって シンボルレベルのコード解析 や編集が可能"
     }
   }
 }
-
