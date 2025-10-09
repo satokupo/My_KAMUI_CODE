@@ -2,6 +2,8 @@
 	"name": "KAMUI CODE",
 	"private": true,
 	"scripts": {
+		"temp": "claude --mcp-config=./_KAMUI/mcp/my-mcp-temp.json",
+		"temp-c": "claude --mcp-config=./_KAMUI/mcp/my-mcp-temp.json -c",
 		"kc": "claude --mcp-config=./_KAMUI/mcp/mcp-kamui-code.json",
 		"kc-c": "claude --mcp-config=./_KAMUI/mcp/mcp-kamui-code.json -c",
 		"kc-i2i": "claude --mcp-config=./_KAMUI/mcp/my-mcp-kamui-i2i.json",
@@ -13,4 +15,3 @@
 	  "venv": "bash -lc \"python -m venv .venv && source .venv/Scripts/activate && exec bash -i\""
 	}
   }
-  
