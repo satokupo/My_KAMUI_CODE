@@ -8,14 +8,16 @@
         "--headless=false",
         "--isolated=true",
         "--executablePath=C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
-      ]
+      ],
+      "description": "AIがChromeのDevToolsを直接操作できるようにする"
     },
     "context7": {
       "command": "npx",
       "args": [
         "-y",
         "@upstash/context7-mcp@latest"
-      ]
+      ],
+      "description": "コードベースから関連性の高いライブラリを自動で判断し、その最新ドキュメントを自動参照"
     },
     "serena": {
       "command": "uvx",
@@ -26,7 +28,8 @@
         "start-mcp-server",
         "--context",
         "desktop-app"
-      ]
+      ],
+      "description": "LSP（Language Server Protocol）の活用によって シンボルレベルのコード解析 や編集が可能"
     }
   }
 }
