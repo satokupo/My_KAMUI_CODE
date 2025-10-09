@@ -1,0 +1,404 @@
+{
+  "mcpServers": {
+    "file-upload-kamui-fal": {
+      "type": "http",
+      "url": "https://kamui-code.ai/uploader/fal",
+      "description": "File Upload to FAL via Kamui Code (Local Uploader) ⭐⭐⭐"
+    },
+    "train-kamui-flux-kontext": {
+      "type": "http",
+      "url": "https://kamui-code.ai/train/fal/flux/kontext",
+      "description": "Flux Kontext Trainer via Kamui Code ⭐"
+    },
+    "video-analysis-kamui": {
+      "type": "http",
+      "url": "https://kamui-code.ai/video-analysis/google/gemini",
+      "description": "Gemini Video Analysis via Kamui Code ⭐"
+    },
+    "t2i-kamui-dreamina-v31": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/bytedance/dreamina/v3.1/text-to-image",
+      "description": "Bytedance Dreamina v3.1 Text-to-Image via Kamui Code ⭐"
+    },
+    "t2i-kamui-flux-krea-lora": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/flux-krea-lora",
+      "description": "FLUX Krea LoRA Text-to-Image via Kamui Code ⭐"
+    },
+    "t2i-kamui-flux-schnell": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/flux/schnell",
+      "description": "Flux-1 Schnell (Fast) via Kamui Code ⭐"
+    },
+    "t2i-kamui-flux-srpo": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/flux/srpo",
+      "description": "FLUX.1 [srpo] - Next generation text-to-image model with enhanced quality and control via Kamui Code ⭐⭐⭐"
+    },
+    "t2i-kamui-ideogram-character-base": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/ideogram/character-base",
+      "description": "Ideogram Character Base - Create consistent characters via Kamui Code ⭐"
+    },
+    "t2i-kamui-imagen3": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/google/imagen",
+      "description": "Google Imagen 3 via Kamui Code ⭐"
+    },
+    "t2i-kamui-imagen4-fast": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/imagen4/fast",
+      "description": "Imagen4 Fast (Speed Optimized) via Kamui Code ⭐"
+    },
+    "t2i-kamui-imagen4-ultra": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/imagen4/ultra",
+      "description": "Imagen4 Ultra (High Quality) via Kamui Code ⭐"
+    },
+    "t2i-kamui-qwen-image": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/qwen-image",
+      "description": "Qwen-Image Text-to-Image via Kamui Code ⭐"
+    },
+    "t2i-kamui-wan-v2-2-a14b": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/wan/v2.2-a14b/text-to-image",
+      "description": "WAN v2.2-a14b Text-to-Image via Kamui Code ⭐"
+    },
+    "i2i-kamui-aura-sr": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/aura-sr",
+      "description": "AuraSR Image Upscaling via Kamui Code ⭐"
+    },
+    "i2i-kamui-flux-kontext-lora": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/flux/kontext",
+      "description": "Flux Kontext LoRA via Kamui Code ⭐"
+    },
+    "i2i-kamui-flux-kontext-max": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/flux/kontext/max",
+      "description": "Flux Kontext Max via Kamui Code ⭐"
+    },
+    "i2i-kamui-flux-krea-lora": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/flux-krea-lora/image-to-image",
+      "description": "FLUX Krea LoRA Image-to-Image via Kamui Code ⭐"
+    },
+    "i2i-kamui-ideogram-character-remix": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/ideogram/character-remix",
+      "description": "Ideogram Character Remix - Transform characters across styles via Kamui Code ⭐"
+    },
+    "i2i-kamui-qwen-image-edit": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/qwen/image-edit",
+      "description": "Qwen Image Edit - AI-powered image editing with text prompts via Kamui Code ⭐"
+    },
+    "t2v-kamui-veo3-fast": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2v/fal/veo3/fast",
+      "description": "Veo3 Fast Text-to-Video via Kamui Code ⭐"
+    },
+    "t2v-kamui-wan-v2-2-5b-fast": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2v/fal/wan/v2.2-5b/text-to-video/fast-wan",
+      "description": "WAN v2.2-5b FastVideo via Kamui Code ⭐"
+    },
+    "t2v-kamui-wan-v2-2-a14b": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2v/fal/wan/v2-2-a14b",
+      "description": "WAN v2.2-a14b Text-to-Video via Kamui Code ⭐"
+    },
+    "i2v-kamui-hailuo-02-fast": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/minimax/hailuo-02/fast",
+      "description": "Hailuo-02 Fast Image-to-Video via Kamui Code ⭐"
+    },
+    "i2v-kamui-hailuo-02-pro": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/minimax/hailuo-02/pro",
+      "description": "Hailuo-02 Pro Image-to-Video via Kamui Code ⭐"
+    },
+    "i2v-kamui-omnihuman": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/bytedance/omnihuman",
+      "description": "ByteDance OmniHuman I2V via Kamui Code ⭐"
+    },
+    "i2v-kamui-omnihuman-v15": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/bytedance/omnihuman-v1.5",
+      "description": "ByteDance OmniHuman v1.5 - Latest version with enhanced lip-sync and expression generation from images and audio via Kamui Code ⭐⭐⭐"
+    },
+    "i2v-kamui-seedance-v1-lite": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/bytedance/seedance-v1-lite",
+      "description": "ByteDance Seedance V1 Lite via Kamui Code ⭐"
+    },
+    "i2v-kamui-veo3-fast": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/veo3/fast",
+      "description": "Veo3 Fast Image-to-Video via Kamui Code ⭐"
+    },
+    "i2v-kamui-wan-v2-2-a14b": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/wan/v2.2-a14b",
+      "description": "WAN v2.2-a14b Image-to-Video via Kamui Code ⭐"
+    },
+    "v2v-kamui-bria-bg-removal": {
+      "type": "http",
+      "url": "https://kamui-code.ai/video/fal/bria/background-removal",
+      "description": "Bria Video Background Removal via Kamui Code ⭐"
+    },
+    "v2v-kamui-creatify-lipsync": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2v/fal/creatify/lipsync",
+      "description": "Creatify Lipsync via Kamui Code ⭐"
+    },
+    "v2v-kamui-luma-ray2": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2v/fal/luma/dream-machine/ray-2/modify",
+      "description": "Luma Ray-2 Video Modification via Kamui Code ⭐"
+    },
+    "v2v-kamui-minimax-voice": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2v/fal/minimax/voice-design",
+      "description": "Minimax Voice Design via Kamui Code ⭐"
+    },
+    "v2v-kamui-pixverse-extend": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2v/fal/pixverse/extend",
+      "description": "Pixverse Extend via Kamui Code ⭐"
+    },
+    "v2v-kamui-pixverse-lipsync": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2v/fal/pixverse/lipsync",
+      "description": "Pixverse Lipsync via Kamui Code ⭐"
+    },
+    "v2v-kamui-runway-aleph": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2v/runway/aleph",
+      "description": "Runway Gen4 Aleph via Kamui Code ⭐"
+    },
+    "v2v-kamui-topaz-upscale": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2v/fal/topaz/upscale-video",
+      "description": "Topaz Video AI Upscaling via Kamui Code ⭐"
+    },
+    "r2v-kamui-vidu-q1": {
+      "type": "http",
+      "url": "https://kamui-code.ai/r2v/fal/vidu/q1",
+      "description": "Vidu Q1 Reference-to-Video via Kamui Code ⭐"
+    },
+    "t2s-kamui-minimax-speech-02-turbo": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2s/fal/minimax/speech-02-turbo",
+      "description": "MiniMax Speech-02-Turbo via Kamui Code ⭐"
+    },
+    "t2m-kamui-lyria": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2m/google/lyria",
+      "description": "Google Lyria Text-to-Music via Kamui Code ⭐"
+    },
+    "v2a-kamui-thinksound": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2a/fal/thinksound/audio/standard",
+      "description": "ThinkSound Video-to-Audio via Kamui Code ⭐"
+    },
+    "r2v-kamui-bytedance-seedance-v1-lite": {
+      "type": "http",
+      "url": "https://kamui-code.ai/r2v/fal/bytedance/seedance-v1-lite",
+      "description": "ByteDance Seedance V1 Lite Reference-to-Video via Kamui Code ⭐"
+    },
+    "s2v-kamui-wan-v2-2-14b": {
+      "type": "http",
+      "url": "https://kamui-code.ai/s2v/fal/wan/v2.2-14b",
+      "description": "WAN v2.2-14b Speech-to-Video via Kamui Code ⭐"
+    },
+    "t2i-kamui-nano-banana": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/nano-banana",
+      "description": "Nano Banana Text-to-Image via Kamui Code ⭐"
+    },
+    "i2i-kamui-nano-banana-edit": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/nano-banana/edit",
+      "description": "Nano Banana Edit - AI-powered image editing and transformation via Kamui Code ⭐"
+    },
+    "i2i-kamui-gemini-25-flash-image-edit": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/gemini-25-flash-image/edit",
+      "description": "Gemini 2.5 Flash Image Edit - State-of-the-art image editing via Kamui Code ⭐"
+    },
+    "t2i-kamui-gemini-25-flash-image": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/gemini-25-flash-image",
+      "description": "Gemini 2.5 Flash Image - State-of-the-art text-to-image generation via Kamui Code ⭐"
+    },
+    "v2v-kamui-hunyuan-video-foley": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2v/fal/hunyuan/video-foley",
+      "description": "Hunyuan Video Foley - Add sound effects to videos via Kamui Code ⭐"
+    },
+    "t2i-kamui-seedream-v4": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/bytedance/seedream/v4",
+      "description": "Bytedance Seedream V4 Text-to-Image - New-generation unified architecture via Kamui Code ⭐⭐"
+    },
+    "i2i-kamui-seedream-v4-edit": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/bytedance/seedream/v4",
+      "description": "Bytedance Seedream V4 Edit - Advanced image editing with unified architecture via Kamui Code ⭐⭐"
+    },
+    "t2visual-kamui-napkin": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2visual/napkin/visual",
+      "description": "Napkin AI Visual Generation - Transform text into beautiful professional visuals, diagrams, and graphics via Kamui Code ⭐⭐⭐"
+    },
+    "i2v-kamui-decart-lucy-14b": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/decart/lucy-14b",
+      "description": "Decart Lucy-14B Image-to-Video - Lightning fast image-to-video generation with high quality results via Kamui Code ⭐⭐⭐"
+    },
+    "t2v-kamui-veo3": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2v/fal/veo3",
+      "description": "Google Veo3 Text-to-Video - Generate high-quality videos from text prompts using Google's Veo 3 model via Kamui Code ⭐⭐⭐"
+    },
+    "t2m-kamui-minimax-music-v15": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2m/fal/minimax/music/v1.5",
+      "description": "Minimax Music V1.5 Text-to-Music - Generate music from lyrics with style control via Kamui Code ⭐⭐"
+    },
+    "a2v-kamui-kling-video-v1-pro-ai-avatar": {
+      "type": "http",
+      "url": "https://kamui-code.ai/a2v/fal/kling-video/v1/pro/ai-avatar",
+      "description": "Kling Video V1 Pro AI Avatar - Generate realistic avatar videos from images and audio files via Kamui Code ⭐⭐⭐"
+    },
+    "tts-kamui-kling-video-v1": {
+      "type": "http",
+      "url": "https://kamui-code.ai/tts/fal/kling-video/v1",
+      "description": "Kling TTS V1 - Convert text to speech with diverse voice options via Kamui Code ⭐⭐⭐"
+    },
+    "t2v-kamui-kling-video-v25-turbo-pro": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2v/fal/kling-video/v25-turbo-pro",
+      "description": "Kling Video v2.5 Turbo Pro Text-to-Video - Generate high-quality videos from text prompts with enhanced performance and quality via Kamui Code ⭐⭐⭐⭐"
+    },
+    "i2v-kamui-kling-video-v25-turbo-pro": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/kling-video/v25-turbo-pro",
+      "description": "Kling Video v2.5 Turbo Pro Image-to-Video - Generate high-quality videos from images with text prompts using enhanced performance and quality via Kamui Code ⭐⭐⭐⭐"
+    },
+    "t2a-kamui-stable-audio-v25": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2a/fal/stable-audio/v2.5",
+      "description": "Stable Audio 2.5 Text-to-Audio - Generate high quality music and sound effects using StabilityAI's state-of-the-art audio generation model via Kamui Code ⭐⭐⭐"
+    },
+    "v2v-kamui-heygen-video-translate": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2v/replicate/heygen/video-translate",
+      "description": "HeyGen Video Translate - Translate videos into over 150 languages with natural voice cloning and lip-sync via Replicate API ⭐⭐⭐"
+    },
+    "v2sfx-kamui-mirelo-video-to-sfx": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2sfx/replicate/mirelo/video-to-sfx",
+      "description": "Mirelo Video to SFX - Generate sound effects from video content using Replicate API. Automatically trims videos to 10 seconds and produces 2-4 high-quality audio samples ⭐⭐⭐"
+    },
+    "i2i3d-kamui-hunyuan3d-v21": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i3d/fal/hunyuan/3d-v21",
+      "description": "Hunyuan3D v2.1 Image-to-3D Generation - Convert images to high-quality 3D models with PBR texturing via Kamui Code ⭐⭐⭐"
+    },
+    "t2i-kamui-hunyuan-image-v3": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/hunyuan-image/v3",
+      "description": "Hunyuan Image V3 Text-to-Image - Advanced text-to-image generation with high-quality output, multiple formats (PNG/JPEG), custom image sizes, safety checker, and precise guidance control via Kamui Code ⭐⭐⭐"
+    },
+    "v2v-kamui-decart-lucy-edit-pro": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2v/fal/decart/lucy-edit/pro",
+      "description": "Decart Lucy Edit Pro - Transform videos with AI video editing using text prompts. Convert scenes, change appearances, and apply creative transformations to existing videos via Kamui Code ⭐⭐⭐"
+    },
+    "i2i3d-kamui-tripo3d-image-to-3d": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i3d/fal/tripo3d/tripo/v25/image-to-3d",
+      "description": "Tripo3D Image-to-3D v2.5 - Convert single images into high-quality 3D models with advanced texturing, PBR materials, and multiple export formats via Kamui Code ⭐⭐⭐"
+    },
+    "i2i3d-kamui-trellis": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i3d/fal/trellis",
+      "description": "Trellis Image-to-3D - Convert single images into high-quality 3D models using advanced sparse structure and structured latent generation with customizable texture resolution via Kamui Code ⭐⭐⭐"
+    },
+    "i2i-kamui-qwen-image-edit-plus": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/qwen-image-edit-plus",
+      "description": "Qwen Image Edit Plus - Advanced multi-image editing with Qwen AI model, supporting array of images, customizable size, safety checker, and multiple output formats via Kamui Code ⭐⭐⭐"
+    },
+    "v2v-kamui-wan-v2-2-14b-animate-replace": {
+      "type": "http",
+      "url": "https://kamui-code.ai/v2v/fal/wan/v2.2-14b/animate/replace",
+      "description": "WAN v2.2-14b Animate Replace - Generate video from video and image with replace mode, supporting multiple resolutions and advanced video quality settings via Kamui Code ⭐⭐⭐"
+    },
+    "a2v-kamui-veed-fabric-1-0": {
+      "type": "http",
+      "url": "https://kamui-code.ai/a2v/fal/veed/fabric-1.0",
+      "description": "Veed Fabric 1.0 - Generate talking head videos from images and audio with advanced lip-sync and facial animation technology via Kamui Code ⭐⭐⭐"
+    },
+    "t2i-kamui-wan-25-preview": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/wan/25-preview",
+      "description": "WAN 2.5 Preview Text-to-Image - High-quality image generation with various artistic styles, supporting resolutions between 768×768 and 1440×1440, multiple images per request, and prompt expansion via Kamui Code ⭐⭐⭐"
+    },
+    "i2i-kamui-wan-25-preview": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/wan/25-preview",
+      "description": "WAN 2.5 Preview Image-to-Image - Advanced image editing with text prompts and multi-image fusion, supporting subject-consistent editing, resolutions between 384×384 and 5000×5000, and up to 4 images per request via Kamui Code ⭐⭐⭐"
+    },
+    "t2v-kamui-wan-25-preview": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2v/fal/wan/25-preview",
+      "description": "WAN 2.5 Preview Text-to-Video - Latest model with best visual quality and motion stability, supporting 480p/720p/1080p resolutions, multiple aspect ratios (16:9, 9:16, 1:1), 5 or 10-second video generation, and optional audio background music via Kamui Code ⭐⭐⭐"
+    },
+    "i2v-kamui-wan-25-preview": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/wan/25-preview",
+      "description": "WAN 2.5 Preview Image-to-Video - Generate video from an image using WAN 2.5 image-to-video model, supporting 480p/720p/1080p resolutions, 5 or 10-second video generation, motion generation based on text prompt, and optional audio background music via Kamui Code ⭐⭐⭐"
+    },
+    "i2v-kamui-ovi": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/ovi",
+      "description": "OVI Image-to-Video - Generate video from an image with audio synthesis support. Features include text prompt-guided video generation, natural audio synthesis using special tags (<S>...<E> for speech, <AUDCAP>...<ENDAUDCAP> for audio description), and customizable inference steps via Kamui Code ⭐⭐⭐"
+    },
+    "t2v-kamui-ovi": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2v/fal/ovi",
+      "description": "OVI Text-to-Video - Generate video from text prompts with audio synthesis support. Features include natural audio synthesis using special tags (<S>...<E> for speech, <AUDCAP>...<ENDAUDCAP> for audio description), multiple resolution options (512x992, 992x512, 960x512, 512x960, 720x720, 448x1120, 1120x448), and customizable inference steps via Kamui Code ⭐⭐⭐"
+    },
+    "i2i3d-kamui-hyper3d-rodin-v2": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i3d/fal/hyper3d/rodin/v2",
+      "description": "Hyper3D Rodin V2 - Advanced 3D model generation from text prompts or images (up to 5), supporting multiple file formats (GLB, USDZ, FBX, OBJ, STL), various quality options, and PBR materials via Kamui Code ⭐⭐⭐"
+    },
+    "i2i-kamui-qwen-image-edit-plus-lora": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/qwen-image-edit-plus-lora",
+      "description": "Qwen Image Edit Plus LoRA - Advanced multi-image editing with Qwen AI model and LoRA support. Features include editing multiple images (array), customizable size, LoRA weights (up to 3), safety checker, multiple output formats, and flexible inference steps via Kamui Code ⭐⭐⭐"
+    },
+    "t2v-kamui-openai-sora": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2v/openai/sora",
+      "description": "OpenAI Sora - State-of-the-art video generation with text-to-video, image-to-video (first frame reference), and remix capabilities. Two models available: 'sora-2' (fast, flexible, good for iteration) and 'sora-2-pro' (production-grade quality). Supports multiple resolutions (720p, 1080p, portrait HD), customizable duration, and 24-hour download URLs for generated videos via Kamui Code ⭐⭐⭐"
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--headless=false",
+        "--isolated=true",
+        "--executablePath=C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+      ]
+    }
+  }
+}
