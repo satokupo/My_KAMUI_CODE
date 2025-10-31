@@ -235,16 +235,6 @@
       "url": "https://kamui-code.ai/r2v/fal/vidu/q1",
       "description": "Vidu Q1 Reference-to-Video via Kamui Code ⭐"
     },
-    "i2v-kamui-vidu-q2-i2v-pro": {
-      "type": "http",
-      "url": "https://kamui-code.ai/i2v/fal/vidu/q2-i2v-pro",
-      "description": "Vidu Q2 Image-to-Video Pro - Transform images into high-quality videos via Kamui Code ⭐⭐⭐"
-    },
-    "v2v-kamui-vidu-q2-video-extension-pro": {
-      "type": "http",
-      "url": "https://kamui-code.ai/v2v/fal/vidu/q2/video-extension/pro",
-      "description": "Vidu Q2 Video Extension Pro - Extend existing videos by 2-7 seconds with Q2 Pro model via Kamui Code ⭐⭐⭐"
-    },
     "t2s-kamui-minimax-speech-02-turbo": {
       "type": "http",
       "url": "https://kamui-code.ai/t2s/fal/minimax/speech-02-turbo",
@@ -274,16 +264,6 @@
       "type": "http",
       "url": "https://kamui-code.ai/r2v/fal/bytedance/seedance-v1-lite",
       "description": "ByteDance Seedance V1 Lite Reference-to-Video via Kamui Code ⭐"
-    },
-    "i2v-kamui-bytedance-seedance-v1-pro-fast": {
-      "type": "http",
-      "url": "https://kamui-code.ai/i2v/fal/bytedance/seedance-v1-pro-fast",
-      "description": "ByteDance Seedance V1 Pro Fast Image-to-Video via Kamui Code ⭐"
-    },
-    "t2v-kamui-bytedance-seedance-v1-pro-fast": {
-      "type": "http",
-      "url": "https://kamui-code.ai/t2v/fal/bytedance/seedance-v1-pro-fast",
-      "description": "ByteDance Seedance V1 Pro Fast Text-to-Video via Kamui Code ⭐"
     },
     "s2v-kamui-wan-v2-2-14b": {
       "type": "http",
@@ -385,11 +365,6 @@
       "url": "https://kamui-code.ai/i2v/fal/kling-video/v25-turbo-pro",
       "description": "Kling Video v2.5 Turbo Pro Image-to-Video - Generate high-quality videos from images with text prompts using enhanced performance and quality via Kamui Code ⭐⭐⭐⭐"
     },
-    "i2v-kamui-kling-video-v25-turbo-standard": {
-      "type": "http",
-      "url": "https://kamui-code.ai/i2v/fal/kling-video/v25-turbo-standard",
-      "description": "Kling Video v2.5 Turbo Standard Image-to-Video - Generate videos from images with text prompts via Kamui Code ⭐⭐⭐"
-    },
     "t2a-kamui-stable-audio-v25": {
       "type": "http",
       "url": "https://kamui-code.ai/t2a/fal/stable-audio/v2.5",
@@ -409,11 +384,6 @@
       "type": "http",
       "url": "https://kamui-code.ai/v2v/fal/mirelo-ai/sfx-v1.5/video-to-video",
       "description": "Mirelo.ai SFX V1.5 Video-to-Video - Add sound effects to videos using AI. Generate multiple audio samples (default: 2) with customizable duration (default: 10s), optional text prompts for guidance, seed control for reproducibility, and adjustable start offset. Returns processed videos with synchronized sound effects via Kamui Code ⭐⭐⭐"
-    },
-    "v2a-kamui-mirelo-ai-sfx-v15": {
-      "type": "http",
-      "url": "https://kamui-code.ai/v2a/fal/mirelo-ai/sfx-v1.5",
-      "description": "Mirelo.ai SFX V1.5 Video-to-Audio - Generate sound effects audio from videos using AI. Generate multiple audio samples (default: 2) with customizable duration (default: 10s), optional text prompts for guidance, seed control (default: 8069) for reproducibility, and adjustable start offset. Returns generated audio files with sound effects via Kamui Code ⭐⭐⭐"
     },
     "i2i3d-kamui-hunyuan3d-v21": {
       "type": "http",
@@ -535,11 +505,6 @@
       "url": "https://kamui-code.ai/i2i3d/fal/meshy/v5/multi-image-to-3d",
       "description": "Meshy-5 Multi-Image-to-3D - Convert 1-4 images of the same object into a single high-quality 3D model. Better geometry from multiple viewpoints, consistent lighting recommended. Supports topology (quad/triangle), target polycount, symmetry, remesh, PBR textures, and safety checker. Processing time: 3–7 minutes via Kamui Code ⭐⭐⭐"
     },
-    "i2i3d-kamui-meshy-v5-remesh": {
-      "type": "http",
-      "url": "https://kamui-code.ai/i2i3d/fal/meshy/v5/remesh",
-      "description": "Meshy V5 Remesh - Remesh a 3D model to simplify or refine geometry. Supports multiple input formats (GLB, GLTF, OBJ, FBX, STL), output formats (GLB, FBX, OBJ, USDZ, STL), topology options (quad for smooth surfaces, triangle for detailed geometry), customizable target polycount (default: 30000), model resizing, and origin repositioning. Processing time: 3-5 minutes via Kamui Code ⭐⭐⭐"
-    },
     "i2v-kamui-lynx": {
       "type": "http",
       "url": "https://kamui-code.ai/i2v/fal/lynx",
@@ -565,61 +530,6 @@
       "type": "http",
       "url": "https://kamui-code.ai/t2v/fal/wan/alpha",
       "description": "WAN Alpha - Generate videos with transparency support from text prompts. Features include customizable resolution (240p–720p), aspect ratios (16:9, 1:1, 9:16), frame count (default: 81), FPS control (default: 16), sampler options (unipc, dpm++, euler), video quality settings (low, medium, high, maximum), multiple output formats (X264 .mp4, VP9 .webm, PRORES4444 .mov, GIF .gif), and advanced mask controls for transparency effects via Kamui Code ⭐⭐⭐"
-    },
-    "t2i-kamui-reve": {
-      "type": "http",
-      "url": "https://kamui-code.ai/t2i/fal/reve/text-to-image",
-      "description": "Reve Text-to-Image - High-quality AI image generation from text prompts using the Reve model. Supports customizable aspect ratios (16:9, 9:16, 3:2, 2:3, 4:3, 3:4, 1:1), multiple images generation, and output formats (png, jpeg, webp) for versatile creative applications via Kamui Code ⭐⭐⭐"
-    },
-    "i2i-kamui-reve-edit": {
-      "type": "http",
-      "url": "https://kamui-code.ai/i2i/fal/reve/edit",
-      "description": "Reve Edit - Edit an image based on a text description using the Reve model. Supports multiple output formats (png, jpeg, webp), multiple image generation, and sync mode for data URI responses. Perfect for AI-powered image editing via Kamui Code ⭐⭐⭐"
-    },
-    "i2i-kamui-reve-remix": {
-      "type": "http",
-      "url": "https://kamui-code.ai/i2i/fal/reve/remix",
-      "description": "Reve Remix - Remix images by combining text prompts with 1-4 reference images using the Reve model. Supports customizable aspect ratios (16:9, 9:16, 3:2, 2:3, 4:3, 3:4, 1:1), multiple output formats (png, jpeg, webp), and XML image tags for precise image referencing. Perfect for creative image composition via Kamui Code ⭐⭐⭐"
-    },
-    "t2v-kamui-krea-wan-14b": {
-      "type": "http",
-      "url": "https://kamui-code.ai/t2v/fal/krea/wan-14b",
-      "description": "KREA Wan 14B Text-to-Video - Generate high-quality videos from text prompts using the KREA Wan 14B model. Supports customizable frame counts (multiples of 12 plus 6), prompt expansion with LLM, and seed control for reproducibility via Kamui Code ⭐⭐⭐⭐"
-    },
-    "t2m-kamui-beatoven-music-generation": {
-      "type": "http",
-      "url": "https://kamui-code.ai/t2m/fal/beatoven/music-generation",
-      "description": "Beatoven Music Generation - Generate high-quality music tracks from text descriptions. Supports jazz, ambient, cinematic, latin, house, and many other genres. Create professional 44.1kHz stereo audio with customizable duration (5-150 seconds), refinement level, and creativity settings via Kamui Code ⭐⭐⭐⭐"
-    },
-    "t2a-kamui-beatoven-sound-effect-generation": {
-      "type": "http",
-      "url": "https://kamui-code.ai/t2a/fal/beatoven/sound-effect-generation",
-      "description": "Beatoven Sound Effect Generation - Create high-quality sound effects from text descriptions. Perfect for foley, UI sounds, and audio production. Generate professional 44.1kHz stereo WAV output with customizable duration (1-35 seconds), refinement level (default: 40), and creativity settings (default: 16) via Kamui Code ⭐⭐⭐⭐"
-    },
-    "i2i-kamui-gpt-image-1-mini-edit": {
-      "type": "http",
-      "url": "https://kamui-code.ai/i2i/fal/gpt-image-1-mini/edit",
-      "description": "GPT Image 1 Mini Edit - AI-powered image editing using advanced multimodal capabilities. Edit multiple images with natural language prompts. Supports JPEG, PNG, and WebP output formats. Perfect for intelligent image manipulation and creative editing tasks via Kamui Code ⭐⭐⭐⭐⭐"
-    },
-    "t2i-kamui-gpt-image-1-mini": {
-      "type": "http",
-      "url": "https://kamui-code.ai/t2i/fal/gpt-image-1-mini",
-      "description": "GPT Image 1 Mini Text-to-Image - AI-powered image generation from text prompts using advanced multimodal capabilities. Generate high-quality images with natural language descriptions. Supports JPEG, PNG, and WebP output formats. Perfect for creative AI image generation via Kamui Code ⭐⭐⭐⭐⭐"
-    },
-    "i2v-kamui-ltxv-2": {
-      "type": "http",
-      "url": "https://kamui-code.ai/i2v/fal/ltxv-2",
-      "description": "LTXV-2 Image-to-Video - Animate images into high-quality videos with prompt guidance. Supports customizable duration (6, 8, 10 seconds), resolution (1080p, 1440p, 2160p), aspect ratio (16:9), FPS (25, 50), and optional audio generation. Perfect for creating professional video animations from static images via Kamui Code ⭐⭐⭐⭐"
-    },
-    "t2v-kamui-ltxv-2": {
-      "type": "http",
-      "url": "https://kamui-code.ai/t2v/fal/ltxv-2",
-      "description": "LTXV-2 Text-to-Video - Generate high-quality videos from text prompts with advanced controls. Supports customizable duration (6, 8, 10 seconds), resolution (1080p, 1440p, 2160p), aspect ratio (16:9), FPS (25, 50), and optional audio generation. Perfect for creating professional video content from text descriptions via Kamui Code ⭐⭐⭐⭐"
-    },
-    "a2t-kamui-audio-understanding": {
-      "type": "http",
-      "url": "https://kamui-code.ai/a2t/fal/audio-understanding",
-      "description": "Audio Understanding - Analyze audio content and answer questions about it using advanced AI. Upload audio files (URL or Base64) and ask questions like 'What is being discussed?' or 'Summarize this audio'. Supports detailed analysis mode for comprehensive insights via Kamui Code ⭐⭐⭐⭐"
     }
   }
 }

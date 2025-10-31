@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "a2t-kamui-audio-understanding": {
+      "type": "http",
+      "url": "https://kamui-code.ai/a2t/fal/audio-understanding",
+      "description": "Audio Understanding - Analyze audio content and answer questions about it using advanced AI. Upload audio files (URL or Base64) and ask questions like 'What is being discussed?' or 'Summarize this audio'. Supports detailed analysis mode for comprehensive insights via Kamui Code ⭐⭐⭐⭐"
+    }
+  }
+}

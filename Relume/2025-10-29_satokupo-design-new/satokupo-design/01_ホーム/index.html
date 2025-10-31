@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   ホーム
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="assets/style/base.css" rel="stylesheet"/>
+  <link href="assets/style/custom.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div id="content-area">
+   <link as="image" href="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg" rel="preload">
+    <link as="image" href="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg" rel="preload">
+     <link as="image" href="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg" rel="preload"/>
+     <header>
+      <section class="relative z-[999] flex min-h-16 w-full items-center border-b border-border-primary bg-background-primary px-[5%] md:min-h-18" id="relume">
+       <div class="mx-auto flex size-full max-w-full items-center justify-between">
+        <a href="#">
+         <img alt="Logo image" src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"/>
+        </a>
+        <div class="absolute hidden h-screen overflow-auto border-b border-border-primary bg-background-primary px-[5%] pb-24 pt-4 md:pb-0 lg:static lg:ml-6 lg:flex lg:h-auto lg:flex-1 lg:items-center lg:justify-between lg:border-none lg:bg-none lg:px-0 lg:pt-0">
+         <div class="flex flex-col items-center lg:flex-row">
+         </div>
+         <div class="flex items-center gap-4" slotname="navbar6_menu-right">
+          <button class="focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary text-text-primary bg-background-primary px-5 py-2" elementname="button" title="Button">
+           Button
+          </button>
+          <button class="focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary bg-background-alternative text-text-alternative px-5 py-2" elementname="button-2" title="Button">
+           Button
+          </button>
+         </div>
+        </div>
+        <button class="-mr-2 flex size-12 cursor-pointer flex-col items-center justify-center lg:hidden">
+         <span class="my-[3px] h-0.5 w-6 bg-black">
+         </span>
+         <span class="my-[3px] h-0.5 w-6 bg-black">
+         </span>
+         <span class="my-[3px] h-0.5 w-6 bg-black">
+         </span>
+        </button>
+       </div>
+       <div class="absolute left-0 right-0 top-full w-full overflow-hidden lg:hidden" style="height:auto">
+        <div class="absolute left-0 right-0 top-0 block h-dvh overflow-auto border-b border-border-primary bg-background-primary px-[5%] pb-8 pt-4" style="transform:translateY(-100%)">
+         <div class="flex flex-col">
+          <a class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base" href="#">
+           Link One
+          </a>
+          <a class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base" href="#">
+           Link Two
+          </a>
+          <a class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base" href="#">
+           Link Three
+          </a>
+          <div>
+           <button class="relative flex w-full items-center justify-between whitespace-nowrap py-3 text-md lg:w-auto lg:justify-start lg:gap-2 lg:px-4 lg:py-6 lg:text-base">
+            <span>
+             Link Four
+            </span>
+            <span>
+             <svg fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path clip-rule="evenodd" d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z" fill="currentColor" fill-rule="evenodd">
+              </path>
+             </svg>
+            </span>
+           </button>
+           <nav class="bottom-auto left-0 top-full w-full min-w-full max-w-full overflow-hidden bg-background-primary lg:absolute lg:w-screen lg:border-b lg:border-border-primary lg:px-[5%] lg:[--height-close:auto]" style="opacity:0;display:none;height:var(--height-close, 0)">
+            <div class="mx-auto flex size-full max-w-full items-center justify-between">
+             <div class="flex w-full flex-col lg:flex-row">
+              <div class="grid flex-1 auto-cols-fr grid-cols-1 gap-x-8 gap-y-6 py-4 md:grid-cols-3 md:gap-y-0 md:py-8 lg:pr-8">
+               <div class="grid auto-cols-fr grid-cols-1 grid-rows-[max-content_max-content_max-content_max-content] gap-y-2 md:gap-y-4">
+                <h4 class="text-sm font-semibold leading-[1.3]">
+                 Page group one
+                </h4>
+                <a class="grid w-full auto-cols-fr grid-cols-[max-content_1fr] items-start gap-x-3 py-2" href="#">
+                 <div class="flex size-6 flex-col items-center justify-center">
+                  <img alt="Icon 1" class="shrink-0" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+                 </div>
+                 <div class="flex flex-col items-start justify-center">
+                  <h5 class="font-semibold">
+                   Page One
+                  </h5>
+                  <p class="hidden text-sm md:block">
+                   Lorem ipsum dolor sit amet consectetur elit
+                  </p>
+                 </div>
+                </a>
+                <a class="grid w-full auto-cols-fr grid-cols-[max-content_1fr] items-start gap-x-3 py-2" href="#">
+                 <div class="flex size-6 flex-col items-center justify-center">
+                  <img alt="Icon 2" class="shrink-0" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+                 </div>
+                 <div class="flex flex-col items-start justify-center">
+                  <h5 class="font-semibold">
+                   Page Two
+                  </h5>
+                  <p class="hidden text-sm md:block">
+                   Lorem ipsum dolor sit amet consectetur elit
+                  </p>
+                 </div>
+                </a>
+                <a class="grid w-full auto-cols-fr grid-cols-[max-content_1fr] items-start gap-x-3 py-2" href="#">
+                 <div class="flex size-6 flex-col items-center justify-center">
+                  <img alt="Icon 3" class="shrink-0" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+                 </div>
+                 <div class="flex flex-col items-start justify-center">
+                  <h5 class="font-semibold">
+                   Page Three
+                  </h5>
+                  <p class="hidden text-sm md:block">
+                   Lorem ipsum dolor sit amet consectetur elit
+                  </p>
+                 </div>
+                </a>
+                <a class="grid w-full auto-cols-fr grid-cols-[max-content_1fr] items-start gap-x-3 py-2" href="#">
+                 <div class="flex size-6 flex-col items-center justify-center">
+                  <img alt="Icon 4" class="shrink-0" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+                 </div>
+                 <div class="flex flex-col items-start justify-center">
+                  <h5 class="font-semibold">
+                   Page Four
+                  </h5>
+                  <p class="hidden text-sm md:block">
+                   Lorem ipsum dolor sit amet consectetur elit
+                  </p>
+                 </div>
+                </a>
+               </div>
+               <div class="grid auto-cols-fr grid-cols-1 grid-rows-[max-content_max-content_max-content_max-content] gap-y-2 md:gap-y-4">
+                <h4 class="text-sm font-semibold leading-[1.3]">
+                 Page group two
+                </h4>
+                <a class="grid w-full auto-cols-fr grid-cols-[max-content_1fr] items-start gap-x-3 py-2" href="#">
+                 <div class="flex size-6 flex-col items-center justify-center">
+                  <img alt="Icon 5" class="shrink-0" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+                 </div>
+                 <div class="flex flex-col items-start justify-center">
+                  <h5 class="font-semibold">
+                   Page Five
+                  </h5>
+                  <p class="hidden text-sm md:block">
+                   Lorem ipsum dolor sit amet consectetur elit
+                  </p>
+                 </div>
+                </a>
+                <a class="grid w-full auto-cols-fr grid-cols-[max-content_1fr] items-start gap-x-3 py-2" href="#">
+                 <div class="flex size-6 flex-col items-center justify-center">
+                  <img alt="Icon 6" class="shrink-0" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+                 </div>
+                 <div class="flex flex-col items-start justify-center">
+                  <h5 class="font-semibold">
+                   Page Six
+                  </h5>
+                  <p class="hidden text-sm md:block">
+                   Lorem ipsum dolor sit amet consectetur elit
+                  </p>
+                 </div>
+                </a>
+                <a class="grid w-full auto-cols-fr grid-cols-[max-content_1fr] items-start gap-x-3 py-2" href="#">
+                 <div class="flex size-6 flex-col items-center justify-center">
+                  <img alt="Icon 7" class="shrink-0" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+                 </div>
+                 <div class="flex flex-col items-start justify-center">
+                  <h5 class="font-semibold">
+                   Page Seven
+                  </h5>
+                  <p class="hidden text-sm md:block">
+                   Lorem ipsum dolor sit amet consectetur elit
+                  </p>
+                 </div>
+                </a>
+                <a class="grid w-full auto-cols-fr grid-cols-[max-content_1fr] items-start gap-x-3 py-2" href="#">
+                 <div class="flex size-6 flex-col items-center justify-center">
+                  <img alt="Icon 8" class="shrink-0" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+                 </div>
+                 <div class="flex flex-col items-start justify-center">
+                  <h5 class="font-semibold">
+                   Page Eight
+                  </h5>
+                  <p class="hidden text-sm md:block">
+                   Lorem ipsum dolor sit amet consectetur elit
+                  </p>
+                 </div>
+                </a>
+               </div>
+               <div class="grid auto-cols-fr grid-cols-1 grid-rows-[max-content_max-content_max-content_max-content] gap-y-2 md:gap-y-4">
+                <h4 class="text-sm font-semibold leading-[1.3]">
+                 Page group three
+                </h4>
+                <a class="grid w-full auto-cols-fr grid-cols-[max-content_1fr] items-start gap-x-3 py-2" href="#">
+                 <div class="flex size-6 flex-col items-center justify-center">
+                  <img alt="Icon 9" class="shrink-0" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+                 </div>
+                 <div class="flex flex-col items-start justify-center">
+                  <h5 class="font-semibold">
+                   Page Nine
+                  </h5>
+                  <p class="hidden text-sm md:block">
+                   Lorem ipsum dolor sit amet consectetur elit
+                  </p>
+                 </div>
+                </a>
+                <a class="grid w-full auto-cols-fr grid-cols-[max-content_1fr] items-start gap-x-3 py-2" href="#">
+                 <div class="flex size-6 flex-col items-center justify-center">
+                  <img alt="Icon 10" class="shrink-0" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+                 </div>
+                 <div class="flex flex-col items-start justify-center">
+                  <h5 class="font-semibold">
+                   Page Ten
+                  </h5>
+                  <p class="hidden text-sm md:block">
+                   Lorem ipsum dolor sit amet consectetur elit
+                  </p>
+                 </div>
+                </a>
+                <a class="grid w-full auto-cols-fr grid-cols-[max-content_1fr] items-start gap-x-3 py-2" href="#">
+                 <div class="flex size-6 flex-col items-center justify-center">
+                  <img alt="Icon 11" class="shrink-0" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+                 </div>
+                 <div class="flex flex-col items-start justify-center">
+                  <h5 class="font-semibold">
+                   Page Eleven
+                  </h5>
+                  <p class="hidden text-sm md:block">
+                   Lorem ipsum dolor sit amet consectetur elit
+                  </p>
+                 </div>
+                </a>
+                <a class="grid w-full auto-cols-fr grid-cols-[max-content_1fr] items-start gap-x-3 py-2" href="#">
+                 <div class="flex size-6 flex-col items-center justify-center">
+                  <img alt="Icon 12" class="shrink-0" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+                 </div>
+                 <div class="flex flex-col items-start justify-center">
+                  <h5 class="font-semibold">
+                   Page Twelve
+                  </h5>
+                  <p class="hidden text-sm md:block">
+                   Lorem ipsum dolor sit amet consectetur elit
+                  </p>
+                 </div>
+                </a>
+               </div>
+              </div>
+              <div class="max-w-none relative mb-4 flex flex-1 p-6 md:max-w-[50rem] md:p-8 lg:mb-0 lg:max-w-xxs lg:py-8 lg:pl-8 lg:pr-0">
+               <div class="relative z-10 grid w-full grid-cols-1 grid-rows-[auto_max-content] gap-y-4">
+                <h4 class="text-sm font-semibold leading-[1.3]">
+                 Featured from Blog
+                </h4>
+                <div class="max-w-none grid w-full grid-cols-1 grid-rows-[auto_auto_auto_auto] items-start gap-y-2 md:block">
+                 <a class="flex flex-col py-2" href="#">
+                  <div class="relative mb-3 w-full overflow-hidden pt-[56.25%]">
+                   <img alt="Relume placeholder image 2" class="absolute inset-0 size-full object-cover" src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"/>
+                  </div>
+                  <div class="mt-2 flex max-w-[18rem] flex-col justify-start md:mt-0">
+                   <h5 class="mb-1 font-semibold">
+                    Article Title
+                   </h5>
+                   <p class="text-sm">
+                    Lorem ipsum dolor sit amet consectetur elit
+                   </p>
+                   <div class="mt-2">
+                    <button class="focus-visible:ring-border-primary inline-flex items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-0 text-text-primary gap-2 p-0 text-sm underline" title="Read more">
+                     Read more
+                    </button>
+                   </div>
+                  </div>
+                 </a>
+                </div>
+                <div class="flex items-center">
+                 <button class="focus-visible:ring-border-primary inline-flex items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-0 text-text-primary gap-2 p-0" title="See all articles">
+                  See all articles
+                  <svg fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+                   <path clip-rule="evenodd" d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z" fill="currentColor" fill-rule="evenodd">
+                   </path>
+                  </svg>
+                 </button>
+                </div>
+               </div>
+               <div class="absolute bottom-0 left-0 right-auto top-0 min-w-full bg-background-secondary lg:min-w-[100vw]">
+               </div>
+              </div>
+             </div>
+            </div>
+           </nav>
+          </div>
+          <div class="mt-6 flex flex-col gap-4">
+           <button class="focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary text-text-primary bg-background-primary px-5 py-2" title="Button">
+            Button
+           </button>
+           <button class="focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary bg-background-alternative text-text-alternative px-5 py-2" title="Button">
+            Button
+           </button>
+          </div>
+         </div>
+        </div>
+       </div>
+      </section>
+     </header>
+     <link as="image" href="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg" rel="preload"/>
+     <section class="px-[5%] py-12 md:py-16 lg:py-20 full-wide" id="hero">
+      <div class="container">
+       <div class="relative flex min-h-[32rem] flex-col items-center justify-center p-8 text-center md:min-h-[40rem] md:p-16">
+        <div class="absolute inset-0 -z-10">
+         <img alt="Relume placeholder image" class="size-full object-cover" src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"/>
+         <div class="absolute inset-0 bg-black/50">
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+     <link as="image" href="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg" rel="preload"/>
+     <section class="px-[5%] py-16 md:py-24 lg:py-28" id="benefit">
+      <div class="container max-w-xl">
+       <div class="mx-auto mb-12 max-w-lg text-center md:mb-18 lg:mb-20" slotname="max-width-large">
+        <h2 class="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl" elementname="heading-style-h2">
+         Short heading goes here
+        </h2>
+        <p class="md:text-md" elementname="paragraph">
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+       </div>
+       <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div class="flex h-full flex-col justify-between border border-border-primary px-6 py-8 md:p-8">
+         <div>
+          <div class="flex flex-col items-center text-center" slotname="text-align-center">
+           <div class="rb-4 mb-3 flex max-w-[18rem] flex-col items-center md:mb-4" elementname="comparison14_image-wrapper">
+            <img alt="Product image 1" class="aspect-square w-full object-cover" src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"/>
+           </div>
+           <h3 class="mb-2 text-md font-bold leading-[1.4] md:text-xl" elementname="heading-style-h6">
+            Product name
+           </h3>
+           <p class="mb-5 md:mb-6" elementname="paragraph-2">
+            Lorem ipsum dolor sit amet
+           </p>
+          </div>
+          <div class="grid grid-cols-1" listname="comparison14_feature-list-top">
+           <div class="flex justify-between gap-4 border-b border-border-primary py-6 first:border-t" elementname="comparison14_feature-top">
+            <p>
+             Feature text goes here
+            </p>
+            <h6 class="text-md font-bold leading-[1.4] md:text-lg md:leading-[1.4]">
+             $19/mo
+            </h6>
+           </div>
+           <div class="flex justify-between gap-4 border-b border-border-primary py-6 first:border-t" elementname="comparison14_feature-top-2">
+            <p>
+             Feature text goes here
+            </p>
+            <h6 class="text-md font-bold leading-[1.4] md:text-lg md:leading-[1.4]">
+             10
+            </h6>
+           </div>
+           <div class="flex justify-between gap-4 border-b border-border-primary py-6 first:border-t" elementname="comparison14_feature-top-3">
+            <p>
+             Feature text goes here
+            </p>
+            <h6 class="text-md font-bold leading-[1.4] md:text-lg md:leading-[1.4]">
+             49%
+            </h6>
+           </div>
+           <div class="flex justify-between gap-4 border-b border-border-primary py-6 first:border-t" elementname="comparison14_feature-top-4">
+            <p>
+             Feature text goes here
+            </p>
+            <h6 class="text-md font-bold leading-[1.4] md:text-lg md:leading-[1.4]">
+             N/A
+            </h6>
+           </div>
+          </div>
+          <div class="mt-6 grid grid-cols-1 gap-y-4 py-2 md:mt-8" listname="comparison14_feature-list-bottom">
+           <div class="flex self-start">
+            <div class="mr-4 flex-none self-start">
+             <svg class="size-6" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z">
+              </path>
+             </svg>
+            </div>
+            <p>
+             Feature text goes here
+            </p>
+           </div>
+           <div class="flex self-start">
+            <div class="mr-4 flex-none self-start">
+             <svg class="size-6" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z">
+              </path>
+             </svg>
+            </div>
+            <p>
+             Feature text goes here
+            </p>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="flex h-full flex-col justify-between border border-border-primary px-6 py-8 md:p-8">
+         <div>
+          <div class="flex flex-col items-center text-center" slotname="text-align-center-2">
+           <div class="rb-4 mb-3 flex max-w-[18rem] flex-col items-center md:mb-4" elementname="comparison14_image-wrapper-2">
+            <img alt="Product image 1" class="aspect-square w-full object-cover" src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"/>
+           </div>
+           <h3 class="mb-2 text-md font-bold leading-[1.4] md:text-xl" elementname="heading-style-h6-2">
+            Product name
+           </h3>
+           <p class="mb-5 md:mb-6" elementname="paragraph-3">
+            Lorem ipsum dolor sit amet
+           </p>
+          </div>
+          <div class="grid grid-cols-1" listname="comparison14_feature-list-top-2">
+           <div class="flex justify-between gap-4 border-b border-border-primary py-6 first:border-t" elementname="comparison14_feature-top-5">
+            <p>
+             Feature text goes here
+            </p>
+            <h6 class="text-md font-bold leading-[1.4] md:text-lg md:leading-[1.4]">
+             $29/mo
+            </h6>
+           </div>
+           <div class="flex justify-between gap-4 border-b border-border-primary py-6 first:border-t" elementname="comparison14_feature-top-6">
+            <p>
+             Feature text goes here
+            </p>
+            <h6 class="text-md font-bold leading-[1.4] md:text-lg md:leading-[1.4]">
+             Unlimited
+            </h6>
+           </div>
+           <div class="flex justify-between gap-4 border-b border-border-primary py-6 first:border-t" elementname="comparison14_feature-top-7">
+            <p>
+             Feature text goes here
+            </p>
+            <h6 class="text-md font-bold leading-[1.4] md:text-lg md:leading-[1.4]">
+             90%
+            </h6>
+           </div>
+           <div class="flex justify-between gap-4 border-b border-border-primary py-6 first:border-t" elementname="comparison14_feature-top-8">
+            <p>
+             Feature text goes here
+            </p>
+            <h6 class="text-md font-bold leading-[1.4] md:text-lg md:leading-[1.4]">
+             +100
+            </h6>
+           </div>
+          </div>
+          <div class="mt-6 grid grid-cols-1 gap-y-4 py-2 md:mt-8" listname="comparison14_feature-list-bottom-2">
+           <div class="flex self-start">
+            <div class="mr-4 flex-none self-start">
+             <svg class="size-6" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z">
+              </path>
+             </svg>
+            </div>
+            <p>
+             Feature text goes here
+            </p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+     <link as="image" href="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg" rel="preload"/>
+     <section class="px-[5%] py-16 md:py-24 lg:py-28" id="request-flow">
+      <div class="container">
+       <div class="flex flex-col items-center">
+        <div class="rb-12 mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
+         <h2 class="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+          依頼の流れ
+         </h2>
+         <p class="md:text-md">
+          まずは無料相談から。段階的に進めるから安心です
+         </p>
+        </div>
+        <div class="grid grid-cols-1 items-start justify-center gap-y-12 md:grid-cols-3 md:gap-x-8 md:gap-y-16 lg:gap-x-12">
+         <div class="flex w-full flex-col items-center text-center">
+          <div class="rb-5 mb-5 md:mb-6">
+           <img alt="Relume logo 1" class="size-12" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+          </div>
+          <h3 class="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
+           無料相談
+          </h3>
+          <p>
+           デジタルの世界であなたのビジネスストーリーを紡ぐ、シンプルで力強い旅
+          </p>
+         </div>
+         <div class="flex w-full flex-col items-center text-center">
+          <div class="rb-5 mb-5 md:mb-6">
+           <img alt="Relume logo 1" class="size-12" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+          </div>
+          <h3 class="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
+           HP設計図作成
+          </h3>
+          <p>
+           最初の一歩は、あなたの夢を聞くことから始まります。対話を通じて、真のニーズを理解します
+          </p>
+         </div>
+         <div class="flex w-full flex-col items-center text-center">
+          <div class="rb-5 mb-5 md:mb-6">
+           <img alt="Relume logo 1" class="size-12" src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"/>
+          </div>
+          <h3 class="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
+           DIYサポート/制作依頼
+          </h3>
+          <p>
+           あなたの店舗の魅力を視覚的に翻訳し、オンラインでの存在感を確立する設計図を描きます
+          </p>
+         </div>
+        </div>
+        <div class="mt-10 flex items-center gap-4 md:mt-14 lg:mt-16">
+         <button class="focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary text-text-primary bg-background-primary px-6 py-3">
+          詳細を見る
+         </button>
+         <button class="focus-visible:ring-border-primary inline-flex items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-0 text-text-primary gap-2 p-0">
+          詳細を見る
+          <svg fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+           <path clip-rule="evenodd" d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z" fill="currentColor" fill-rule="evenodd">
+           </path>
+          </svg>
+         </button>
+        </div>
+       </div>
+      </div>
+     </section>
+     <link as="image" href="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg" rel="preload"/>
+     <section class="px-[5%] py-16 md:py-24 lg:py-28" id="why-choose-us">
+      <div class="container">
+       <div class="flex flex-col items-center">
+        <div class="rb-12 mb-12 text-center md:mb-18 lg:mb-20">
+         <div class="w-full max-w-lg" slotname="max-width-large">
+          <p class="mb-3 font-semibold md:mb-4" elementname="tagline">
+           Tagline
+          </p>
+          <h2 class="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl" elementname="heading">
+           Medium length section heading goes here
+          </h2>
+          <p class="md:text-md" elementname="paragraph">
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros elementum tristique. Duis cursus, mi quis
+            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+            vitae erat.
+          </p>
+         </div>
+        </div>
+        <div class="grid grid-cols-1 items-start justify-center gap-y-12 md:grid-cols-3 md:gap-x-8 md:gap-y-16 lg:gap-x-12" listname="layout239_list">
+         <div class="flex w-full flex-col items-center text-center">
+          <div class="rb-6 mb-6 md:mb-8">
+           <img alt="Relume placeholder image" src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"/>
+          </div>
+          <h3 class="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
+           Medium length section heading goes here
+          </h3>
+          <p>
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros elementum tristique. Duis cursus, mi quis
+            viverra ornare, eros dolor interdum nulla.
+          </p>
+         </div>
+        </div>
+        <div class="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
+         <button class="focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary text-text-primary bg-background-primary px-6 py-3">
+          詳細
+         </button>
+         <button class="focus-visible:ring-border-primary inline-flex items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-0 text-text-primary gap-2 p-0">
+          詳細
+          <svg fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+           <path clip-rule="evenodd" d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z" fill="currentColor" fill-rule="evenodd">
+           </path>
+          </svg>
+         </button>
+        </div>
+       </div>
+      </div>
+     </section>
+     <section class="px-[5%] py-16 md:py-24 lg:py-28" id="faq">
+      <div class="container max-w-lg">
+       <div class="rb-12 mb-12 text-center md:mb-18 lg:mb-20" slotname="max-width-large">
+        <h2 class="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl" elementname="heading">
+         FAQs
+        </h2>
+        <p class="md:text-md" elementname="paragraph">
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique.
+        </p>
+       </div>
+       <div class="grid items-start justify-stretch gap-4" data-orientation="vertical" listname="faq4_list">
+        <div class="first:border-t border border-border-primary px-5 md:px-6" data-orientation="vertical" data-state="closed" elementname="faq4_accordion">
+         <h3 class="flex w-full" data-orientation="vertical" data-state="closed">
+          <button aria-controls="radix-«R16»" aria-expanded="false" class="flex flex-1 items-center justify-between py-4 font-bold transition-all focus-visible:outline-none focus-visible:ring-0 md:py-5 md:text-md [&amp;[data-state=open]&gt;svg]:rotate-45" data-orientation="vertical" data-radix-collection-item="" data-state="closed" id="radix-«R6»" type="button">
+           Question text goes here
+           <svg class="size-7 shrink-0 text-text-primary transition-transform duration-300 md:size-8" fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M8 2.75C8 2.47386 7.77614 2.25 7.5 2.25C7.22386 2.25 7 2.47386 7 2.75V7H2.75C2.47386 7 2.25 7.22386 2.25 7.5C2.25 7.77614 2.47386 8 2.75 8H7V12.25C7 12.5261 7.22386 12.75 7.5 12.75C7.77614 12.75 8 12.5261 8 12.25V8H12.25C12.5261 8 12.75 7.77614 12.75 7.5C12.75 7.22386 12.5261 7 12.25 7H8V2.75Z" fill="currentColor" fill-rule="evenodd">
+            </path>
+           </svg>
+          </button>
+         </h3>
+         <div aria-labelledby="radix-«R6»" class="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-state="closed" hidden="" id="radix-«R16»" role="region" style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)">
+         </div>
+        </div>
+        <div class="first:border-t border border-border-primary px-5 md:px-6" data-orientation="vertical" data-state="closed" elementname="faq4_accordion-2">
+         <h3 class="flex w-full" data-orientation="vertical" data-state="closed">
+          <button aria-controls="radix-«R1a»" aria-expanded="false" class="flex flex-1 items-center justify-between py-4 font-bold transition-all focus-visible:outline-none focus-visible:ring-0 md:py-5 md:text-md [&amp;[data-state=open]&gt;svg]:rotate-45" data-orientation="vertical" data-radix-collection-item="" data-state="closed" id="radix-«Ra»" type="button">
+           Question text goes here
+           <svg class="size-7 shrink-0 text-text-primary transition-transform duration-300 md:size-8" fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M8 2.75C8 2.47386 7.77614 2.25 7.5 2.25C7.22386 2.25 7 2.47386 7 2.75V7H2.75C2.47386 7 2.25 7.22386 2.25 7.5C2.25 7.77614 2.47386 8 2.75 8H7V12.25C7 12.5261 7.22386 12.75 7.5 12.75C7.77614 12.75 8 12.5261 8 12.25V8H12.25C12.5261 8 12.75 7.77614 12.75 7.5C12.75 7.22386 12.5261 7 12.25 7H8V2.75Z" fill="currentColor" fill-rule="evenodd">
+            </path>
+           </svg>
+          </button>
+         </h3>
+         <div aria-labelledby="radix-«Ra»" class="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-state="closed" hidden="" id="radix-«R1a»" role="region" style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)">
+         </div>
+        </div>
+        <div class="first:border-t border border-border-primary px-5 md:px-6" data-orientation="vertical" data-state="closed" elementname="faq4_accordion-3">
+         <h3 class="flex w-full" data-orientation="vertical" data-state="closed">
+          <button aria-controls="radix-«R1e»" aria-expanded="false" class="flex flex-1 items-center justify-between py-4 font-bold transition-all focus-visible:outline-none focus-visible:ring-0 md:py-5 md:text-md [&amp;[data-state=open]&gt;svg]:rotate-45" data-orientation="vertical" data-radix-collection-item="" data-state="closed" id="radix-«Re»" type="button">
+           Question text goes here
+           <svg class="size-7 shrink-0 text-text-primary transition-transform duration-300 md:size-8" fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M8 2.75C8 2.47386 7.77614 2.25 7.5 2.25C7.22386 2.25 7 2.47386 7 2.75V7H2.75C2.47386 7 2.25 7.22386 2.25 7.5C2.25 7.77614 2.47386 8 2.75 8H7V12.25C7 12.5261 7.22386 12.75 7.5 12.75C7.77614 12.75 8 12.5261 8 12.25V8H12.25C12.5261 8 12.75 7.77614 12.75 7.5C12.75 7.22386 12.5261 7 12.25 7H8V2.75Z" fill="currentColor" fill-rule="evenodd">
+            </path>
+           </svg>
+          </button>
+         </h3>
+         <div aria-labelledby="radix-«Re»" class="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-state="closed" hidden="" id="radix-«R1e»" role="region" style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)">
+         </div>
+        </div>
+        <div class="first:border-t border border-border-primary px-5 md:px-6" data-orientation="vertical" data-state="closed" elementname="faq4_accordion-4">
+         <h3 class="flex w-full" data-orientation="vertical" data-state="closed">
+          <button aria-controls="radix-«R1i»" aria-expanded="false" class="flex flex-1 items-center justify-between py-4 font-bold transition-all focus-visible:outline-none focus-visible:ring-0 md:py-5 md:text-md [&amp;[data-state=open]&gt;svg]:rotate-45" data-orientation="vertical" data-radix-collection-item="" data-state="closed" id="radix-«Ri»" type="button">
+           Question text goes here
+           <svg class="size-7 shrink-0 text-text-primary transition-transform duration-300 md:size-8" fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M8 2.75C8 2.47386 7.77614 2.25 7.5 2.25C7.22386 2.25 7 2.47386 7 2.75V7H2.75C2.47386 7 2.25 7.22386 2.25 7.5C2.25 7.77614 2.47386 8 2.75 8H7V12.25C7 12.5261 7.22386 12.75 7.5 12.75C7.77614 12.75 8 12.5261 8 12.25V8H12.25C12.5261 8 12.75 7.77614 12.75 7.5C12.75 7.22386 12.5261 7 12.25 7H8V2.75Z" fill="currentColor" fill-rule="evenodd">
+            </path>
+           </svg>
+          </button>
+         </h3>
+         <div aria-labelledby="radix-«Ri»" class="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-state="closed" hidden="" id="radix-«R1i»" role="region" style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)">
+         </div>
+        </div>
+        <div class="first:border-t border border-border-primary px-5 md:px-6" data-orientation="vertical" data-state="closed" elementname="faq4_accordion-5">
+         <h3 class="flex w-full" data-orientation="vertical" data-state="closed">
+          <button aria-controls="radix-«R1m»" aria-expanded="false" class="flex flex-1 items-center justify-between py-4 font-bold transition-all focus-visible:outline-none focus-visible:ring-0 md:py-5 md:text-md [&amp;[data-state=open]&gt;svg]:rotate-45" data-orientation="vertical" data-radix-collection-item="" data-state="closed" id="radix-«Rm»" type="button">
+           Question text goes here
+           <svg class="size-7 shrink-0 text-text-primary transition-transform duration-300 md:size-8" fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M8 2.75C8 2.47386 7.77614 2.25 7.5 2.25C7.22386 2.25 7 2.47386 7 2.75V7H2.75C2.47386 7 2.25 7.22386 2.25 7.5C2.25 7.77614 2.47386 8 2.75 8H7V12.25C7 12.5261 7.22386 12.75 7.5 12.75C7.77614 12.75 8 12.5261 8 12.25V8H12.25C12.5261 8 12.75 7.77614 12.75 7.5C12.75 7.22386 12.5261 7 12.25 7H8V2.75Z" fill="currentColor" fill-rule="evenodd">
+            </path>
+           </svg>
+          </button>
+         </h3>
+         <div aria-labelledby="radix-«Rm»" class="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-orientation="vertical" data-state="closed" hidden="" id="radix-«R1m»" role="region" style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)">
+         </div>
+        </div>
+       </div>
+       <div class="mx-auto mt-12 max-w-md text-center md:mt-18 lg:mt-20" slotname="max-width-medium">
+        <h4 class="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl" elementname="heading-2">
+         Still have questions?
+        </h4>
+        <p class="md:text-md" elementname="paragraph-2">
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div class="mt-6 md:mt-8" elementname="button-group" slotname="button-group">
+         <button class="focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary text-text-primary bg-background-primary px-6 py-3" elementname="button" title="Contact">
+          Contact
+         </button>
+        </div>
+       </div>
+      </div>
+     </section>
+     <link as="image" href="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg" rel="preload"/>
+     <section class="px-[5%] py-16 md:py-24 lg:py-28 wide" id="cta">
+      <div class="container">
+       <div class="mb-12 md:mb-18 lg:mb-20">
+        <div class="mx-auto w-full max-w-lg text-center" slotname="max-width-large">
+         <p class="mb-3 font-semibold md:mb-4" elementname="tagline">
+          Blog
+         </p>
+         <h2 class="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl" elementname="heading">
+          Short heading goes here
+         </h2>
+         <p class="md:text-md" elementname="heading-paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         </p>
+        </div>
+       </div>
+       <div class="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-8 lg:gap-x-12" listname="blog48_list">
+        <div class="flex size-full flex-col items-center justify-start border border-border-primary">
+         <div class="relative w-full overflow-hidden pt-[66%]">
+          <img alt="Relume placeholder image" class="absolute inset-0 size-full object-cover" src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"/>
+         </div>
+         <div class="px-5 py-6 md:p-6">
+          <div class="rb-4 mb-4 flex w-full items-center justify-start">
+           <p class="mr-4 bg-background-secondary px-2 py-1 text-sm font-semibold">
+            Category
+           </p>
+           <p class="inline text-sm font-semibold">
+            5 min read
+           </p>
+          </div>
+          <a class="mb-2" href="#">
+           <h2 class="mb-2 text-xl font-bold md:text-2xl">
+            Blog title heading will go here
+           </h2>
+          </a>
+          <p>
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros.
+          </p>
+          <button class="focus-visible:ring-border-primary justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-0 text-text-primary gap-2 p-0 mt-6 flex items-center gap-x-1" title="Read more">
+           Read more
+           <svg fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z" fill="currentColor" fill-rule="evenodd">
+            </path>
+           </svg>
+          </button>
+         </div>
+        </div>
+       </div>
+       <div class="flex items-center justify-center" slotname="button-group">
+        <button class="focus-visible:ring-border-primary gap-3 whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary text-text-primary bg-background-primary px-6 py-3 mt-12 flex items-center justify-center md:mt-20" elementname="button-3" title="View all">
+         View all
+        </button>
+       </div>
+      </div>
+     </section>
+     <link as="image" href="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg" rel="preload"/>
+     <footer class="px-[5%] py-12 md:py-18 lg:py-20" id="relume">
+      <div class="container">
+       <div class="flex flex-col items-center pb-12 md:pb-18 lg:pb-20">
+        <a class="mb-8" href="#">
+         <img alt="Logo image" class="inline-block" src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"/>
+        </a>
+        <ul class="grid grid-flow-row grid-cols-1 items-start justify-center justify-items-center gap-6 md:grid-flow-col md:grid-cols-[max-content] md:justify-center md:justify-items-start" listname="footer7_link-list">
+         <li class="font-semibold" elementname="footer7_link">
+          <a href="#">
+           Link One
+          </a>
+         </li>
+         <li class="font-semibold" elementname="footer7_link-2">
+          <a href="#">
+           Link Two
+          </a>
+         </li>
+         <li class="font-semibold" elementname="footer7_link-3">
+          <a href="#">
+           Link Three
+          </a>
+         </li>
+         <li class="font-semibold" elementname="footer7_link-4">
+          <a href="#">
+           Link Four
+          </a>
+         </li>
+         <li class="font-semibold" elementname="footer7_link-5">
+          <a href="#">
+           Link Five
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="h-px w-full bg-black">
+       </div>
+       <div class="flex flex-col-reverse items-center justify-between pb-4 pt-6 text-center text-sm md:flex-row md:pb-0 md:pt-8">
+        <p class="mt-8 md:mt-0">
+         © 2024 Relume. All rights reserved.
+        </p>
+        <ul class="grid grid-flow-row grid-cols-[max-content] justify-center gap-y-4 text-sm md:grid-flow-col md:gap-x-6 md:gap-y-0" listname="footer7_legal-list">
+         <li class="underline decoration-black underline-offset-1" elementname="footer7_legal-link">
+          <a href="#">
+           Privacy Policy
+          </a>
+         </li>
+         <li class="underline decoration-black underline-offset-1" elementname="footer7_legal-link-2">
+          <a href="#">
+           Terms of Service
+          </a>
+         </li>
+         <li class="underline decoration-black underline-offset-1" elementname="footer7_legal-link-3">
+          <a href="#">
+           Cookies Settings
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </footer>
+    </link>
+   </link>
+  </div>
+  <script src="assets/js/main.js" type="module">
+  </script>
+ </body>
+</html>

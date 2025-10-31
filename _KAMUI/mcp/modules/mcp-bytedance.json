@@ -1,0 +1,49 @@
+{
+  "mcpServers": {
+    "t2i-kamui-seedream-v4": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/bytedance/seedream/v4",
+      "description": "Bytedance Seedream V4 Text-to-Image - New-generation unified architecture via Kamui Code ⭐⭐"
+    },
+    "i2i-kamui-seedream-v4-edit": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2i/fal/bytedance/seedream/v4",
+      "description": "Bytedance Seedream V4 Edit - Advanced image editing with unified architecture via Kamui Code ⭐⭐"
+    },
+    "t2i-kamui-dreamina-v31": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2i/fal/bytedance/dreamina/v3.1/text-to-image",
+      "description": "Bytedance Dreamina v3.1 Text-to-Image via Kamui Code ⭐"
+    },
+    "r2v-kamui-bytedance-seedance-v1-lite": {
+      "type": "http",
+      "url": "https://kamui-code.ai/r2v/fal/bytedance/seedance-v1-lite",
+      "description": "ByteDance Seedance V1 Lite Reference-to-Video via Kamui Code ⭐"
+    },
+    "i2v-kamui-omnihuman": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/bytedance/omnihuman",
+      "description": "ByteDance OmniHuman I2V via Kamui Code ⭐"
+    },
+    "i2v-kamui-omnihuman-v15": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/bytedance/omnihuman-v1.5",
+      "description": "ByteDance OmniHuman v1.5 - Latest version with enhanced lip-sync and expression generation from images and audio via Kamui Code ⭐⭐⭐"
+    },
+    "i2v-kamui-seedance-v1-lite": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/bytedance/seedance-v1-lite",
+      "description": "ByteDance Seedance V1 Lite via Kamui Code ⭐"
+    },
+    "t2v-kamui-bytedance-seedance-v1-pro-fast": {
+      "type": "http",
+      "url": "https://kamui-code.ai/t2v/fal/bytedance/seedance-v1-pro-fast",
+      "description": "ByteDance Seedance V1 Pro Fast Text-to-Video via Kamui Code ⭐"
+    },
+    "i2v-kamui-seedance-v1-pro-fast": {
+      "type": "http",
+      "url": "https://kamui-code.ai/i2v/fal/bytedance/seedance-v1-pro-fast",
+      "description": "ByteDance Seedance V1 Pro Fast Image-to-Video via Kamui Code ⭐"
+    }
+  }
+}
