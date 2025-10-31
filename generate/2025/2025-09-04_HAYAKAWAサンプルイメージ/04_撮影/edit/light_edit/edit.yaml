@@ -1,0 +1,254 @@
+project: cafe_moody_adjustment
+intent:
+  description: Make bright cafe photos feel calm, moody, and warmly inviting.
+  style_keywords: [calm, moody, warm, adult, cozy]
+
+pipeline:
+  - geometry_corrections
+  - base_exposure_and_tone
+  - tone_curve
+  - white_balance_and_hsl
+  - local_masks
+  - detail
+  - export
+
+global_adjustments:
+  exposure_ev:
+    min: -0.7
+    max: -0.3
+  highlights_pct:
+    min: -40
+    max: -20
+  whites_pct:
+    min: -25
+    max: -10
+  shadows_pct:
+    min: 5
+    max: 15
+  blacks_pct:
+    min: -10
+    max: -5
+  contrast:
+    min: 5
+    max: 12
+  tone_curve:
+    type: s_curve
+    strength: mild
+
+white_balance:
+  temperature_kelvin_delta:
+    min: 200
+    max: 600
+  tint_magenta_delta:
+    min: 0
+    max: 5
+
+hsl:
+  orange_saturation_delta:
+    min: 5
+    max: 12
+  yellow_saturation_delta:
+    min: 5
+    max: 12
+  green_saturation_delta:
+    min: -8
+    max: -3
+  blue_saturation_delta:
+    min: -8
+    max: -3
+  skin_tone_hue_protection: true
+
+local_adjustments:
+  gradient_from_light_sources:
+    exposure_ev:
+      min: -0.3
+      max: -0.1
+  radial_on_subject:
+    exposure_ev:
+      min: 0.05
+      max: 0.15
+    texture_or_clarity:
+      min: 3
+      max: 7
+  specular_control:
+    highlights_pct:
+      min: -25
+      max: -10
+
+vignette:
+  enabled: false
+
+geometry:
+  rotation_expected_range_deg:
+    min: -2.0
+    max: 2.0
+  rotation_target_tolerance_deg: 0.2
+  reference_edges: [walls, shelves, tabletop]
+  lens_profile_corrections: true
+  chromatic_aberration_correction: true
+  auto_vignetting_correction: light
+
+detail:
+  sharpening:
+    amount: {min: 20, max: 40}
+    radius: {min: 0.8, max: 1.2}
+    detail: {min: 20, max: 35}
+  noise_reduction:
+    luminance: {min: 10, max: 20}
+    color: {min: 10, max: 20}
+
+crop:
+  keep_aspect_ratio: true
+  trim_percent_max: 10
+  composition_hint: subject_center_to_upper
+
+quality_checks:
+  - minimize_right_clip_in_histogram
+  - smooth_vignette_without_visible_edges
+  - warm_tone_without_orange_over_saturation
+  - rotation_within_tolerance
+  - preserve_texture_without_harsh_sharpening
+
+export:
+  format: jpeg
+  long_edge_min_px: 3000
+  filename_suffix: _calm-warm
+  metadata:
+    - exposure_ev
+    - white_balance_delta
+    - highlights_pct
+    - vignette_exposure
+    - rotation_deg
+プロジェクト: cafe_moody_adjustment
+意図:
+  説明: 明るすぎるカフェ写真を、落ち着いてしっとりした暖かい雰囲気に調整する。
+  スタイルキーワード: [落ち着き, しっとり, 暖色, 大人, 居心地]
+
+パイプライン:
+  - 幾何補正
+  - 基本露出とトーン
+  - トーンカーブ
+  - ホワイトバランスとHSL
+  - ローカルマスク
+  - ビネット
+  - ディテール
+  - 書き出し
+
+グローバル調整:
+  露出EV:
+    最小: -0.7
+    最大: -0.3
+  ハイライト百分率:
+    最小: -40
+    最大: -20
+  白レベル百分率:
+    最小: -25
+    最大: -10
+  シャドウ百分率:
+    最小: 5
+    最大: 15
+  黒レベル百分率:
+    最小: -10
+    最大: -5
+  コントラスト:
+    最小: 5
+    最大: 12
+  トーンカーブ:
+    種類: Sカーブ
+    強度: 弱め
+
+ホワイトバランス:
+  色温度ケルビン差分:
+    最小: 200
+    最大: 600
+  マゼンタティント差分:
+    最小: 0
+    最大: 5
+
+HSL:
+  オレンジ彩度差分:
+    最小: 5
+    最大: 12
+  イエロー彩度差分:
+    最小: 5
+    最大: 12
+  グリーン彩度差分:
+    最小: -8
+    最大: -3
+  ブルー彩度差分:
+    最小: -8
+    最大: -3
+  肌色の色相保護: true
+
+ローカル調整:
+  光源側グラデーション:
+    露出EV:
+      最小: -0.3
+      最大: -0.1
+  被写体ラジアル:
+    露出EV:
+      最小: 0.05
+      最大: 0.15
+    テクスチャまたは明瞭度:
+      最小: 3
+      最大: 7
+  反射制御:
+    ハイライト百分率:
+      最小: -25
+      最大: -10
+
+ビネット:
+  露出EV:
+    最小: -0.6
+    最大: -0.2
+  フェザー: 大きめ
+  中心: 被写体またはフレーム中央
+  暖色ケルビン差分:
+    最小: 100
+    最大: 250
+  彩度差分:
+    最小: 2
+    最大: 5
+
+幾何:
+  期待回転範囲度:
+    最小: -2.0
+    最大: 2.0
+  目標回転許容度: 0.2
+  参照エッジ: [壁, 棚, 卓面]
+  レンズプロファイル補正: true
+  色収差補正: true
+  自動周辺減光補正: 弱め
+
+ディテール:
+  シャープ:
+    量: {最小: 20, 最大: 40}
+    半径: {最小: 0.8, 最大: 1.2}
+    ディテール: {最小: 20, 最大: 35}
+  ノイズ低減:
+    輝度: {最小: 10, 最大: 20}
+    カラー: {最小: 10, 最大: 20}
+
+トリミング:
+  アスペクト比維持: true
+  余白トリム最大％: 10
+  構図ヒント: 中央〜やや上寄りに主被写体
+
+品質チェック:
+  - ヒストグラム右端のクリップ最小化
+  - ビネット境界が見えない滑らかさ
+  - 暖色化しつつオレンジ過飽和を回避
+  - 回転誤差が許容内
+  - 質感を保ち過剰シャープを回避
+
+書き出し:
+  フォーマット: jpeg
+  長辺最小px: 3000
+  ファイル名サフィックス: _calm-warm
+  メタデータ:
+    - 露出EV
+    - ホワイトバランス差分
+    - ハイライト百分率
+    - ビネット露出
+    - 回転角度
+

@@ -39,7 +39,8 @@ __pycache__
 **/requirement-docs/kamui-*.png
 **/requirement-docs/mcp_*.png
 
-**/generate/
+## その他
+# **/generate/
 **/settings.local.json
 
 

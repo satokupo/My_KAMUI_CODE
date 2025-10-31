@@ -1,0 +1,65 @@
+Visual Requirements for Image:
+  Concept:
+    Purpose: "Convey the division of roles with UI motifs only: Instagram = attract (left), Website/HP = inform & reassure (right)"
+    KeyVisual: "Symmetric split 50/50 with a central right-pointing arrow as the bridge"
+  Layout:
+    Split: { left: 0.5, right: 0.5 }
+    Grid: { columns: 12, gutter: 16, margin: { top_bottom: 64, left_right: 64 } }
+    SafeZone: "Keep critical elements inside an inner 90% area (10% outer margins) to survive crops"
+    CornerRadius: { panels: 16, cards: 12, thumbnails: 8, buttons: 12 }
+    Edge/Shadow: { panel_divider: "1px line #E5E7EB", card_shadow: "Y=8, Blur=24, Opacity=15%" }
+  LeftPanel (Instagram-like Grid):
+    Frame: "Abstract smartphone UI (status bar hints only, extremely minimal)"
+    Grid: { rows: 2, cols: 3, tile_gap: 8 }
+    Tiles:
+      Tone: "Mid-contrast, slightly desaturated, unified color tone"
+      Content: "Photographic placeholders as rectangles, no overlaid text or icons"
+      Crop: "Bold, subject-forward crops without identifiable faces"
+    ToneOffset: "Softer than the right panel by ~0.5 steps (slightly lower saturation or darker bg)"
+  RightPanel (Website-like Cards):
+    Composition: "Three cards: Price / Reserve / Access"
+    Arrangement: "Either top row 2 cards (Price, Reserve) + bottom row 1 card (Access), or a single vertical stack"
+    PriceCard:
+      Visual: "Simple table (3 rows × 2 columns) with #E5E7EB cell lines; prices in bold"
+      Icon: { type: "tag or receipt", stroke: 2 }
+    ReserveCard:
+      Visual: "One primary button (radius 12, min height 44) + small calendar/phone icons as auxiliaries"
+      ButtonStates: { default: "accent color", hover: "accent +10% darkness", active: "accent +20% darkness" }
+    AccessCard:
+      Visual: "Abstract mini-map (roads = gray strokes, blocks = light fills) + a single map pin"
+      Pin: { shape: "teardrop", min_side: "16", stroke: 2 }
+    NavHint: "Tiny pseudo-tabs at the very top (Home | Price | Reserve | Access), decorative only"
+    ExteriorThumb:
+      Position: "Top-right small window with 8px radius"
+      Tone: "Slightly desaturated; avoid glare/ghosting"
+  BridgeArrow:
+    Shape: "Bold solid arrow with rounded head"
+    Direction: "Left → Right"
+    Placement: "Centered on the split between panels (both horizontally and vertically)"
+    SizeStroke: "Line width readable even when scaled down; target >= 8px equivalent at output"
+  Colors:
+    Neutrals: ["#0F172A", "#334155", "#E5E7EB", "#F1F5F9"]
+    AccentDefault: "#2563EB"
+    AccentAlternatives: ["#16A34A", "#F59E0B"]
+    Roles:
+      TextDark: "#0F172A"
+      Lines/Dividers: "#E5E7EB"
+      Background: "#F1F5F9"
+      Buttons/Arrow/Highlights: "Accent color"
+  Typography:
+    Fonts: ["Noto Sans JP", "Inter (for Latin elements)"]
+    Weights: { headings_buttons: 700, labels_numbers: 500 }
+    MinLegibility: "Avoid type below ~10–12px equivalent after downscaling"
+    Labels: "Keep to 1–2 short words (e.g., Price / Reserve / Access) or omit if icons alone convey meaning"
+  Icons:
+    Style: "Unified stroked line-icons (2px stroke, rounded joins/caps)"
+    SetExamples: ["map-pin","calendar","phone","tag","table"] # any OSS/commercial-free pack
+    Consistency: "Rounded corners (~4px) and round line caps across all icons"
+  Contrast & Legibility:
+    TargetContrast: "WCAG 2.1 AA (≥ 4.5:1 for small text)"
+    DownscaleRobustness: "At 25% scale, the arrow, pin, and primary button remain clearly identifiable"
+    TextIndependence: "Cards should remain understandable via icons/layout even if labels are removed"
+  Variability (Brand Adaptation Points):
+    BrandColor: "Swap the accent color to the client brand"
+    Photography: "Replace left tiles and the exterior thumbnail with actual assets without layout changes"
+    Arrangement: "Toggle between stacked vs 2+1 card layout depending on content density"

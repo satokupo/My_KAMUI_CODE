@@ -1,0 +1,25 @@
+stroke:
+  width: "1.0 * w"
+  width_variation: "<= 0.02 * w"       # 可変幅は禁止（誤差のみ）
+  # ▼デュアルバンドの揺らぎモデル：微細な“震え”＋大きめの“へろへろ”
+  jitter:
+    model: "dual-band"
+    micro:                              # 手の震えのような細かいブレ
+      amplitude_rms: "0.06–0.12 * w"    # 小振幅
+      frequency_per_w: "6–12"           # 1wあたり6〜12回の蛇行（高周波）
+      randomness: "high"
+    macro:                              # 線全体のゆるい蛇行
+      amplitude_rms: "0.20–0.35 * w"
+      frequency_per_10w: "0.6–1.2"
+      randomness: "medium"
+    spectral_mix: "micro:0.65, macro:0.35"  # 仕上がりの比率
+  caps: "round"
+  joins: "round"
+  pressure_emulation: "off"
+  texture: "solid black, grain<=0.05"
+
+acceptance_criteria:
+  - "線幅の標準偏差 ≤ 0.02 * w（可変幅化していないこと）"
+  - "micro揺らぎRMSが 0.06–0.12*w、frequency_per_w が 6–12 に収まる"
+  - "macro揺らぎRMSが 0.20–0.35*w、frequency_per_10w が 0.6–1.2 に収まる"
+  - "全体の見た目で micro:macro の寄与が概ね 0.65:0.35（±0.1）"
